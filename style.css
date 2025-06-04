@@ -1,0 +1,176 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+}
+
+:root{
+    --pretuncio:#313131;
+    --carlos:#848484;
+    --branco:#DCDCDC;
+    --bler:#4D69A6;
+    --sonic:#305FC5;
+    --mephiles:#0A3B6C;
+    --petroleo:#021B34;
+    --verdura:#106348;
+    --verde:#1FA57F;
+    --grama:#58B23D;
+    --va:#BEE15E;
+    --espere:#E7C84D;
+    --amareluncio:#BF9230;
+    --pare:#C33E3E;
+    --vermelhuncio:#A32D2D;
+    --ash: rgba(255, 255, 255, 0.2);
+    --algo-gradiente: linear-gradient(#000, #434343);
+
+    --fonte: alguem me ajuda;
+}
+
+body {
+    font-family: mudar isso daqui;
+    background-color: var(--branco);
+    color: var(--pretuncio);
+    line-height: 20px;
+}
+
+header {
+    background-color: var(--mephiles);
+    color: var(--branco);
+    position:sticky;
+    top: 0;
+    left: 0;
+}
+
+.cabecao{
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.minilogo{
+    height: 50px;
+    align-self:center;
+}
+
+.titulocabeca{
+    align-self: center;
+    font-size: 30px;
+    margin: 0;
+}
+
+.profile{
+    background: transparent;
+    border: none;    
+}
+
+.pernil{
+    height: 35px;
+}
+
+.colarbones{
+    background-color: var(--mephiles);
+    color: var(--branco);
+    align-content: center;
+    display:;
+    justify-content:center;
+    height: 400px;
+    margin-top: 2px;
+    left: 0;
+}
+
+/*.pescosso{
+    background-color: var(--mephiles);
+    color: var(--branco);
+    align-content: center;
+    display: grid;
+    justify-content:center;
+    height: 60px;
+    margin-top: 2px;
+    left: 0;
+}
+
+main {
+  padding: 6rem 1rem 3rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 600px) {
+  main {
+    max-width: 600px;
+    margin: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*isso daq serve para todo o corpo da pagina
+body{
+    font-family: "Inter", sans-serif;
+    background: var(--mephiles);
+    color: var(--branco); 
+    justify-content: center;
+    align-content: center;
+}
+
+/*isso daq serve pra cada class na pagina
+header{
+    background-image: var(--mephiles);
+    height: 100px;
+    justify-content: space-around;
+    align-content: center;
+    margin-left: -50px;
+    margin-right: -50px;
+    display: flex;
+}    
+
+.cabeca{
+    width: 274px;
+    justify-content: center;
+        display: flex;
+}
+
+.redes{
+    width: 78px;
+    height: 78px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 11px;
+    margin-bottom: 11px;
+}*/
