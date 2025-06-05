@@ -69,11 +69,12 @@ header {
     height: 35px;
 }
 
-.colarbones{
+.chest{
     background-color: var(--mephiles);
     color: var(--branco);
+    align-items: center;
     align-content: center;
-    display:;
+    display: flex;
     justify-content:center;
     height: 400px;
     margin-top: 2px;
