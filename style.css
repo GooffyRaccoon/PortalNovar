@@ -81,6 +81,20 @@ header {
     left: 0;
 }
 
+.rightit{
+    height: 150px;
+    max-width:500px;
+    padding-right: 20px;
+}
+
+.leftit{
+    
+}
+
+.logao{
+    width: 200px;
+}
+
 /*.pescosso{
     background-color: var(--mephiles);
     color: var(--branco);
