@@ -1,199 +1,236 @@
-{
+/* Reset and base styles */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    top: 0;
-    left: 0;
 }
 
-:root{
-    --pretuncio:#313131;
-    --carlos:#848484;
-    --branco:#DCDCDC;
-    --bler:#4D69A6;
-    --sonic:#305FC5;
-    --mephiles:#0A3B6C;
-    --petroleo:#021B34;
-    --verdura:#106348;
-    --verde:#1FA57F;
-    --grama:#58B23D;
-    --va:#BEE15E;
-    --espere:#E7C84D;
-    --amareluncio:#BF9230;
-    --pare:#C33E3E;
-    --vermelhuncio:#A32D2D;
+:root {
+    /* Color Palette */
+    --gray-dark: #313131;
+    --gray-medium: #848484;
+    --white: #DCDCDC;
+    --blue-light: #4D69A6;
+    --blue-main: #305FC5;
+    --blue-dark: #0A3B6C;
+    --blue-night: #021B34;
+    --green-dark: #106348;
+    --green-main: #1FA57F;
+    --green-light: #58B23D;
+    --yellow-light: #BEE15E;
+    --yellow-main: #E7C84D;
+    --yellow-dark: #BF9230;
+    --red-main: #C33E3E;
+    --red-dark: #A32D2D;
     --ash: rgba(255, 255, 255, 0.2);
-    --algo-gradiente: linear-gradient(#000, #434343);
+    --gradient-dark: linear-gradient(#000, #434343);
 
-    --fonte: alguem me ajuda;
+    /* Typography */
+    --font-main: 'Inter', Arial, Helvetica, sans-serif;
 }
 
 body {
-    font-family: mudar isso daqui;
-    background-color: var(--branco);
-    color: var(--pretuncio);
-    line-height: 20px;
+    font-family: var(--font-main);
+    background-color: var(--white);
+    color: var(--gray-dark);
+    line-height: 1.5;
 }
 
+.tudin{
+    max-width: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+/* Header */
 header {
-    background-color: var(--mephiles);
-    color: var(--branco);
-    position:sticky;
+    background-color: var(--blue-dark);
+    color: var(--white);
+    position: sticky;
     top: 0;
     left: 0;
+    z-index: 100;
 }
 
-.cabecao{
+.cabecao {
     height: 70px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
-.minilogo{
+.minilogo {
     height: 50px;
-    align-self:center;
+    align-self: center;
 }
 
-.titulocabeca{
-    justify-items: center;
+.titulocabeca {
     align-self: center;
     height: 160px;
     padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.profile{
+/* Profile/Avatar */
+.profile {
     background: transparent;
-    border: none;    
+    border: none;
 }
 
-.pernil{
+.pernil {
     height: 35px;
 }
 
-.chest{
-    background-color: var(--mephiles);
-    color: var(--branco);
-    align-items: center;
-    align-content: center;
+/* Main Section */
+.chest {
+    background-color: var(--blue-dark);
+    color: var(--white);
     display: flex;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
     height: 300px;
-    margin-top: 2px;
     left: 0;
 }
 
-.rightit{
+.rightit {
     height: 150px;
-    max-width:500px;
+    max-width: 500px;
     padding-right: 20px;
+    display: grid;
+    align-items: center;
 }
 
-.leftit{
-    justify-items: center;
+.leftit {
     height: 250px;
-    display:grid;
+    display: grid;
+    place-items: center;
 }
 
-.logao{
+.logao {
     max-width: 200px;
 }
 
-.baixar{
+.baixar {
+    background: var(--white);
+    border: none;
+    border-radius: 10px;
     width: 150px;
-    max-height: 34px;
+    height: 34px;
+    text-align: center;
+    align-content: center;
 }
 
-/*.pescosso{
-    background-color: var(--mephiles);
-    color: var(--branco);
+.barriga{
+    background-color: var(--blue-dark);
+    color: var(--white);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    left: 0;
+}
+
+.sobreoapp{
+    height: 150px;
+    width: 860px;
+    align-items: center;
+    justify-content: center;
+}
+
+.quadril{
+    background-color: var(--blue-dark);
+    color: var(--white);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    left: 0;
+}
+
+.sobrenos{
+    height: 150px;
+    width: 860px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tipografia */
+main{
+    padding: 6rem 1rem 3rem;
+    max-width: 100vw;
+}
+
+h1{
+    margin-bottom: 2rem;
+    font-size: 40px;
+}
+
+p{
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 1rem;
+    position: static;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+    main {
+        max-width: 600px;
+        margin: auto;
+    }
+}
+
+/* Utility and future classes (commented for reference)
+.pescosso {
+    background-color: var(--blue-dark);
+    color: var(--white);
     align-content: center;
     display: grid;
-    justify-content:center;
+    justify-content: center;
     height: 60px;
     margin-top: 2px;
     left: 0;
 }
 
-main {
-  padding: 6rem 1rem 3rem;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-footer {
-  background-color: #222;
-  color: #ccc;
-  text-align: center;
-  padding: 1rem;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  font-size: 0.9rem;
-}
-
-@media (min-width: 600px) {
-  main {
-    max-width: 600px;
-    margin: auto;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*isso daq serve para todo o corpo da pagina
-body{
-    font-family: "Inter", sans-serif;
-    background: var(--mephiles);
-    color: var(--branco); 
-    justify-content: center;
-    align-content: center;
-}
-
-/*isso daq serve pra cada class na pagina
-header{
-    background-image: var(--mephiles);
+header {
+    background-color: var(--blue-dark);
     height: 100px;
+    display: flex;
     justify-content: space-around;
-    align-content: center;
+    align-items: center;
     margin-left: -50px;
     margin-right: -50px;
-    display: flex;
-}    
-
-.cabeca{
-    width: 274px;
-    justify-content: center;
-        display: flex;
 }
 
-.redes{
+.cabeca {
+    width: 274px;
+    display: flex;
+    justify-content: center;
+}
+
+.redes {
     width: 78px;
     height: 78px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 11px;
-    margin-bottom: 11px;
-}*/
+    margin: 11px 0;
+}
+*/
