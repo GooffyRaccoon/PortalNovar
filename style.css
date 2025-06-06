@@ -55,9 +55,10 @@ header {
 }
 
 .titulocabeca{
+    justify-items: center;
     align-self: center;
-    font-size: 30px;
-    margin: 0;
+    height: 160px;
+    padding-top: 10px;
 }
 
 .profile{
@@ -76,7 +77,7 @@ header {
     align-content: center;
     display: flex;
     justify-content:center;
-    height: 400px;
+    height: 300px;
     margin-top: 2px;
     left: 0;
 }
@@ -88,11 +89,18 @@ header {
 }
 
 .leftit{
-    
+    justify-items: center;
+    height: 250px;
+    display:grid;
 }
 
 .logao{
-    width: 200px;
+    max-width: 200px;
+}
+
+.baixar{
+    width: 150px;
+    max-height: 34px;
 }
 
 /*.pescosso{
