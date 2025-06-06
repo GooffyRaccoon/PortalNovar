@@ -8,33 +8,31 @@
 }
 
 :root {
-    /* Color Palette */
-    --gray-dark: #313131;
-    --gray-medium: #848484;
-    --white: #DCDCDC;
-    --blue-light: #4D69A6;
-    --blue-main: #305FC5;
-    --blue-dark: #0A3B6C;
-    --blue-night: #021B34;
-    --green-dark: #106348;
-    --green-main: #1FA57F;
-    --green-light: #58B23D;
-    --yellow-light: #BEE15E;
-    --yellow-main: #E7C84D;
-    --yellow-dark: #BF9230;
-    --red-main: #C33E3E;
-    --red-dark: #A32D2D;
+    --pretuncio:#313131;
+    --carlos:#848484;
+    --branco:#DCDCDC;
+    --bler:#4D69A6;
+    --sonic:#305FC5;
+    --mephiles:#0A3B6C;
+    --petroleo:#021B34;
+    --verdura:#106348;
+    --verde:#1FA57F;
+    --grama:#58B23D;
+    --va:#BEE15E;
+    --espere:#E7C84D;
+    --amareluncio:#BF9230;
+    --pare:#C33E3E;
+    --vermelhuncio:#A32D2D;
     --ash: rgba(255, 255, 255, 0.2);
-    --gradient-dark: linear-gradient(#000, #434343);
+    --algo-gradiente: linear-gradient(#000, #434343);
 
-    /* Typography */
     --font-main: 'Inter', Arial, Helvetica, sans-serif;
 }
 
 body {
     font-family: var(--font-main);
-    background-color: var(--white);
-    color: var(--gray-dark);
+    background-color: var(--branco);
+    color: var(--branco);
     line-height: 1.5;
 }
 
@@ -48,8 +46,8 @@ body {
 
 /* Header */
 header {
-    background-color: var(--blue-dark);
-    color: var(--white);
+    background-color: var(--mephiles);
+    color: var(--branco);
     position: sticky;
     top: 0;
     left: 0;
@@ -87,19 +85,19 @@ header {
     height: 35px;
 }
 
-/* Main Section */
+/*Corpinho*/
 .chest {
-    background-color: var(--blue-dark);
+    background-color: var(--verdura);
     color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 300px;
+    height: 400px;
     left: 0;
 }
 
 .rightit {
-    height: 150px;
+    height: 300px;
     max-width: 500px;
     padding-right: 20px;
     display: grid;
@@ -107,7 +105,7 @@ header {
 }
 
 .leftit {
-    height: 250px;
+    height: 300px;
     display: grid;
     place-items: center;
 }
@@ -117,7 +115,7 @@ header {
 }
 
 .baixar {
-    background: var(--white);
+    background: var(--branco);
     border: none;
     border-radius: 10px;
     width: 150px;
@@ -127,34 +125,34 @@ header {
 }
 
 .barriga{
-    background-color: var(--blue-dark);
-    color: var(--white);
+    background-color: var(--amareluncio);
+    color: var(--branco);
     display: grid;
-    align-items: center;
+    align-content:space-around;
     justify-content: center;
-    height: 300px;
+    height: 400px;
     left: 0;
 }
 
 .sobreoapp{
-    height: 150px;
+    height: 300px;
     width: 860px;
     align-items: center;
     justify-content: center;
 }
 
 .quadril{
-    background-color: var(--blue-dark);
-    color: var(--white);
+    background-color: var(--vermelhuncio);
+    color: var(--branco);
     display: grid;
-    align-items: center;
+    align-content:space-around;
     justify-content: center;
-    height: 300px;
+    height: 400px;
     left: 0;
 }
 
 .sobrenos{
-    height: 150px;
+    height: 300px;
     width: 860px;
     display: grid;
     align-items: center;
