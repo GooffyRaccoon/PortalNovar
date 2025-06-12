@@ -3,6 +3,38 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NovAR</title>
   	<link rel="stylesheet" href="style.css">
+
+    <style>
+        .slideshow-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+        }
+        .slide {
+            display: none;
+            width: 100%;
+        }
+        .active {
+            display: block;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            padding: 12px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 0 3px 3px 0;
+            background: rgba(0,0,0,0.5);
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,18 +64,59 @@
         </div>
     </header>
 
-    <section class="testa">
-        <div class="textotesta">
-            <p>Seja Bem Vindo(a) ao Portal de Araucária: NovAR! Aqui você encontra tudo que deseja saber sobre a cidade paranaense.</p>
-        </div>
+    <div class="slideshow-container">
+        <img class="slide active" src="https://placekitten.com/600/300" alt="Gato 1">
+        <img class="slide" src="https://placekitten.com/601/300" alt="Gato 2">
+        <img class="slide" src="https://placekitten.com/602/300" alt="Gato 3">
 
-        <div id="slideshow">
-            <img src="slide1.png" class="active" alt="Port">
-            <img src="slide2.jpg" alt="Slide 2">
-            <img src="slide3.jpg" alt="Slide 3">
-        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
 
-    </section>
+    <script>
+let slideIndex = 0;
+const slides = document.getElementsByClassName("slide");
+
+function showSlide(index) {
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+    }
+    slides[index].classList.add("active");
+}
+
+function plusSlides(n) {
+    slideIndex += n;
+    if (slideIndex >= slides.length) slideIndex = 0;
+    if (slideIndex < 0) slideIndex = slides.length - 1;
+    showSlide(slideIndex);
+}
+
+// Inicializa o slideshow
+showSlide(slideIndex);
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <footer>
         <div class="canela">
