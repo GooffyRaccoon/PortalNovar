@@ -10,7 +10,10 @@
 :root {
     --pretuncio:#313131;
     --carlos:#848484;
-    --branco:#DCDCDC;
+    --carlito:#999999;
+    --baranco:#B2B2B2;
+    --branco:#CCCCCC;
+    --brancao:#E5E5E5;
     --bler:#4D69A6;
     --sonic:#305FC5;
     --mephiles:#0A3B6C;
@@ -44,120 +47,57 @@ body {
     align-items: center; 
 }
 
-/* Header */
-header {
-    background-color: var(--mephiles);
-    color: var(--branco);
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 100;
-}
 
-.cabecao {
-    height: 70px;
+/*cabelo*/
+.cabelo{
+    width: 1380px;
+    height: 58px;
+    flex-shrink: 0;
+    background-color: var(--mephiles);
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.minilogo {
-    height: 50px;
-    align-self: center;
+.loguinho{
+    width: 30px;
+    height: 23px;
+    flex-shrink: 0;
+    aspect-ratio: 30/23;
 }
 
-.titulocabeca {
-    align-self: center;
-    height: 160px;
-    padding-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.risquin{
+    width: 0px;
+    height: 19.8px;
+    flex-shrink: 0;
 }
 
-/* Profile/Avatar */
-.profile {
-    background: transparent;
-    border: none;
-}
-
-.pernil {
-    height: 35px;
-}
-
-/*Corpinho*/
-.chest {
-    background-color: var(--verdura);
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 400px;
-    left: 0;
-}
-
-.rightit {
-    height: 300px;
-    max-width: 500px;
-    padding-right: 20px;
-    display: grid;
-    align-items: center;
-}
-
-.leftit {
-    height: 300px;
-    display: grid;
-    place-items: center;
-}
-
-.logao {
-    max-width: 200px;
-}
-
-.baixar {
-    background: var(--branco);
-    border: none;
-    border-radius: 10px;
-    width: 150px;
-    height: 34px;
+.textcabelo{
+    color: var(--baranco, #B2B2B2);
     text-align: center;
-    align-content: center;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
-.barriga{
-    background-color: var(--amareluncio);
+.xzin{
+    width: 19.412px;
+    height: 18px;
+    flex-shrink: 0;
+}
+/*fim do cabelo*/
+
+/* 
+header{
+    background-color: var(--mephiles);
     color: var(--branco);
-    display: grid;
-    align-content:space-around;
-    justify-content: center;
-    height: 400px;
+    position: sticky;
+    top: 0;
     left: 0;
 }
-
-.sobreoapp{
-    height: 300px;
-    width: 860px;
-    align-items: center;
-    justify-content: center;
-}
-
-.quadril{
-    background-color: var(--vermelhuncio);
-    color: var(--branco);
-    display: grid;
-    align-content:space-around;
-    justify-content: center;
-    height: 400px;
-    left: 0;
-}
-
-.sobrenos{
-    height: 300px;
-    width: 860px;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-}
+*/
 
 footer {
     background-color: #222;
