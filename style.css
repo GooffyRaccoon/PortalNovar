@@ -50,8 +50,9 @@ body {
 
 /*cabelo*/
 .cabelo{
-    width: 1380px;
-    height: 58px;
+    width: 100%;
+    height: 100%;
+    max-height: 60px;
     flex-shrink: 0;
     background-color: var(--mephiles);
     display: flex;
@@ -59,32 +60,35 @@ body {
     align-items: center;
 }
 
+.piolho{
+    max-width: 300px;
+}
+
 .loguinho{
     width: 30px;
-    height: 23px;
+    height: 24px;
     flex-shrink: 0;
     aspect-ratio: 30/23;
 }
 
 .risquin{
     width: 0px;
-    height: 19.8px;
+    height: 20px;
     flex-shrink: 0;
 }
 
 .textcabelo{
     color: var(--baranco, #B2B2B2);
     text-align: center;
-    font-family: Inter;
-    font-size: 15px;
+    font-size: 20px;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
+    margin: 0;
 }
 
-.xzin{
-    width: 19.412px;
-    height: 18px;
+.xcabelo{
+    max-width: 15px;
+    max-height: 15px;
     flex-shrink: 0;
 }
 /*fim do cabelo*/
