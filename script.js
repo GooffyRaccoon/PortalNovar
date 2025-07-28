@@ -38,7 +38,7 @@ function irParaSlide(index, manual = false) {
 }
 
 function iniciarCarrossel() {
-  timer = setInterval(() => proximoSlide(true), 10000); // 10 segundos
+  timer = setInterval(() => proximoSlide(true), 10); // 10 segundos
 }
 function resetarTimer() {
   clearInterval(timer);
