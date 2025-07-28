@@ -18,7 +18,7 @@ function proximoSlide() {
 }
 
 function iniciarCarrossel() {
-    timer = setInterval(proximoSlide, 8000);
+    timer = setInterval(proximoSlide, 10000); // 10 segundos
 }
 
 function pararCarrossel() {
