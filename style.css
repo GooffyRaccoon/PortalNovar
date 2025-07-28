@@ -92,6 +92,8 @@ body {
     flex-shrink: 0;
 }
 
+
+
 footer {
     background-color: var(--brancao);
     color: #ccc;
@@ -121,13 +123,14 @@ p{
 }
 
 /* Responsive */
-@media (min-width: 600px) {
+@media (min-width: 1200px) {
     main {
-        max-width: 600px;
+        max-width: 1200px;
         margin: auto;
     }
 }
 
-/*
-comentarios
-*/
+.slideshow-container{
+    #slideshow img { display: none; }
+    #slideshow img.active { display: block; }
+}
