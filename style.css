@@ -93,16 +93,12 @@ body {
 
 /* Carrossel */
 .carrossel-container {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     max-width: 1200px;
-    max-height: 100vh;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-    /* Centraliza verticalmente para telas maiores */
-    top: 50%;
-    transform: translateY(-50%);
+    /* Remova altura fixa e centralização vertical */
 }
 
 .carrossel-slides {
@@ -114,20 +110,23 @@ body {
 }
 
 .carrossel-slide {
-    min-width: 100vw;
+    width: 100%;
     max-width: 1200px;
-    height: 100vh;
-    max-height: 100vh;
-}
-
-.carrossel-slide img {
-    width: 100vw;
-    max-width: 1200px;
-    height: 100vh;
-    max-height: 100vh;
+    height: auto;
+    max-height: 500px; /* ajuste conforme desejado */
     object-fit: cover;
     display: block;
 }
+
+.carrossel-slide img {
+     width: 100%;
+    max-width: 1200px;
+    height: auto;
+    max-height: 500px; /* ajuste conforme desejado */
+    object-fit: cover;
+    display: block;
+}
+
 .carrossel-indicadores {
     position: absolute;
     left: 0;
