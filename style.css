@@ -118,11 +118,13 @@ body {
 
 .carrossel-slide img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 400px;
+  object-fit: cover;
+  max-width: 100%;
   max-height: 400px;
   border-radius: 12px;
   background: #eee;
+  /* Todas as imagens terão exatamente 800x400 (ou o tamanho do container) */
 }
 
 .carrossel-seta {
