@@ -94,6 +94,17 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 footer {
     background-color: var(--brancao);
     color: #ccc;
@@ -120,17 +131,4 @@ h1{
 p{
     margin-bottom: 1rem;
     font-size: 20px;
-}
-
-/* Responsive */
-@media (min-width: 1200px) {
-    main {
-        max-width: 1200px;
-        margin: auto;
-    }
-}
-
-#slideshow-container{
-    #slideshow img { display: none; }
-    #slideshow img.active { display: block; }
 }

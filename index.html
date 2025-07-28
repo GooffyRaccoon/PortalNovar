@@ -34,66 +34,6 @@
         </div>
     </header>
 
-    <div id="slideshow-container">
-        <img src="slide1.png" alt="Gato 1" class="slide active">
-        <img src="slide2.png" alt="Gato 2" class="slide">
-        <img src="slide3.png" alt="Gato 3" class="slide">
-
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-
-        <link rel="stylesheet" href="styles.css">
-    </div>
-    
-    <script>
-  let slides = document.querySelectorAll('#slideshow .slide');
-  let current = 0;
-  let intervalId;
-
-  function showSlide(index) {
-    slides.forEach((img, i) => {
-      img.classList.toggle('active', i === index);
-    });
-  }
-
-  function nextSlide() {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-  }
-
-  function plusSlides(n) {
-    current += n;
-    if (current >= slides.length) current = 0;
-    if (current < 0) current = slides.length - 1;
-    showSlide(current);
-    resetInterval();
-  }
-
-  function startInterval() {
-    intervalId = setInterval(nextSlide, 10000); // 10 segundos
-  }
-
-  function resetInterval() {
-    clearInterval(intervalId);
-    startInterval();
-  }
-
-  // Inicialização
-  showSlide(current);
-  startInterval();
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
