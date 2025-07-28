@@ -1,48 +1,54 @@
-const slides = document.getElementById('carrosselSlides');
-const indicadores = document.querySelectorAll('.carrossel-indicador');
-const totalSlides = indicadores.length;
+const slides = document.querySelectorAll('.gatinhos-carrossel-slide');
+const slidesWrapper = document.getElementById('gatinhosCarrosselSlides');
+const setaEsq = document.getElementById('gatinhosSetaEsquerda');
+const setaDir = document.getElementById('gatinhosSetaDireita');
+const indicadoresContainer = document.getElementById('gatinhosCarrosselIndicadores');
 let currentIndex = 0;
 let timer = null;
 
-function getSlideWidth() {
-    // Largura máxima de 1200px ou largura da tela, o que for menor
-    return Math.min(window.innerWidth, 1200);
+// Cria indicadores
+for (let i = 0; i < slides.length; i++) {
+  const span = document.createElement('span');
+  span.className = 'gatinhos-carrossel-indicador' + (i === 0 ? ' ativo' : '');
+  span.dataset.index = i;
+  span.onclick = () => irParaSlide(i, true);
+  indicadoresContainer.appendChild(span);
 }
+const indicadores = indicadoresContainer.querySelectorAll('.gatinhos-carrossel-indicador');
 
 function mostrarSlide(index) {
-    const slideWidth = getSlideWidth();
-    slides.style.transform = `translateX(-${index * slideWidth}px)`;
-    indicadores.forEach((ind, i) => {
-        ind.classList.toggle('ativo', i === index);
-    });
-    currentIndex = index;
+  slidesWrapper.style.transform = `translateX(-${index * 100}%)`;
+  indicadores.forEach((ind, i) => ind.classList.toggle('ativo', i === index));
+  currentIndex = index;
 }
 
-function proximoSlide() {
-    let nextIndex = (currentIndex + 1) % totalSlides;
-    mostrarSlide(nextIndex);
+function proximoSlide(auto = false) {
+  let nextIndex = (currentIndex + 1) % slides.length;
+  mostrarSlide(nextIndex);
+  if (!auto) resetarTimer();
+}
+function anteriorSlide() {
+  let prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+  mostrarSlide(prevIndex);
+  resetarTimer();
+}
+function irParaSlide(index, manual = false) {
+  mostrarSlide(index);
+  if (manual) resetarTimer();
 }
 
 function iniciarCarrossel() {
-    timer = setInterval(proximoSlide, 10000); // 10 segundos
+  timer = setInterval(() => proximoSlide(true), 10000); // 10 segundos
+}
+function resetarTimer() {
+  clearInterval(timer);
+  iniciarCarrossel();
 }
 
-function pararCarrossel() {
-    if (timer) clearInterval(timer);
-}
+setaEsq.onclick = anteriorSlide;
+setaDir.onclick = proximoSlide;
 
-indicadores.forEach(indicador => {
-    indicador.addEventListener('click', function() {
-        pararCarrossel();
-        mostrarSlide(Number(this.dataset.index));
-        iniciarCarrossel();
-    });
-});
-
-// Ajusta o slide ao redimensionar a tela
-window.addEventListener('resize', () => {
-    mostrarSlide(currentIndex);
-});
-
+window.addEventListener('resize', () => mostrarSlide(currentIndex));
 mostrarSlide(0);
 iniciarCarrossel();
+
