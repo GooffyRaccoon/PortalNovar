@@ -92,6 +92,10 @@ body {
 
 
 /* Carrossel */
+.carroselfilhadaputa{
+  height: 1200px;
+}
+
 .carrossel-container {
   position: relative;
   max-width: 800px;
