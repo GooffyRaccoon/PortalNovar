@@ -178,6 +178,16 @@ body {
   opacity: 1;
 }
 
+.carrossel-slides {
+  display: flex;
+  transition: transform 0.7s cubic-bezier(.77,0,.18,1);
+  width: 100%;
+}
+.carrossel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
 /* Footer */
 footer {
     background-color: var(--brancao);
