@@ -130,7 +130,7 @@ p{
     }
 }
 
-.slideshow-container{
+#slideshow-container{
     #slideshow img { display: none; }
     #slideshow img.active { display: block; }
 }
