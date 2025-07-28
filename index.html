@@ -1,44 +1,12 @@
-<html lang="pt-br"><head>
+<html lang="pt-br">
+<head>
   	<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NovAR</title>
   	<link rel="stylesheet" href="style.css">
-
-    <style>
-        .slideshow-container {
-            position: relative;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .slide {
-            display: none;
-            width: 100%;
-        }
-        .active {
-            display: block;
-        }
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            padding: 12px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            border-radius: 0 3px 3px 0;
-            background: rgba(0,0,0,0.5);
-            user-select: none;
-        }
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-    </style>
 </head>
 
 <body>
-
     <header> 
         <div class="cabelo">
             <div class="piolho">
@@ -70,36 +38,15 @@
             </a>
     </section>
 
-    <div class="slideshow-container">
-        <img class="slide active" src="slide1.png" alt="Gato 1">
-        <img class="slide" src="slide2.png" alt="Gato 2">
-        <img class="slide" src="slide3.png" alt="Gato 3">
+    <div id="slideshow-container">
+        <img src="slide1.png" alt="Gato 1" class="slide active">
+        <img src="slide2.png" alt="Gato 2" class="slide">
+        <img src="slide3.png" alt="Gato 3" class="slide">
 
         <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a>
     </div>
 
-    <script>
-let slideIndex = 0;
-const slides = document.getElementsByClassName("slide");
-
-function showSlide(index) {
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove("active");
-    }
-    slides[index].classList.add("active");
-}
-
-function plusSlides(n) {
-    slideIndex += n;
-    if (slideIndex >= slides.length) slideIndex = 0;
-    if (slideIndex < 0) slideIndex = slides.length - 1;
-    showSlide(slideIndex);
-}
-
-// Inicializa o slideshow
-showSlide(slideIndex);
-    </script>
 
 
 
@@ -116,7 +63,7 @@ showSlide(slideIndex);
 
 
 
-
+    
 
 
 

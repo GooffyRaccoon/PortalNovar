@@ -11,5 +11,25 @@
     setInterval(() => {
       current = (current + 1) % slides.length;
       showSlide(current);
-    }, 2000); // Change slide every 2 seconds
-  </script>
+    }, 2000); //Troca de alide a cada s
+
+let slideIndex = 0;
+const slides = document.getElementsByClassName("slide");
+
+function showSlide(index) {
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+    }
+    slides[index].classList.add("active");
+}
+
+function plusSlides(n) {
+    slideIndex += n;
+    if (slideIndex >= slides.length) slideIndex = 0;
+    if (slideIndex < 0) slideIndex = slides.length - 1;
+    showSlide(slideIndex);
+}
+
+</script>
+
+  
