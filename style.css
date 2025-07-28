@@ -8,27 +8,26 @@
 }
 
 :root {
-    --pretuncio:#313131;
-    --carlos:#848484;
-    --carlito:#999999;
-    --baranco:#B2B2B2;
-    --branco:#CCCCCC;
-    --brancao:#E5E5E5;
-    --bler:#4D69A6;
-    --sonic:#305FC5;
-    --mephiles:#0A3B6C;
-    --petroleo:#021B34;
-    --verdura:#106348;
-    --verde:#1FA57F;
-    --grama:#58B23D;
-    --va:#BEE15E;
-    --espere:#E7C84D;
-    --amareluncio:#BF9230;
-    --pare:#C33E3E;
-    --vermelhuncio:#A32D2D;
+    --pretuncio: #313131;
+    --carlos: #848484;
+    --carlito: #999999;
+    --baranco: #B2B2B2;
+    --branco: #CCCCCC;
+    --brancao: #E5E5E5;
+    --bler: #4D69A6;
+    --sonic: #305FC5;
+    --mephiles: #0A3B6C;
+    --petroleo: #021B34;
+    --verdura: #106348;
+    --verde: #1FA57F;
+    --grama: #58B23D;
+    --va: #BEE15E;
+    --espere: #E7C84D;
+    --amareluncio: #BF9230;
+    --pare: #C33E3E;
+    --vermelhuncio: #A32D2D;
     --ash: rgba(255, 255, 255, 0.2);
     --algo-gradiente: linear-gradient(#000, #434343);
-
     --font-main: 'Inter', Arial, Helvetica, sans-serif;
 }
 
@@ -39,19 +38,17 @@ body {
     line-height: 1.5;
 }
 
-.tudin{
+.tudin {
     max-width: none;
     padding: 0;
     margin: 0;
     justify-content: space-around;
-    align-items: center; 
+    align-items: center;
 }
 
-
-/*cabelo*/
-.cabelo{
+/* cabelo */
+.cabelo {
     width: 100%;
-    height: 100%;
     max-height: 60px;
     flex-shrink: 0;
     background-color: var(--mephiles);
@@ -60,24 +57,24 @@ body {
     align-items: center;
 }
 
-.piolho{
+.piolho {
     max-width: 300px;
 }
 
-.loguinho{
+.loguinho {
     width: 30px;
     height: 24px;
     flex-shrink: 0;
     aspect-ratio: 30/23;
 }
 
-.risquin{
+.divisaocabelo {
     width: 0px;
     height: 20px;
     flex-shrink: 0;
 }
 
-.textcabelo{
+.textcabelo {
     color: var(--baranco, #B2B2B2);
     text-align: center;
     font-size: 20px;
@@ -86,135 +83,64 @@ body {
     margin: 0;
 }
 
-.xcabelo{
+.xcabelo {
     max-width: 15px;
     max-height: 15px;
     flex-shrink: 0;
 }
 
+/* Carrossel */
+.carrossel-container {
+    width: 600px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    margin: 30px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.carrossel-slides {
+    display: flex;
+    width: 1800px; /* 3 imagens * 600px */
+    height: 100%;
+    transition: transform 1s cubic-bezier(.77,0,.18,1);
+}
+.carrossel-slide {
+    min-width: 600px;
+    height: 350px;
+}
+.carrossel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.carrossel-indicadores {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 16px;
+    text-align: center;
+    z-index: 2;
+}
+.carrossel-indicador {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.4;
+    cursor: pointer;
+    border: 1px solid #333;
+    transition: opacity 0.3s;
+}
+.carrossel-indicador.ativo {
+    opacity: 1;
+    background: #333;
+}
 
-
-  <style>
-    .carrossel-container {
-      width: 600px;
-      height: 350px;
-      overflow: hidden;
-      position: relative;
-      margin: 30px auto;
-      border-radius: 15px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-    }
-    .carrossel-slides {
-      display: flex;
-      width: 1800px; /* 3 imagens * 600px */
-      height: 100%;
-      transition: transform 1s cubic-bezier(.77,0,.18,1);
-    }
-    .carrossel-slide {
-      min-width: 600px;
-      height: 350px;
-    }
-    .carrossel-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 15px;
-    }
-    .carrossel-indicadores {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 16px;
-      text-align: center;
-      z-index: 2;
-    }
-    .carrossel-indicador {
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      margin: 0 6px;
-      background: #fff;
-      border-radius: 50%;
-      opacity: 0.4;
-      cursor: pointer;
-      border: 1px solid #333;
-      transition: opacity 0.3s;
-    }
-    .carrossel-indicador.ativo {
-      opacity: 1;
-      background: #333;
-    }
-  </style>
-</head>
-<body>
-  <div class="carrossel-container">
-    <div class="carrossel-slides" id="carrosselSlides">
-      <div class="carrossel-slide">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Imagem 1">
-      </div>
-      <div class="carrossel-slide">
-        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Imagem 2">
-      </div>
-      <div class="carrossel-slide">
-        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Imagem 3">
-      </div>
-    </div>
-    <div class="carrossel-indicadores">
-      <span class="carrossel-indicador ativo" data-index="0"></span>
-      <span class="carrossel-indicador" data-index="1"></span>
-      <span class="carrossel-indicador" data-index="2"></span>
-    </div>
-  </div>
-  <script>
-    const slides = document.getElementById('carrosselSlides');
-    const indicadores = document.querySelectorAll('.carrossel-indicador');
-    const totalSlides = 3;
-    let currentIndex = 0;
-    let timer = null;
-
-    function mostrarSlide(index) {
-      slides.style.transform = `translateX(-${index * 600}px)`;
-      indicadores.forEach((ind, i) => {
-        ind.classList.toggle('ativo', i === index);
-      });
-      currentIndex = index;
-    }
-
-    function proximoSlide() {
-      let nextIndex = (currentIndex + 1) % totalSlides;
-      mostrarSlide(nextIndex);
-    }
-
-    function iniciarCarrossel() {
-      timer = setInterval(proximoSlide, 10000);
-    }
-
-    function pararCarrossel() {
-      if (timer) clearInterval(timer);
-    }
-
-    indicadores.forEach(indicador => {
-      indicador.addEventListener('click', function() {
-        pararCarrossel();
-        mostrarSlide(Number(this.dataset.index));
-        iniciarCarrossel();
-      });
-    });
-
-    // Inicializa
-    mostrarSlide(0);
-    iniciarCarrossel();
-  </script>
-
-
-
-
-
-
-
-
-
-
+/* Footer */
 footer {
     background-color: var(--brancao);
     color: #ccc;
@@ -227,18 +153,18 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Tipografia */
-main{
+/* Typography */
+main {
     padding: 6rem 1rem 3rem;
     max-width: 100vw;
 }
 
-h1{
+h1 {
     margin-bottom: 2rem;
     font-size: 40px;
 }
 
-p{
+p {
     margin-bottom: 1rem;
     font-size: 20px;
 }
