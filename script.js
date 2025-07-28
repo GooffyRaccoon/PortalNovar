@@ -1,23 +1,21 @@
-// Seletores dos elementos
-const slidesWrapper = document.getElementById('gatinhosCarrosselSlides');
-const slides = document.querySelectorAll('.gatinhos-carrossel-slide');
-const setaEsq = document.getElementById('gatinhosSetaEsquerda');
-const setaDir = document.getElementById('gatinhosSetaDireita');
-const indicadoresContainer = document.getElementById('gatinhosCarrosselIndicadores');
+const slidesWrapper = document.getElementById('carrosselSlides');
+const slides = document.querySelectorAll('.carrossel-slide');
+const setaEsq = document.getElementById('carrosselSetaEsquerda');
+const setaDir = document.getElementById('carrosselSetaDireita');
+const indicadoresContainer = document.getElementById('carrosselIndicadores');
 
-// Estado
 let currentIndex = 0;
 let timer = null;
 
 // Criação dos indicadores (bolinhas)
 for (let i = 0; i < slides.length; i++) {
   const span = document.createElement('span');
-  span.className = 'gatinhos-carrossel-indicador' + (i === 0 ? ' ativo' : '');
+  span.className = 'carrossel-indicador' + (i === 0 ? ' ativo' : '');
   span.dataset.index = i;
   span.onclick = () => irParaSlide(i, true);
   indicadoresContainer.appendChild(span);
 }
-const indicadores = indicadoresContainer.querySelectorAll('.gatinhos-carrossel-indicador');
+const indicadores = indicadoresContainer.querySelectorAll('.carrossel-indicador');
 
 // Função para mostrar o slide desejado
 function mostrarSlide(index) {

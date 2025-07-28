@@ -92,7 +92,7 @@ body {
 
 
 /* Carrossel */
-.gatinhos-carrossel-container {
+.carrossel-container {
   position: relative;
   max-width: 800px;
   margin: 40px auto;
@@ -102,13 +102,13 @@ body {
   background: #fff;
 }
 
-.gatinhos-carrossel-slides {
+.carrossel-slides {
   display: flex;
   transition: transform 0.8s cubic-bezier(.77,0,.18,1);
   width: 100%;
 }
 
-.gatinhos-carrossel-slide {
+.carrossel-slide {
   min-width: 100%;
   display: flex;
   justify-content: center;
@@ -116,7 +116,7 @@ body {
   background: #222;
 }
 
-.gatinhos-carrossel-slide img {
+.carrossel-slide img {
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -125,7 +125,7 @@ body {
   background: #eee;
 }
 
-.gatinhos-carrossel-seta {
+.carrossel-seta {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -144,17 +144,17 @@ body {
   justify-content: center;
 }
 
-.gatinhos-carrossel-seta-esquerda {
+.carrossel-seta-esquerda {
   left: 12px;
 }
-.gatinhos-carrossel-seta-direita {
+.carrossel-seta-direita {
   right: 12px;
 }
-.gatinhos-carrossel-seta:hover {
+.carrossel-seta:hover {
   background: #000c;
 }
 
-.gatinhos-carrossel-indicadores {
+.carrossel-indicadores {
   position: absolute;
   left: 0; right: 0; bottom: 18px;
   display: flex;
@@ -162,8 +162,7 @@ body {
   gap: 10px;
   z-index: 3;
 }
-
-.gatinhos-carrossel-indicador {
+.carrossel-indicador {
   width: 14px; height: 14px;
   border-radius: 50%;
   background: #eee;
@@ -172,20 +171,9 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
-
-.gatinhos-carrossel-indicador.ativo {
+.carrossel-indicador.ativo {
   background: #555;
   opacity: 1;
-}
-
-.carrossel-slides {
-  display: flex;
-  transition: transform 0.7s cubic-bezier(.77,0,.18,1);
-  width: 100%;
-}
-.carrossel-slide {
-  min-width: 100%;
-  box-sizing: border-box;
 }
 
 /* Footer */
