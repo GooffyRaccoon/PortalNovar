@@ -46,7 +46,8 @@ body {
     align-items: center;
 }
 
-/* cabelo */
+
+/* cabecarios */
 .cabelo {
     width: 100%;
     max-height: 60px;
@@ -89,56 +90,61 @@ body {
     flex-shrink: 0;
 }
 
+
 /* Carrossel */
 .carrossel-container {
-    width: 600px;
-    height: 350px;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
     position: relative;
-    margin: 30px auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
 }
+
 .carrossel-slides {
     display: flex;
-    width: 1800px; /* 3 imagens * 600px */
-    height: 100%;
+    height: 100vh;
+    width: 300vw; /* Exemplo: 3 slides (atualize se mudar o número de slides) */
     transition: transform 1s cubic-bezier(.77,0,.18,1);
 }
+
 .carrossel-slide {
-    min-width: 600px;
-    height: 350px;
+    min-width: 100vw;
+    height: 100vh;
 }
+
 .carrossel-slide img {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
-    border-radius: 15px;
+    display: block;
 }
+
 .carrossel-indicadores {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 16px;
+    bottom: 30px;
     text-align: center;
     z-index: 2;
 }
+
 .carrossel-indicador {
     display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin: 0 6px;
+    width: 16px;
+    height: 16px;
+    margin: 0 8px;
     background: #fff;
     border-radius: 50%;
-    opacity: 0.4;
+    opacity: 0.5;
     cursor: pointer;
-    border: 1px solid #333;
-    transition: opacity 0.3s;
+    border: 2px solid #333;
+    transition: opacity 0.3s, background 0.3s;
 }
+
 .carrossel-indicador.ativo {
     opacity: 1;
     background: #333;
 }
+
 
 /* Footer */
 footer {
