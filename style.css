@@ -109,7 +109,25 @@ body {
     transition: transform 1s cubic-bezier(.77,0,.18,1);
 }
 
-.carrossel-slide {
+.carrossel-slide1 {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    max-height: 500px; /* ajuste conforme desejado */
+    object-fit: cover;
+    display: block;
+}
+
+.carrossel-slide2 {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    max-height: 500px; /* ajuste conforme desejado */
+    object-fit: cover;
+    display: block;
+}
+
+.carrossel-slide3 {
     width: 100%;
     max-width: 1200px;
     height: auto;
