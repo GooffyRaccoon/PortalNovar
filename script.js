@@ -4,8 +4,14 @@ const totalSlides = indicadores.length;
 let currentIndex = 0;
 let timer = null;
 
+function getSlideWidth() {
+    // Largura máxima de 1200px ou largura da tela, o que for menor
+    return Math.min(window.innerWidth, 1200);
+}
+
 function mostrarSlide(index) {
-    slides.style.transform = `translateX(-${index * 100}vw)`;
+    const slideWidth = getSlideWidth();
+    slides.style.transform = `translateX(-${index * slideWidth}px)`;
     indicadores.forEach((ind, i) => {
         ind.classList.toggle('ativo', i === index);
     });
