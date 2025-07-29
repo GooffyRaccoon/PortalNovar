@@ -1,4 +1,4 @@
-/* Reset and base styles */
+
 *,
 *::before,
 *::after {
@@ -31,26 +31,20 @@
     --font-main: 'Inter', Arial, Helvetica, sans-serif;
 }
 
+/* Reset and base styles */
+
 body {
     font-family: var(--font-main);
-    background-color: var(--branco);
+    background-color: var(--baranco);
     color: var(--branco);
-    line-height: 1.5;
+    line-height: 2;
 }
-
-.tudin {
-    max-width: none;
-    padding: 0;
-    margin: 0;
-    justify-content: space-around;
-    align-items: center;
-}
-
 
 /* cabecario */
 .cabelo {
     width: 100%;
-    max-height: 60px;
+    height: 50px;
+    max-height: 50px;
     flex-shrink: 0;
     background-color: var(--mephiles);
     display: flex;
@@ -58,16 +52,12 @@ body {
     align-items: center;
 }
 
-.piolho {
-    max-width: 300px;
-}
-
 .loguinho {
     width: 30px;
-    height: 24px;
     flex-shrink: 0;
     aspect-ratio: 30/23;
     justify-self: center;
+    align-self: center;
 }
 
 .divisaocabelo {
