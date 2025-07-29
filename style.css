@@ -47,7 +47,7 @@ body {
 }
 
 
-/* cabecarios */
+/* cabecario */
 .cabelo {
     width: 100%;
     max-height: 60px;
@@ -91,8 +91,37 @@ body {
     flex-shrink: 0;
 }
 
+/* cabecario 2*/
+.cabecao {
+  width: 100%;
+  background: var(--brancao);
+  color: var(--brancao);
+  text-align: center;
+  padding: 20px;
+    box-shadow: 0 4px 16px #0002;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+}
 
-/* Carrossel */
+.cabecao a {
+  padding: 20px 30px;
+}
+
+.cabecao img.logo {
+    width: 150px;    
+}
+
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .cabecao {
+    padding: 40px 10px 24px 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
+
+/* carrossel */
 .carroselfilhadaputa{
     justify-self: center;
 }
