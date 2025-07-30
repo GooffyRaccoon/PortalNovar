@@ -122,9 +122,6 @@ body {
   }
 }
 
-
-
-
 /* carrossel */
 .carroselfilhadaputa{
     justify-self: center;
@@ -213,6 +210,88 @@ body {
   background: #555;
   opacity: 1;
 }
+
+
+.notrec {
+  width: 100%;
+  background: var(--brancao, #F8F8F8);
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 8px #0001;
+  border-radius: 16px;
+  margin-bottom: 32px;
+}
+
+.notrec h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--pretuncio, #313131);
+  margin-bottom: 24px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.bloconot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.notsup, .notinf {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px #0002;
+  padding: 16px;
+  min-width: 240px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notsup img, .notinf img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.notsup p, .notinf p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.sitenot {
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Footer */
 footer {
