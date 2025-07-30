@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 const slidesWrapper = document.getElementById('carrosselSlides');
 const slides = document.querySelectorAll('.carrossel-slide');
 const setaEsq = document.getElementById('carrosselSetaEsquerda');
@@ -8,6 +18,7 @@ let currentIndex = 0;
 let timer = null;
 
 // Criação dos indicadores (bolinhas)
+indicadoresContainer.innerHTML = '';
 for (let i = 0; i < slides.length; i++) {
   const span = document.createElement('span');
   span.className = 'carrossel-indicador' + (i === 0 ? ' ativo' : '');
@@ -46,7 +57,7 @@ function irParaSlide(index, manual = false) {
 
 // Inicia o carrossel automático
 function iniciarCarrossel() {
-  timer = setInterval(() => proximoSlide(true), 10000); // 10 segundos
+  timer = setInterval(() => proximoSlide(true), 7000); // 7 segundos
 }
 
 // Reseta o timer ao trocar manualmente
