@@ -48,6 +48,7 @@ body {
     flex-shrink: 0;
     background-color: var(--mephiles);
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
@@ -56,12 +57,19 @@ body {
     width: 30px;
     flex-shrink: 0;
     aspect-ratio: 30/23;
-    justify-self: center;
-    align-self: center;
+    flex-direction: row;
+}
+
+.piolho {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* centraliza também verticalmente */
+  gap: 4vw; /* opcional: espaço entre os elementos */
 }
 
 .divisaocabelo {
-    width: 0px;
+    width: 2px;
     height: 20px;
     flex-shrink: 0;
 }
@@ -86,7 +94,7 @@ body {
   width: 100%;
   background: var(--brancao);
   color: var(--brancao);
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center; /* centraliza horizontalmente */
