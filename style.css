@@ -86,11 +86,13 @@ body {
   width: 100%;
   background: var(--brancao);
   color: var(--brancao);
-  text-align: center;
   padding: 20px;
-    box-shadow: 0 4px 16px #0002;
-  border-bottom-left-radius: 32px;
-  border-bottom-right-radius: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente */
+  gap: 20px;               /* espaço entre os itens */
+  box-shadow: 0 4px 16px #0002;
 }
 
 .cabecao a {
@@ -110,6 +112,9 @@ body {
     border-bottom-right-radius: 20px;
   }
 }
+
+
+
 
 /* carrossel */
 .carroselfilhadaputa{
