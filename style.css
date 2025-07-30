@@ -96,7 +96,7 @@ body {
   color: var(--brancao);
   padding: 10px;
   display: flex;
-  flex-direction: row;
+  flex-direction: row; 
   justify-content: center; /* centraliza horizontalmente */
   align-items: center;     /* centraliza verticalmente */
   gap: 20px;               /* espaço entre os itens */
@@ -104,10 +104,11 @@ body {
 }
 
 .cabecao a {
-  padding: 20px 30px;
+  padding: 0px 30px;
+  text-align:center;
 }
 
-.cabecao img.logo {
+.cabecao logo {
     width: 150px;    
 }
 
