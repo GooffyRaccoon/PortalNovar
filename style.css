@@ -190,6 +190,7 @@ body {
 
 .carrossel-seta-esquerda {
   left: 20px;
+    z-index:5;
 }
 .carrossel-seta-direita {
   right: 20px;
