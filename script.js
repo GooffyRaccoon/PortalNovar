@@ -47,7 +47,7 @@ function irParaSlide(index, manual = false) {
 
 // Inicia o carrossel automático
 function iniciarCarrossel() {
-  timer = setInterval(() => proximoSlide(true), 5000); // 5 segundos
+  timer = setInterval(() => proximoSlide(true), 8000); // 8 segundos
 }
 
 // Reseta o timer ao trocar manualmente
