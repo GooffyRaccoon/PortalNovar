@@ -168,7 +168,6 @@ body {
   width: 100%;
   object-fit: cover;
   background: var(--carlos);
-  background: linear-gradient(90deg, #2B4886 8.17%, rgba(48, 95, 197, 0) 80.77%); 
 }
 
 .carrossel-seta {
@@ -217,7 +216,10 @@ body {
   border: 3px solid var(--branco);
 }
 
-.overlay{
+.gradiente-entre {
+  width: 100%;
+  height: 80px; /* ajuste conforme necessário */
+  background: linear-gradient(90deg, #2B4886 8.17%, rgba(48, 95, 197, 0) 80.77%); 
 }
 
 
