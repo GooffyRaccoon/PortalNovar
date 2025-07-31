@@ -1,13 +1,3 @@
-
-
-
-
-
-
-
-
-
-
 const slidesWrapper = document.getElementById('carrosselSlides');
 const slides = document.querySelectorAll('.carrossel-slide');
 const setaEsq = document.getElementById('carrosselSetaEsquerda');
@@ -57,7 +47,7 @@ function irParaSlide(index, manual = false) {
 
 // Inicia o carrossel automático
 function iniciarCarrossel() {
-  timer = setInterval(() => proximoSlide(true), 2000); // 2 segundos
+  timer = setInterval(() => proximoSlide(true), 5000); // 5 segundos
 }
 
 // Reseta o timer ao trocar manualmente
