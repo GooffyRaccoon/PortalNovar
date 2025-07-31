@@ -134,6 +134,7 @@ body {
   position: relative;
   width: 100%;
   display: flex;
+  flex-direction:column;
   height: 80vh; /* ou o tamanho desejado */
   justify-content: center; /* centraliza horizontalmente */
   align-items: center;     /* centraliza verticalmente */
@@ -192,7 +193,6 @@ body {
   left: 20px;
     z-index:5;
 }
-
 .carrossel-seta-direita {
   right: 20px;
 }
@@ -243,6 +243,14 @@ body {
   margin-top: -10vw;
   z-index: 2; /* garante que fica acima de outros elementos */
 } 
+
+.butt{
+  position: absolute;
+  margin-left: -1000px; 
+  margin-top: 300px;
+  z-index: 2; /* garante que fica acima de outros elementos */
+
+}
 
 
 
