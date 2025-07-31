@@ -216,6 +216,16 @@ body {
   border: 3px solid var(--branco);
 }
 
+.gradiente-entre {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; /* ou altura desejada do gradiente */
+  z-index: 2;
+  pointer-events: none; /* gradiente não interfere em cliques */
+  background: linear-gradient(90deg, #2B4886 8.17%, rgba(48, 95, 197, 0) 80.77%); 
+}
 
 
 
