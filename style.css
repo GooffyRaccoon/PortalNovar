@@ -31,13 +31,15 @@
 }
 
 /* Reset and base styles */
-
 body {
     font-family: var(--font-main);
     background-color: var(--baranco);
     color: var(--branco);
     line-height: 2;
 }
+
+
+
 
 /* cabecario */
 .cabelo {
@@ -88,6 +90,9 @@ body {
     flex-shrink: 0;
 }
 
+
+
+
 /* cabecario 2*/
 .cabecao {
   width: 100%;
@@ -120,6 +125,9 @@ body {
     border-bottom-right-radius: 20px;
   }
 }
+
+
+
 
 /* carrossel */
 .carroselfilhadaputa{
@@ -208,6 +216,18 @@ body {
 .carrossel-indicador.ativo {
   background: #555;
   opacity: 1;
+}
+
+
+
+/* texto carrosel */
+.txtcarr {
+  position: absolute; /* ou pode ser relative/fixed, dependendo do contexto */
+  left: 50vw;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* assegura que fique sobre a imagem */
+  
 }
 
 
