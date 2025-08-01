@@ -407,15 +407,67 @@ footer .footer-copy {
 
 
 @media (max-width: 600px) {
-    .cabecao {
-        display: flex;
-        flex-direction: column;
-        padding: 40px 10px 24px 10px;
-    }
-    footer .footer-content {
-        padding: 0 10px;
-    }
-    footer .footer-links {
-        gap: 15px;
-    }
+  body {
+    padding: 0;
+  }
+
+  /* cabecario 1 */
+  .cabelo {
+    height: 6.5vw;
+    flex-direction: column;
+    max-height: 8vw;
+    gap: 1vw;
+  }
+
+  .textcabelo {
+    font-size: 4vw;
+    text-align: center;
+    padding: 0.3em;
+  }
+  
+  .loguinho {
+  display: none !important;
+  }
+
+  .piolho {
+  display: none !important;
+  }
+
+  .divisaocabelo {
+  display: none !important;
+  }
+
+  .xcabelo {
+  display: none !important;
+  }
+
+  /* cabecario 2 */
+  .cabecao {
+    flex-direction: column;
+    padding: 2vw 1vw;          /* 8px 4px → 2vw 1vw */
+    min-width: 50%;
+  }
+
+  .logo {
+    max-width: 8vw;            /* 48px → 8vw */
+    margin: 0 0 1vw 0;         /* 8px → 1vw */
+    justify-content: center;
+  }
+
+  .topnavegation {
+    max-width: 100%;
+    font-size: 1.1em;          /* 1rem → 1.1em */
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin: 0;
+  }
+
+  .perfil {
+  display: none !important;
+}
+
+  /* carrossel */
+.carroselfilhadaputa * {
+  display: none !important;
 }
