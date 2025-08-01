@@ -355,17 +355,22 @@ footer {
 
 .canela{
   margin: 0 auto;
-  padding: 2vw;
+  padding: 1vw;
   display: flex;
   flex-direction:row;
   align-items: center;
   justify-content: space-between;
 }
 
-.texttornoxel {
+.redesocial {
   margin: 15px 0;
   display: flex;
   gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.logo{
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -381,14 +386,14 @@ footer .footer-links a:hover {
   color: #99aab5;
 }
 
-footer .footer-social {
+.redes {
   margin: 10px 0;
   display: flex;
   gap: 18px;
   justify-content: center;
 }
 
-footer .footer-social a {
+. {
   color: #fff;
   font-size: 22px;
   transition: color 0.2s;
