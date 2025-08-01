@@ -370,10 +370,7 @@ footer {
   justify-content: center;
 }
 
-.logo{
-  flex-wrap: wrap;
-  justify-content: center;
-}
+
 
 footer .footer-links a {
   color: #7289da;
