@@ -40,96 +40,82 @@ body {
   align-self: center;
 }
 
-
-
-
-/* cabecario */
+/* cabecario 1 */
 .cabelo {
-    width: 100%;
-    height: 4vw;
-    max-width: 100%;
-    max-height: 50px;
-    flex-shrink: 0;
-    background-color: var(--mephiles);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.loguinho {
-  width: 30px;
-  flex-shrink: 0;
+  width: 100%;
+  height: 4vw;
+  max-width: 100%;
+  max-height: 50px;
+  background-color: var(--mephiles);
+  display: flex;
   flex-direction: row;
-  display: flex;
-}
-
-.piolho {
-  width: 6vw;
-  display: flex;
-  justify-content: center;
-  align-items: center; /* centraliza também verticalmente */
-  gap: 4vw; /* opcional: espaço entre os elementos */
-}
-
-.divisaocabelo {
-    width: 0.3w;
-    height: 20px;
-    flex-shrink: 0;
-}
-
-.textcabelo {
-    color: var(--baranco, #B2B2B2);
-    text-align: center;
-    font-size: 1.5vw;
-    font-style: normal;
-    line-height: normal;
-    margin: 0;
-}
-
-.xcabelo {
-  width: 1vw;
   flex-shrink: 0;
+  justify-content: space-between;
+  align-items: center;
 }
 
-
-
+        .piolho {
+          width: 8vw;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          gap: 4vw;
+          margin: 0 5rem;
+        }
+        
+                .loguinho {
+                  size: 100%;
+                  display: flex;
+                }
+            
+                .divisaocabelo {
+                  size: 100%;
+                }
+    
+        .textcabelo {
+          color: var(--baranco);
+          text-align: center;
+          font-size: 120%;
+          font-style: normal;
+          line-height: normal;
+        }
+    
+        .xcabelo {
+          scale: 60%;
+          margin: 0 5rem;
+        }
 
 /* cabecario 2*/
 .cabecao {
   width: 100%;
   background: var(--brancao);
-  color: var(--brancao);
-  padding: 1vw;
+  color: var(--pretuncio);
   display: flex;
-  flex-direction: row; 
-  justify-content: center; /* centraliza horizontalmente */
-  align-items: center;     /* centraliza verticalmente */
-  gap: 1vw;               /* espaço entre os itens */
-  box-shadow: 0 4px 16px #0002;
-}
-
-.topnavegation {
-  padding: 0px 1vw;
-  text-align: center;
-  font-size: 1.5vw;
-  flex-shrink: 0;
   flex-direction: row;
-  display: flex;  
+  padding: 0.75vw;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  box-shadow: 0 4px 16px var(--baranco);
 }
 
-.cabecao img{
-  : 0px 4vw 0px 0px;
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-  .cabecao {
-    padding: 40px 10px 24px 10px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
-}
+        .logo{
+          scale: 110%;
+          padding: 0 3vw 0 1vw;
+        }
+        
+        .topnavegation {
+          font-size: 1.5vw;
+          color: inherit;
+          text-decoration: none;
+          display: flex; 
+          flex-shrink: 0;
+          flex-direction: row;
+          text-align: center;
+          padding: 0 1vw;
+          
+        }
 
 
 
@@ -419,11 +405,17 @@ footer .footer-copy {
   margin-top: 15px;
 }
 
+
 @media (max-width: 600px) {
-  footer .footer-content {
-    padding: 0 10px;
-  }
-  footer .footer-links {
-    gap: 15px;
-  }
+    .cabecao {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 10px 24px 10px;
+    }
+    footer .footer-content {
+        padding: 0 10px;
+    }
+    footer .footer-links {
+        gap: 15px;
+    }
 }
