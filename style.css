@@ -347,27 +347,22 @@ body {
 footer {
   background-color: var(--brancao);
   color: var(--bler);
-  padding: 30px 0;
+  padding: 1vw;
   text-align: center;
-  width: 100%;
-  max-width: 90vw;
+  width: 80%;
+  justify-self: center;
 }
 
 .canela{
-  max-width: 1200px;
   margin: 0 auto;
   padding: 2vw;
   display: flex;
   flex-direction:row;
   align-items: center;
-  justify-content: space-around;
-}
+  justify-content: space-between;
 }
 
-footer .footer-content {
-  
-
-footer .footer-links {
+.texttornoxel {
   margin: 15px 0;
   display: flex;
   gap: 25px;
