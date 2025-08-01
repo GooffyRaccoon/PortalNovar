@@ -91,18 +91,19 @@ body {
   color: var(--pretuncio);
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 0.75vw;
+  padding: 0.5vw 3vw;
   gap: 1vw;
-  box-shadow: 0 4px 16px #999;
+  box-shadow: 0 0.5vw 16px #999;
   position: relative;
   z-index: 10; 
 }
 
         .logo{
-          scale: 1.1;
-          margin: 0 5vw 0 0;
+          max-width: 5vw;
+          justify-content: center;
+          margin: 0 2rem 0 0;
         }
         
         .topnavegation {
@@ -116,12 +117,11 @@ body {
           flex-shrink: 0;
           flex-direction: row;
           text-align: center;
-          padding: 0 1vw;
         }
 
         .perfil{
-          scale: 0.9;
-          display: flex;
+          scale: 1;
+          display: flex; 
         }
 
 /* carrossel */
