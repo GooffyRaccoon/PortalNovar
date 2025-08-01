@@ -47,7 +47,7 @@ body {
 .cabelo {
     width: 100%;
     height: 4vw;
-  max-width: 100%;
+    max-width: 100%;
     max-height: 50px;
     flex-shrink: 0;
     background-color: var(--mephiles);
@@ -355,32 +355,17 @@ footer {
 
 .canela{
   margin: 0 auto;
-  padding: 1vw;
+  padding: 0 3vw;
   display: flex;
   flex-direction:row;
   align-items: center;
   justify-content: space-between;
 }
 
-.redesocial {
-  margin: 15px 0;
+.logo{
+  flex-shrink: 0;
+  flex-direction: row;
   display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-
-
-footer .footer-links a {
-  color: #7289da;
-  text-decoration: none;
-  transition: color 0.2s;
-  font-weight: 500;
-}
-
-footer .footer-links a:hover {
-  color: #99aab5;
 }
 
 .redes {
@@ -390,6 +375,34 @@ footer .footer-links a:hover {
   justify-content: center;
 }
 
+.redesocial{
+  margin: 15px 0;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tornozelo{
+  padding: 1vw;
+}
+
+
+
+.texttornoxelo {
+  font-size: 1.75vw;
+}
+
+.text2tornoxelo{
+  font-size: 0.75vw;  
+}
+
+  transition: color 0.2s;
+  font-weight: 500;
+
+
+
+  
 . {
   color: #fff;
   font-size: 22px;
