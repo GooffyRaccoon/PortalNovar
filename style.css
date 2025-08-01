@@ -58,9 +58,9 @@ body {
 }
 
 .loguinho {
-    width: 30px;
-    flex-shrink: 0;
-    flex-direction: row;
+  width: 30px;
+  flex-shrink: 0;
+  flex-direction: row;
   display: flex;
 }
 
@@ -109,16 +109,18 @@ body {
   box-shadow: 0 4px 16px #0002;
 }
 
-.cabecao a {
+.topnavegation {
   padding: 0px 1vw;
   text-align: center;
   font-size: 1.5vw;
+  flex-shrink: 0;
+  flex-direction: row;
+  display: flex;  
 }
 
-.cabecao logo {
-    width: 150px;    
+.cabecao img{
+  : 0px 4vw 0px 0px;
 }
-
 
 /* Responsividade */
 @media (max-width: 600px) {
