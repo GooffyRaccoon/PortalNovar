@@ -114,7 +114,7 @@ body {
                 }
         
         .topnavegation {
-          s
+          max-width: 15rem;
           font-size: 1.5vw;
           color: inherit;
           text-decoration: none;
