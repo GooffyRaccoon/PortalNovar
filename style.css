@@ -306,29 +306,6 @@ body {
 
 .sitenot {}
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Footer */
 footer {
   color: var(--bler);
@@ -399,31 +376,29 @@ footer {
           display: flex;
           flex-direction: column;
           align-items: space-around;
-          padding: 0.7vw 2vw 1vw 2vw;
+          padding: 0vw 2vw 1vw 2vw;
           box-sizing: border-box;
         }
         
-        .torntxt {
-          font-size: 1.7vw;
-          text-align: center;
-          letter-spacing: 0.2px;
-          margin: 1vw 0 0.6vw 0;
-          padding: 0 0 3vw;
-          border-bottom: 2px solid var(--pretuncio);
-        }
+                .torntxt {
+                  font-size: 1.7vw;
+                  text-align: center;
+                  letter-spacing: 0.2px;
+                  margin: 0 0 0.6vw 0;
+                  padding: 0 0 2vw;
+                  border-bottom: 2px solid var(--carlito);
+                }
         
-        .divtornozelo {
-          width: 98%;        }
-        
-        .text2tornoxelo {
-          font-size: 0.95vw;
-          text-align: left;
-          margin: 0.5vw 0 0 0;
-          font-family: inherit;
-        }
+                .torntxt2 {
+                  font-size: 0.95vw;
+                  align-self: center;
+                  letter-spacing: 0.3px;
+                  margin: 0.5vw 0 0 0;
+                }
 
 
-media (max-width: 600px) {
+  /* celulares */
+@media (max-width: 600px) {
   body {
     padding: 0;
   }
