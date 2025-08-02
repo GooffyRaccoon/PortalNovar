@@ -331,15 +331,24 @@ body {
 
 /* Footer */
 footer {
-  background-color: var(--brancao);
   color: var(--bler);
-  padding: 1vw;
-  text-align: center;
-  width: 80%;
-  justify-self: center;
+  background: linear-gradient(180deg, #FFFFFF 0%, #0A3B6C 100%);
+  padding: 1.5vw 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.canela{
+.canela {
+  background: var(--brancao);
+  width: 98%;
+  height: 8vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1vw 2vw 0vw;
+  
   margin: 0 auto;
   padding: 0 3vw;
   display: flex;
@@ -348,65 +357,82 @@ footer {
   justify-content: space-between;
 }
 
-.logo{
-  flex-shrink: 0;
-  flex-direction: row;
+.gmail {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.5vw;
+  font-family: inherit;
+  text-decoration: none;
+  flex: 1;
+  text-align: center;
+}
+
+.canela .logo {
+  flex: 1;
   display: flex;
+  justify-content: center;
+}
+.canela .logo img {
+  max-height: 52px;
+  max-width: 120px;
 }
 
 .redes {
-  margin: 10px 0;
+  flex: 1;
   display: flex;
-  gap: 18px;
-  justify-content: center;
+  justify-content: flex-end;
+  gap: 1vw;
 }
 
-.redesocial{
-  margin: 15px 0;
+.redesocial img {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+  filter: grayscale(0%);
+  transition: filter 0.2s;
+}
+.redesocial img:hover {
+  filter: brightness(1.2);
+}
+
+.tornozelo {
+  background: var(--brancao, #eee);
+  width: 98%;
+  border-radius: 0 0 4px 4px;
   display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.7vw 2vw 1vw 2vw;
+  box-sizing: border-box;
+  border-top: 1px solid #ccc;
 }
-
-.tornozelo{
-  padding: 1vw;
-}
-
-
 
 .texttornoxelo {
-  font-size: 1.75vw;
+  color: #3360a9;
+  font-family: inherit;
+  font-size: 1.45vw;
+  font-weight: 400;
+  text-align: center;
+  margin: 1vw 0 0.6vw 0;
 }
 
-.text2tornoxelo{
-  font-size: 0.75vw;  
+.divtornozelo {
+  width: 98%;
+  height: 2px;
+  background: #ccc;
+  margin: 0.7vw 0;
 }
 
-  transition: color 0.2s;
-  font-weight: 500;
-
-
-
-  
-. {
-  color: #fff;
-  font-size: 22px;
-  transition: color 0.2s;
-}
-
-footer .footer-social a:hover {
-  color: #7289da;
-}
-
-footer .footer-copy {
-  font-size: 15px;
-  color: #99aab5;
-  margin-top: 15px;
+.text2tornoxelo {
+  color: #666;
+  font-size: 0.95vw;
+  text-align: left;
+  margin: 0.5vw 0 0 0;
+  font-family: inherit;
 }
 
 
-@media (max-width: 600px) {
+media (max-width: 600px) {
   body {
     padding: 0;
   }
