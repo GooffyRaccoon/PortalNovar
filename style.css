@@ -339,61 +339,51 @@ footer {
   align-items: center;
 }
 
-.canela {
-  background: var(--brancao);
-  width: 98%;
-  height: 8vw;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  padding: 1vw 2vw 0vw;
-  
-  margin: 0 auto;
-  padding: 0 3vw;
-  display: flex;
-  flex-direction:row;
-  align-items: center;
-  justify-content: space-between;
-}
+        .canela {
+          background: var(--brancao);
+          width: 98%;
+          height: 8vw;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-around;
+          padding: 1vw 2vw 0vw;
+          margin: 0 auto;
+        }
 
-.gmail {
-  color: inherit;
-  text-decoration: none;
-  font-size: 1.5vw;
-  font-family: inherit;
-  text-decoration: none;
-  flex: 1;
-  text-align: center;
-}
-
-.canela .logo {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-.canela .logo img {
-  max-height: 52px;
-  max-width: 120px;
-}
-
-.redes {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  gap: 1vw;
-}
-
-.redesocial img {
-  height: 32px;
-  width: 32px;
-  object-fit: contain;
-  filter: grayscale(0%);
-  transition: filter 0.2s;
-}
-.redesocial img:hover {
-  filter: brightness(1.2);
-}
+                .gmail {
+                  color: inherit;
+                  text-decoration: none;
+                  font-size: 1.5vw;
+                  text-align: left;
+                  flex: 1;
+                  padding: 0 0 0 2vw;
+                }
+                
+                .canlogo {
+                  flex: 1;
+                  justify-content: center;               
+                  max-height: 52px;
+                  max-width: 120px;
+                }
+                
+                .redes {
+                  flex: 1;
+                  display: flex;
+                  justify-content: flex-end;
+                  gap: 1vw;
+                }
+                
+                .redesocial img {
+                  height: 32px;
+                  width: 32px;
+                  object-fit: contain;
+                  filter: grayscale(0%);
+                  transition: filter 0.2s;
+                }
+                .redesocial img:hover {
+                  filter: brightness(1.2);
+                }
 
 .tornozelo {
   background: var(--brancao, #eee);
