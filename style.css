@@ -471,3 +471,13 @@ footer .footer-copy {
 .carroselfilhadaputa * {
   display: none !important;
 }
+
+/* noticias recentes */
+.notrec * {
+  display: none !important;
+}
+
+/* Footer */
+footer * {
+  display: none !important;
+}
