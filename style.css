@@ -393,38 +393,29 @@ footer {
                                   filter: brightness(1.2);
                                 }
 
-       .torntxt {
-          display: flex;
-          flex-direction:column;
-          font-size: 1.45vw;
-          font-weight: 400;
-          text-align: center;
-          margin: 1vw 0 0.6vw 0;
-        }
-
         .tornozelo {
-          background: var(--brancao, #eee);
+          background: var(--brancao);
           width: 98%;
-          border-radius: 0 0 4px 4px;
           display: flex;
           flex-direction: column;
-          align-items: center;
+          align-items: space-around;
           padding: 0.7vw 2vw 1vw 2vw;
           box-sizing: border-box;
-          border-top: 1px solid #ccc;
         }
         
-       
+        .torntxt {
+          font-size: 1.7vw;
+          text-align: center;
+          letter-spacing: 0.2px;
+          margin: 1vw 0 0.6vw 0;
+          padding: 0 0 3vw;
+          border-bottom: 2px solid var(--pretuncio);
+        }
         
         .divtornozelo {
-          width: 98%;
-          height: 2px;
-          background: #ccc;
-          margin: 0.7vw 0;
-        }
+          width: 98%;        }
         
         .text2tornoxelo {
-          color: #666;
           font-size: 0.95vw;
           text-align: left;
           margin: 0.5vw 0 0 0;
