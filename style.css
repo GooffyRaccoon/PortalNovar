@@ -347,7 +347,7 @@ footer {
           flex-direction: row;
           align-items: center;
           justify-content: space-around;
-          padding: 1vw 2vw 0vw;
+          padding: 1vw 2vw;
           margin: 0 auto;
         }
 
@@ -356,70 +356,78 @@ footer {
                   text-decoration: none;
                   font-size: 1.5vw;
                   text-align: left;
+                  display: flex;
                   flex: 1;
                   padding: 0 0 0 2vw;
                 }
                 
                 .canlogo {
-                  flex: 1;
-                  justify-content: center;               
-                  max-height: 52px;
-                  max-width: 120px;
-                }
-                
-                .redes {
-                  flex: 1;
+                  justify-content: center;
                   display: flex;
-                  justify-content: flex-end;
-                  gap: 1vw;
+                  flex: 1;
+                  scale: 0.6;
                 }
-                
-                .redesocial img {
-                  height: 32px;
-                  width: 32px;
-                  object-fit: contain;
-                  filter: grayscale(0%);
-                  transition: filter 0.2s;
+        
+                        .canela .canlogo img{
+                          flex: -1;
+                          margin: 1vw 2vw;
+                        }
+                        
+                .redes {
+                  display: flex;
+                  flex: 1;
+                  justify-content: right;
+                  gap: 0;
                 }
-                .redesocial img:hover {
-                  filter: brightness(1.2);
-                }
 
-.tornozelo {
-  background: var(--brancao, #eee);
-  width: 98%;
-  border-radius: 0 0 4px 4px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0.7vw 2vw 1vw 2vw;
-  box-sizing: border-box;
-  border-top: 1px solid #ccc;
-}
+                        .redesocial{
+                          justify-content: center;
+                          display: flex;
+                          scale: 0.7;
+                          object-fit: contain;
+                          filter: grayscale(0%);
+                          transition: filter 0.2s;
+                        }
 
-.texttornoxelo {
-  color: #3360a9;
-  font-family: inherit;
-  font-size: 1.45vw;
-  font-weight: 400;
-  text-align: center;
-  margin: 1vw 0 0.6vw 0;
-}
+                                .redesocial img:hover {
+                                  filter: brightness(1.2);
+                                }
 
-.divtornozelo {
-  width: 98%;
-  height: 2px;
-  background: #ccc;
-  margin: 0.7vw 0;
-}
-
-.text2tornoxelo {
-  color: #666;
-  font-size: 0.95vw;
-  text-align: left;
-  margin: 0.5vw 0 0 0;
-  font-family: inherit;
-}
+        .tornozelo {
+          background: var(--brancao, #eee);
+          width: 98%;
+          border-radius: 0 0 4px 4px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 0.7vw 2vw 1vw 2vw;
+          box-sizing: border-box;
+          border-top: 1px solid #ccc;
+        }
+        
+        .texttornoxelo {
+          color: #3360a9;
+          font-family: inherit;
+          font-size: 1.45vw;
+          font-weight: 400;
+          text-align: center;
+          margin: 1vw 0 0.6vw 0;
+        }
+        
+        .divtornozelo {
+          width: 98%;
+          height: 2px;
+          background: #ccc;
+          margin: 0.7vw 0;
+        }
+        
+        .text2tornoxelo {
+          color: #666;
+          font-size: 0.95vw;
+          text-align: left;
+          margin: 0.5vw 0 0 0;
+          font-family: inherit;
+        }
 
 
 media (max-width: 600px) {
