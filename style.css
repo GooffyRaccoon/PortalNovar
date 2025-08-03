@@ -143,6 +143,8 @@ body {
                   margin: 0 3vw 0 2vw;
                 }
 
+  
+
 /* carrossel */
 .carroselfilhadaputa{
   width: 100%;
@@ -232,9 +234,9 @@ body {
           position: absolute;
           left: 0;
           top: 20%;
-          width: 66.666%;      /* ocupa 2/3 da largura do slide */
+          width: 40%;
           height: 60.666%;
-          max-width: none;     /* remove limite fixo */
+          max-width: none;
           min-width: 320px;
           color: var(--branco);
           line-height: 1.3;
@@ -243,8 +245,8 @@ body {
           justify-content: flex-start;
           margin: 0 0 0 8%;
           z-index: 2;
-          font-size: 1.5rem;
-          letter-spacing: 0.7px;
+          font-size: 130%;
+          letter-spacing: 0.3px;
           padding: 0 0 0 2vw;
           text-align: left;
           word-break: break-word;
@@ -260,7 +262,8 @@ body {
         .butt{
           background: var(--baranco);
           color: var(--mephiles);
-          max-width: 20%;
+          height: auto;
+          width: 30%;
           line-height: 2vw;
           font-size: 80%;
           font-weight: 500;
@@ -269,8 +272,8 @@ body {
           justify-content: space-around;
           display: flex;
           flex-direction: row;
-          margin: 2% 10vw;
-          padding: 0.3rem;
+          margin: 2% 15%;
+          padding: 0.2rem;
           gap: 0.2rem;          
         } 
                                 
