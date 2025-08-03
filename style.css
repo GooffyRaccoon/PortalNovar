@@ -320,9 +320,7 @@ body {
 :root {
   --cinza-fundo: #e6e6e6;
   --cinza-card: #f7f7f7;
-  --azul-titulo: #234e7b;
   --cinza-box: #bcbcbc;
-  --texto: #222;
   --link: #3566b8;
 }
 
@@ -340,7 +338,7 @@ body {
 
 .notrec h1 {
   text-align: center;
-  color: var(--azul-titulo);
+  color: var(--mephiles);
   font-size: 2.5rem;
   font-weight: 500;
   margin-bottom: 2vw;
@@ -387,7 +385,7 @@ body {
 
 .notcard .titulo {
   font-size: 1.08rem;
-  color: var(--texto);
+  color: var(--pretuncio);
   margin: 1vw 0 0.5vw 0;
   font-weight: 400;
 }
