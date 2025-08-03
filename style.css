@@ -284,23 +284,22 @@ body {
           gap: 0.2rem;
           cursor: pointer;
           transition: background 0.2s;
-        }                 
+        }
+
+        .buttset {
+          display: flex;
+          transform: scaleX(0.7) scaleY(1.7);
+          color: var(--mephiles);
+          transition: filter 0.2s;
+        }
                 .butt:hover {
                   background: var(--verdura);
                   color: var(--branco);
                 }
-
-        .buttset {
-          scale: 70%;
-          filter: brightness(1.08) drop-shadow(2px 2px 2px var(--bler));
-          color: var(--petroleo);
-          transition: filter 0.3s;
-        }
+                .butt:hover .buttset {
+                  color: var(--branco);
+                }
         
-        .buttset:hover {
-          filter: brightness(100%);
-        }
-
 
 .gradiente-entre {
   position: absolute;
