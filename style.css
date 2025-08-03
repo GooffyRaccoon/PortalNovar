@@ -243,33 +243,45 @@ body {
 /* texto carrosel */
 .txtcarr {
   color: var(--branco);
+  top: 60%;
+  transform: translateY(-60%);
+  width: 800px;
+  line-height: 1.3;
+  display: flex;
+  flex-direction: column;
   position: absolute;
+  align-items: left;
   margin-left: -20vw; 
   margin-top: -10vw;
   z-index: 2;
-} 
+  font-size: 2rem;
+  letter-spacing: 0.7px;
+}
 
         .txtcarr h1 {
-          position: absolute;
-          font-size: 2.4rem;
-          width: 25rem;
-          line-height: 1.3;
-          letter-spacing: 0.7px;
+          font-weight: 200;
           margin-bottom: 0.5rem;
-          font-weight: 40;
         }
 
         .txtcarr h2 {
-          position: absolute;
-          font-size: 2.4rem;
-          width: 25rem;
-          line-height: 1.3;
-          letter-spacing: 0.7px;
-          margin-bottom: 0.5rem;
-          font-weight: 40;
+          font-weight: 200;
         }
                 
         .butt{
+          color: var(--baranco);
+          top: 80%;
+          width: 800px;
+          line-height: 1.3;
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          align-items: left;
+          margin-left: -20vw; 
+          margin-top: -10vw;
+          z-index: 2;
+          font-size: 2rem;
+          letter-spacing: 0.7px;
+        }
           position: absolute;
           margin-left: -50vw; 
           margin-top: 18vw;
