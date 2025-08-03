@@ -687,79 +687,242 @@ footer {
                 }
 
 
-  /* celulares */
+/* celulares */
 @media (max-width: 600px) {
   body {
     padding: 0;
+    font-size: 1rem;
+    background-color: var(--baranco);
   }
 
   /* cabecario 1 */
   .cabelo {
-    height: 6.5vw;
+    height: 10vw;
     flex-direction: column;
-    max-height: 8vw;
-    gap: 1vw;
+    max-height: none;
+    gap: 2vw;
+    padding: 1vw 0;
   }
 
   .textcabelo {
-    font-size: 4vw;
+    font-size: 5vw;
     text-align: center;
-    padding: 0.3em;
-  }
-  
-  .loguinho {
-  display: none !important;
+    padding: 0.5em 0;
+    line-height: 1.2;
   }
 
-  .piolho {
-  display: none !important;
-  }
-
-  .divisaocabelo {
-  display: none !important;
-  }
-
-  .xcabelo {
-  display: none !important;
+  .loguinho, .piolho, .divisaocabelo, .xcabelo {
+    display: none !important;
   }
 
   /* cabecario 2 */
   .cabecao {
     flex-direction: column;
-    padding: 2vw 1vw;
-    min-width: 50%;
+    padding: 4vw 2vw;
+    gap: 2vw;
+    min-width: 100%;
+    font-size: 1rem;
+    box-shadow: none;
   }
 
   .logo {
-    max-width: 8vw;
-    margin: 0 0 1vw 0;
+    max-width: 18vw;
+    margin: 0 0 2vw 0;
     justify-content: center;
   }
 
+  .cabecao .logo img {
+    margin: 0;
+    width: 16vw;
+    height: auto;
+  }
+
   .topnavegation {
-    max-width: 100%;
-    font-size: 1.1em;          /* 1rem → 1.1em */
+    font-size: 1.1em;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+    gap: 2vw;
+    padding: 0;
     margin: 0;
+    width: 100%;
   }
 
   .perfil {
-  display: none !important;
-}
+    display: none !important;
+  }
 
   /* carrossel */
-.carroselfilhadaputa * {
-  display: none !important;
-}
+  .carroselfilhadaputa,
+  .carrossel-container,
+  .carrossel-slides,
+  .carrossel-slide,
+  .carrossel-slide img,
+  .carrossel-seta,
+  .carrossel-seta-esquerda,
+  .carrossel-seta-direita,
+  .carrossel-indicadores,
+  .carrossel-indicador,
+  .gradiente-entre,
+  .txtcarr,
+  .butt, .buttset {
+    display: none !important;
+  }
 
-/* noticias recentes */
-.notrec * {
-  display: none !important;
-}
+  /* notícias recentes */
+  .notrec,
+  .notrec h1,
+  .bloconot,
+  .notcard,
+  .notcard .site,
+  .notcard .not img,
+  .notcard .titulo,
+  .notcard .sitenot,
+  .notinf,
+  .notinf .infobox,
+  .notinf p {
+    display: none !important;
+  }
 
-/* Footer */
-footer * {
-  display: none !important;
+  /* appinfo */
+  .appinfo {
+    padding: 4vw 0 2vw 0;
+    background: var(--card-bg);
+    width: 100vw;
+  }
+
+  .app-title {
+    font-size: 1.3rem;
+    margin-bottom: 4vw;
+    text-align: center;
+    padding: 0 3vw;
+  }
+
+  .app-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 4vw;
+    width: 98vw;
+    margin: 0 auto;
+  }
+
+  .app-imgbox img {
+    width: 40vw;
+    min-width: 70px;
+    max-width: 180px;
+    margin-bottom: 3vw;
+  }
+
+  .app-desc {
+    font-size: 1rem;
+    max-width: 95vw;
+    min-width: 0;
+    text-align: center;
+    margin-bottom: 3vw;
+    padding: 0 5vw;
+  }
+
+  .app-btn {
+    font-size: 1rem;
+    padding: 0.8em 2em;
+    margin: 2vw auto 0 auto;
+    display: block;
+    width: 80vw;
+    max-width: 240px;
+    text-align: center;
+  }
+
+  /* ideiainfo */
+  .ideiainfo {
+    padding: 4vw 0 2vw 0;
+    background: var(--app-bg);
+    width: 100vw;
+  }
+
+  .ideia-title {
+    font-size: 1.1rem;
+    margin-bottom: 4vw;
+    text-align: center;
+    padding: 0 3vw;
+  }
+
+  .ideia-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 4vw;
+    width: 98vw;
+    margin: 0 auto;
+  }
+
+  .ideia-desc {
+    font-size: 1rem;
+    max-width: 95vw;
+    min-width: 0;
+    text-align: center;
+    margin-bottom: 3vw;
+    padding: 0 5vw;
+  }
+
+  .ideia-btn {
+    font-size: 1rem;
+    padding: 0.8em 2em;
+    margin: 2vw auto 0 auto;
+    display: block;
+    width: 80vw;
+    max-width: 240px;
+    text-align: center;
+  }
+
+  /* Footer */
+  footer {
+    padding: 3vw 1vw;
+    font-size: 0.95rem;
+  }
+
+  .canela {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 2vw 2vw;
+    gap: 2vw;
+  }
+
+  .gmail, .canlogo, .redes {
+    font-size: 1em;
+    padding: 2vw 0;
+    flex: unset;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .canlogo img {
+    width: 18vw;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .redesocial img {
+    width: 9vw;
+    height: auto;
+    margin: 0 1vw;
+  }
+
+  .tornozelo {
+    padding: 2vw 2vw 2vw 2vw;
+    width: 100%;
+    font-size: 1em;
+  }
+
+  .torntxt {
+    font-size: 1.2em;
+    border-bottom: 1px solid var(--carlito);
+    padding-bottom: 2vw;
+    margin-bottom: 2vw;
+  }
+
+  .torntxt2 {
+    font-size: 1em;
+    margin-top: 1vw;
+  }
 }
