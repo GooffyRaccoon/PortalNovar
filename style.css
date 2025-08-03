@@ -207,6 +207,27 @@ body {
           right: 1vw;
         }
 
+        .carrossel-indicadores {
+                  position: absolute;
+                  left: 10vw;
+                  bottom: 90px;
+                  display: flex;
+                  gap: 15px;
+                  z-index: 2;
+                }
+                .carrossel-indicador {
+                  width: 14px; height: 14px;
+                  border-radius: 50%;
+                  background: var(--branco);
+                  border: 3px solid var(--mephiles);
+                  cursor: pointer;
+                  transition: 0.3s;
+                }
+                
+                        .carrossel-indicador.ativo {
+                          background: var(--mephiles);
+                          border: 3px solid var(--branco);
+                        }
 
 
 .gradiente-entre {
@@ -297,27 +318,7 @@ body {
                           background: #e6eefd;
                         }
 
-                .carrossel-indicadores {
-                  position: absolute;
-                  left: 10vw;
-                  bottom: 90px;
-                  display: flex;
-                  gap: 15px;
-                  z-index: 9;
-                }
-                .carrossel-indicador {
-                  width: 14px; height: 14px;
-                  border-radius: 50%;
-                  background: var(--branco);
-                  border: 3px solid var(--mephiles);
-                  cursor: pointer;
-                  transition: 0.3s;
-                }
                 
-                        .carrossel-indicador.ativo {
-                          background: var(--mephiles);
-                          border: 3px solid var(--branco);
-                        }
 
 
 
