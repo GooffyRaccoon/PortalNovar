@@ -332,96 +332,96 @@ body {
           letter-spacing: 1px;
         }
 
-.bloconot {
-  display: flex;
-  justify-content: center;
-  gap: 2vw;
-  flex-wrap: wrap;
-  width: 90vw;
-  margin: 0 auto;
-}
+        .bloconot {
+          display: flex;
+          justify-content: center;
+          gap: 2vw;
+          flex-wrap: wrap;
+          width: 90vw;
+          margin: 0 auto;
+        }
 
-.notcard {
-  background: var(--branco);
-  border: 1px solid var(--baranco);
-  box-shadow: 0 2px 4px rgba(34,80,157,0.08);
-  width: 27vw;
-  min-width: 250px;
-  max-width: 350px;
-  padding: 1vw;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 2vw;
-}
+                .cardnot {
+                  background: var(--branco);
+                  border: 1px solid var(--baranco);
+                  box-shadow: 0 2px 4px rgba(34,80,157,0.08);
+                  width: 27vw;
+                  min-width: 250px;
+                  max-width: 350px;
+                  padding: 1vw;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  margin-bottom: 2vw;
+                }
 
-.notcard .site {
-  font-size: 1rem;
-  color: var(--carlos);
-  font-weight: bold;
-  margin-bottom: 0.5vw;
-  font-family: var(--font-inter);
-}
+                        .cardnot .titulo {
+                          font-size: 1rem;
+                          color: var(--carlos);
+                          font-weight: bold;
+                          margin-bottom: 0.5vw;
+                          font-family: var(--font-inter);
+                        }
 
-.notcard .not img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: contain;
-  background: white;
-  border: 1px solid var(--baranco);
-}
+                        .cardnot .noticia img {
+                          width: 100%;
+                          max-height: 200px;
+                          object-fit: contain;
+                          background: white;
+                          border: 1px solid var(--baranco);
+                        }
 
-.notcard .titulo {
-  font-size: 1.08rem;
-  color: var(--pretuncio);
-  margin: 1vw 0 0.5vw 0;
-  font-weight: 400;
-  font-family: var(--font-abeezee);
-}
+                        .cardnot .subtitulo {
+                          font-size: 1.08rem;
+                          color: var(--pretuncio);
+                          margin: 1vw 0 0.5vw 0;
+                          font-weight: 400;
+                          font-family: var(--font-abeezee);
+                        }
 
-.notcard .sitenot {
-  color: var(--mephiles);
-  font-size: 0.98rem;
-  margin-bottom: 1vw;
-  text-decoration: none;
-  display: inline-block;
-  transition: color 0.2s;
-  font-family: var(--font-roboto-cond);
-}
+                        .cardnot .cliquenot {
+                          color: var(--mephiles);
+                          font-size: 0.98rem;
+                          margin-bottom: 1vw;
+                          text-decoration: none;
+                          display: inline-block;
+                          transition: color 0.2s;
+                          font-family: var(--font-roboto-cond);
+                        }
 
-.notcard .sitenot:hover {
-  color: var(--sonic);
-  text-decoration: underline;
-}
+                                .cardnot .cliquenot:hover {
+                                  color: var(--sonic);
+                                  text-decoration: underline;
+                                }
 
-.notinf {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5vw;
-  margin-top: 1vw;
-  border-top: 1px solid var(--baranco);
-  padding-top: 0.8vw;
-}
+                .not2 {
+                  width: 100%;
+                  display: flex;
+                  align-items: flex-start;
+                  gap: 0.5vw;
+                  margin-top: 1vw;
+                  border-top: 1px solid var(--baranco);
+                  padding-top: 0.8vw;
+                }
 
-.notinf .infobox {
-  width: 2vw;
-  height: 2vw;
-  min-width: 32px;
-  min-height: 32px;
-  background: var(--baranco);
-  margin-right: 0.5vw;
-  border-radius: 4px;
-}
+                        .not2 .infonot {
+                          width: 2vw;
+                          height: 2vw;
+                          min-width: 32px;
+                          min-height: 32px;
+                          background: var(--baranco);
+                          margin-right: 0.5vw;
+                          border-radius: 4px;
+                        }
 
-.notinf p {
-  font-family: var(--font-roboto);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.97rem;
-  color: var(--carlito);
-  margin: 0;
-}
+                        .not2 p {
+                          font-family: var(--font-roboto);
+                          font-style: normal;
+                          font-weight: 400;
+                          font-size: 0.97rem;
+                          color: var(--carlito);
+                          margin: 0;
+                        }
 
 :root {
   --app-bg: #e6e6e6;
