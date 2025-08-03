@@ -259,11 +259,13 @@ body {
 }
 
         .txtcarr h1 {
+          margin: 2vw;
           font-weight: 200;
           margin-bottom: 0.5rem;
         }
 
         .txtcarr h2 {
+          margin: 0 2vw;
           font-weight: 200;
         }
                 
