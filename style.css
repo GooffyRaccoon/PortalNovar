@@ -7,32 +7,35 @@
 }
 
 :root {
-    --pretuncio: #313131;
-    --carlos: #848484;
-    --carlito: #999999;
-    --baranco: #B2B2B2;
-    --branco: #CCCCCC;
-    --brancao: #E5E5E5;
-    --bler: #4D69A6;
-    --sonic: #305FC5;
-    --mephiles: #0A3B6C;
-    --petroleo: #021B34;
-    --verdura: #106348;
-    --verde: #1FA57F;
-    --grama: #58B23D;
-    --va: #BEE15E;
-    --espere: #E7C84D;
-    --amareluncio: #BF9230;
-    --pare: #C33E3E;
-    --vermelhuncio: #A32D2D;
-    --ash: rgba(255, 255, 255, 0.2);
-    --algo-gradiente: linear-gradient(#000, #434343);
-    --font-main: 'Inter', Arial, Helvetica, sans-serif;
+  --pretuncio: #313131;
+  --carlos: #848484;
+  --carlito: #999999;
+  --baranco: #B2B2B2;
+  --branco: #CCCCCC;
+  --brancao: #E5E5E5;
+  --bler: #4D69A6;
+  --sonic: #305FC5;
+  --mephiles: #0A3B6C;
+  --petroleo: #021B34;
+  --verdura: #106348;
+  --verde: #1FA57F;
+  --grama: #58B23D;
+  --va: #BEE15E;
+  --espere: #E7C84D;
+  --amareluncio: #BF9230;
+  --pare: #C33E3E;
+  --vermelhuncio: #A32D2D;
+  --ash: rgba(255, 255, 255, 0.2);
+  --font-inter: 'Inter', Arial, Helvetica, sans-serif;
+  --font-abeezee: 'ABeeZee', Arial, Helvetica, sans-serif;
+  --font-roboto: 'Roboto', Arial, Helvetica, sans-serif;
+  --font-crimson: 'Crimson Text', Georgia, 'Times New Roman', serif;
+  --font-roboto-cond: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
 }
 
 /* Reset and base styles */
 body {
-  font-family: var(--font-main);
   background-color: var(--baranco);
   justify-self: center;
   align-self: center;
@@ -73,10 +76,9 @@ body {
     
         .textcabelo {
           color: var(--baranco);
-          text-align: center;
-          font-size: 120%;
+          font: var(--font-inter);
           font-style: normal;
-          line-height: normal;
+          font-weight: 400;
         }
     
         .xcabelo {
@@ -86,6 +88,9 @@ body {
 
 /* cabecario 2*/
 .cabecao {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
   width: 100%;
   background: var(--brancao);
   color: var(--pretuncio);
@@ -142,8 +147,6 @@ body {
                   flex: -1;
                   margin: 0 3vw 0 2vw;
                 }
-
-  
 
 /* carrossel */
 .carroselfilhadaputa{
@@ -234,9 +237,9 @@ body {
           position: absolute;
           left: 0;
           top: 20%;
-          width: 40%;
+          width: 66.666%;      /* ocupa 2/3 da largura do slide */
           height: 60.666%;
-          max-width: none;
+          max-width: none;     /* remove limite fixo */
           min-width: 320px;
           color: var(--branco);
           line-height: 1.3;
@@ -245,8 +248,8 @@ body {
           justify-content: flex-start;
           margin: 0 0 0 8%;
           z-index: 2;
-          font-size: 130%;
-          letter-spacing: 0.3px;
+          font-size: 1.5rem;
+          letter-spacing: 0.7px;
           padding: 0 0 0 2vw;
           text-align: left;
           word-break: break-word;
@@ -262,8 +265,7 @@ body {
         .butt{
           background: var(--baranco);
           color: var(--mephiles);
-          height: auto;
-          width: 30%;
+          max-width: 20%;
           line-height: 2vw;
           font-size: 80%;
           font-weight: 500;
@@ -272,8 +274,8 @@ body {
           justify-content: space-around;
           display: flex;
           flex-direction: row;
-          margin: 2% 15%;
-          padding: 0.2rem;
+          margin: 2% 10vw;
+          padding: 0.3rem;
           gap: 0.2rem;          
         } 
                                 
