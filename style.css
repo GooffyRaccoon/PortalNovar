@@ -272,7 +272,7 @@ body {
         .butt{
           background: var(--baranco);
           color: var(--mephiles);
-          width: 15vw;
+          width: 150px;
           line-height: 2vw;
           font-size: 1rem;
           font-weight: 500;
@@ -290,35 +290,11 @@ body {
           gap: 1rem;
           z-index: 2;          
         } 
-
-                .butt button:hover {
-                  background: #e6eefd;
+                        
+                .buttset{
+                  scale: 75%;
                 }
-
-                .buttset {
-                  display: flex;
-                  align-items: center;
-                  gap: 1rem;
-                  background: var(--baranco);
-                  color: var(--mephiles);
-                  width: 15vw;
-                  line-height: 2vw;
-                  font-size: 1rem;
-                  font-weight: 500;
-                  letter-spacing: 0.5px;
-                  border: none;
-                  box-shadow: 0 2px 8px rgba(34,80,157,0.08);
-                  cursor: pointer;
-                  transition: background 0.3s;
-                  padding: 0.2rem;
-                  z-index: 2;
-                }
-
-                        .buttset:hover {
-                          background: #e6eefd;
-                        }
-
-                
+                        
 
 
 
