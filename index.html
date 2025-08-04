@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
+<html lang="pt-br"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NovAR</title>
     <link rel="stylesheet" href="style.css">
         <!-- Inter: 400 -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&amp;display=swap" rel="stylesheet">
         <!-- ABeeZee: 400 -->
-    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:wght@400&amp;display=swap" rel="stylesheet">
         <!-- Roboto: 400, 700 -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
         <!-- Crimson Text: 400, 700 -->
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&amp;display=swap" rel="stylesheet">
         <!-- Roboto Condensed: 400, 700 -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&amp;display=swap" rel="stylesheet">
         <!-- Cormorant Garamond: 400 -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&amp;display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -48,7 +46,7 @@
 
     <section class="carroselfilhadaputa">
         <div class="carrossel-container">
-            <div class="carrossel-slides" id="carrosselSlides">
+            <div class="carrossel-slides" id="carrosselSlides" style="transform: translateX(-200%);">
                 <div class="carrossel-slide">
                     <img src="slide1.png" alt="Gatinho 1">
                 </div>
@@ -77,19 +75,19 @@
                     <img src="slide9.png" alt="Gatinho 3">
                 </div>
             </div>
-                <button class="carrossel-seta carrossel-seta-esquerda" id="carrosselSetaEsquerda">&#9664;</button>
-                <button class="carrossel-seta carrossel-seta-direita" id="carrosselSetaDireita">&#9654;</button>
-                <div class="carrossel-indicadores" id="carrosselIndicadores"></div>
+                <button class="carrossel-seta carrossel-seta-esquerda" id="carrosselSetaEsquerda">◀</button>
+                <button class="carrossel-seta carrossel-seta-direita" id="carrosselSetaDireita">▶</button>
+                <div class="carrossel-indicadores" id="carrosselIndicadores"><span class="carrossel-indicador" data-index="0"></span><span class="carrossel-indicador" data-index="1"></span><span class="carrossel-indicador ativo" data-index="2"></span><span class="carrossel-indicador" data-index="3"></span><span class="carrossel-indicador" data-index="4"></span><span class="carrossel-indicador" data-index="5"></span><span class="carrossel-indicador" data-index="6"></span><span class="carrossel-indicador" data-index="7"></span><span class="carrossel-indicador" data-index="8"></span></div>
                     <div class="txtcarr">
                         <h1>Seja Bem Vindo(a) ao Portal de Araucária: NovAR!</h1>
                         <h2>Aqui você encontra tudo que deseja saber sobre a cidade paranaense.</h2>
                         <button class="butt">Saiba Mais
-                            <span class="buttset">></span>
+                            <span class="buttset">&gt;</span>
                         </button>
                     </div>
         <script src="script.js"></script>
         <div class="gradiente-entre"></div>
-     </section>
+     </div></section>
 
     <section class="notrec">
         <h1>NOTÍCIAS RECENTES</h1>        
@@ -176,8 +174,45 @@
 
 
     <footer>
+  <div class="footer-conheca">
+    <h2>CONHEÇA-NOS!</h2>
+    <div class="conheca-cards">
+      <div class="conheca-card">
+        <div class="conheca-img"></div>
+        <div class="conheca-info">
+          <h3 class="conheca-nome" style="color: #097442;">LAILA</h3>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+          <small>Lorem Ipsum is simply</small>
+        </div>
+      </div>
+      <div class="conheca-card">
+        <div class="conheca-img"></div>
+        <div class="conheca-info">
+          <h3 class="conheca-nome" style="color: #e7b700;">LEILA</h3>
+          <p style="color: #e7b700;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+          <small>Lorem Ipsum is simply</small>
+        </div>
+      </div>
+      <div class="conheca-card">
+        <div class="conheca-img"></div>
+        <div class="conheca-info">
+          <h3 class="conheca-nome" style="color: #2957ab;">LETICIA</h3>
+          <p style="color: #2957ab;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+          <small>Lorem Ipsum is simply</small>
+        </div>
+      </div>
+      <div class="conheca-card">
+        <div class="conheca-img"></div>
+        <div class="conheca-info">
+          <h3 class="conheca-nome" style="color: #c1272d;">STEPHANY</h3>
+          <p style="color: #c1272d;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+          <small>Lorem Ipsum is simply</small>
+        </div>
+      </div>
+    </div>
+  </div>
         <div class="canela">
-            <a class="gmail" href="mailto:portalnovar@gmail.com"target="_blank" rel="noopener">portalnovar@gmail.com</a>
+            <a class="gmail" href="mailto:portalnovar@gmail.com" target="_blank" rel="noopener">portalnovar@gmail.com</a>
             <a class="canlogo" href="index.html">
                 <img src="logo.png" alt="Logo do aplicativo NovAR, a árvore de Araucária, com a palavra NOVAR na frente">
             </a>
@@ -198,5 +233,5 @@
             <p class="torntxt2">Todo o conteúdo desse site está publicado sob licença.</p>
         </div>
     </footer>
-</body>
-</html>
+
+</body></html>
