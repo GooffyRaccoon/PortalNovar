@@ -370,6 +370,7 @@ body {
                           font-family: var(--font-crimson);
                           font-weight: 400;
                           font-size: 1.1rem;
+                          line-height: 125%;
                           color: var(--pretuncio);
                           margin: 0.7vw 0.4vw 0.2vw 0.4vw;
                           text-align: center;
@@ -404,18 +405,19 @@ body {
                         .not2 .infonot {
                           width: 2vw;
                           height: 2vw;
-                          min-width: 32px;
+                          min-width: 48px;
                           min-height: 32px;
-                          background: var(--baranco);
+                          background: var(--carlito);
                           margin-right: 0.5vw;
                           border-radius: 4px;
                         }
 
                         .not2 p {
-                          font-family: var(--font-roboto);
+                          font-family: var(--font-crimson);
                           font-style: normal;
                           font-weight: 400;
-                          font-size: 0.97rem;
+                          font-size: 0.9rem;
+                          line-height: 120%;
                           color: var(--carlito);
                           margin: 0;
                         }
@@ -429,12 +431,14 @@ body {
 }
 
         .appinfo .title {
+          font-family: var(--font-abeezee);
+          font-style: normal;
+          font-size: 2.5rem;
+          font-weight: 400;
           text-align: center;
-          color: var(--verde);
-          font-size: 2rem;
-          font-weight: 500;
-          letter-spacing: 1px;
+          color: var(--verdura);
           margin-bottom: 2vw;
+          letter-spacing: 1px;
         }
 
         .appinfo .row {
