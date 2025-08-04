@@ -314,20 +314,18 @@ body {
 
 /* noticias recentes */
 .notrec {
-  font-family: var(--font-abeezee);  
   width: 100vw;
-  padding: 2vw 0 0 0;
-  background: var(--brancao);
-  min-height: 100vh;
+  padding: 2vw 0 2vw 0;
+  background: var(--branco);
 }
 
         .notrec h1 {
-          text-align: center;
-          color: var(--mephiles);
+          font-family: var(--font-abeezee);
           font-style: normal;
-          font-family: inherit;
           font-size: 2.5rem;
           font-weight: 400;
+          text-align: center;
+          color: var(--mephiles);
           margin-bottom: 2vw;
           letter-spacing: 1px;
         }
@@ -342,8 +340,7 @@ body {
         }
 
                 .cardnot {
-                  background: var(--branco);
-                  border: 1px solid var(--baranco);
+                  border: 1px solid var(--carlito);
                   box-shadow: 0 2px 4px rgba(34,80,157,0.08);
                   width: 27vw;
                   min-width: 250px;
