@@ -643,13 +643,12 @@ footer {
 
 .footer-saiba-mais button {
   background: linear-gradient(180deg, #2d4e77 0%, #233d5c 100%);
-  color: #fff;
+  color: var(--brancao);
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   padding: 0.9rem 2.2rem;
   border: none;
-  border-radius: 6px;
   box-shadow: 0 4px 12px 0 rgba(40,70,130,0.16);
   cursor: pointer;
   letter-spacing: 0.04em;
@@ -814,6 +813,25 @@ footer {
                   letter-spacing: 0.3px;
                   margin: 0.5vw 0 0 0;
                 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* celulares */
