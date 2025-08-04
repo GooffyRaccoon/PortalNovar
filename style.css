@@ -315,7 +315,7 @@ body {
 /* noticias recentes */
 .notrec {
   width: 100vw;
-  padding: 2vw 0 2vw 0;
+  padding: 2vw 0 3vw 0;
   background: var(--branco);
 }
 
@@ -340,8 +340,6 @@ body {
         }
 
                 .cardnot {
-                  border: 1px solid var(--carlito);
-                  box-shadow: 0 2px 4px rgba(34,80,157,0.08);
                   width: 27vw;
                   min-width: 250px;
                   max-width: 350px;
@@ -349,22 +347,22 @@ body {
                   display: flex;
                   flex-direction: column;
                   align-items: flex-start;
-                  margin-bottom: 2vw;
+                  margin-bottom: 1.5vw;
                 }
 
-                        .cardnot .titulo {
+                        .cardnot .site {
+                          font-family: var(--font-roboto);
                           font-size: 1rem;
-                          color: var(--carlos);
-                          font-weight: bold;
-                          margin-bottom: 0.5vw;
-                          font-family: var(--font-inter);
+                          color: var(--pretuncio);
+                          font-weight: 400;
+                          margin: 0 0 0.5vw 0.5vw;
                         }
 
                         .cardnot .noticia img {
                           width: 100%;
                           max-height: 200px;
                           object-fit: contain;
-                          background: white;
+                          background: var(--carlito);
                           border: 1px solid var(--baranco);
                         }
 
