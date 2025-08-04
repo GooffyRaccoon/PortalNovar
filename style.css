@@ -345,6 +345,8 @@ body {
                   max-width: 350px;
                   padding: 1vw;
                   display: flex;
+                  border: 1.25px solid var(--carlito);
+                  box-shadow: ;
                   flex-direction: column;
                   align-items: flex-start;
                   margin-bottom: 1.5vw;
@@ -357,34 +359,33 @@ body {
                           font-weight: 400;
                           margin: 0 0 0.5vw 0.5vw;
                         }
-
-                        
-                        .cardnot .noticia img {
-                          width: 100%;
-                          max-height: 275px;
-                          object-fit: contain;
-                          background: white;
-                          border: 1px solid var(--baranco);
-                        }
+                                .cardnot .noticia img {
+                                  width: 100%;
+                                  max-height: 275px;
+                                  object-fit: contain;
+                                  background: var(--carlito);
+                                }
 
                         .cardnot .subtitulo {
                           font-family: var(--font-crimson);
-                          font-size: 1rem;
-                          color: var(--pretuncio);
-                          margin: 1vw 0 0.5vw 0;
                           font-weight: 400;
+                          font-size: 1.1rem;
+                          color: var(--pretuncio);
+                          margin: 0.7vw 0.4vw 0.2vw 0.4vw;
+                          text-align: center;
                         }
 
                         .cardnot .cliquenot {
-                          color: var(--mephiles);
-                          font-size: 0.98rem;
-                          margin-bottom: 1vw;
+                          font-family: var(--font-roboto-cond);
+                          font-size: 1rem;
+                          color: var(--sonic);
+                          margin: 1vw 0.25vw 0;
+                          align-self: center;
                           text-decoration: none;
                           display: inline-block;
                           transition: color 0.2s;
-                          font-family: var(--font-roboto-cond);
+                          
                         }
-
                                 .cardnot .cliquenot:hover {
                                   color: var(--sonic);
                                   text-decoration: underline;
