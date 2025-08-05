@@ -43,7 +43,6 @@ body {
 
 /* cabecario 1 */
 .cabelo {
-  width: 100%;
   height: 4vw;
   max-width: 100%;
   max-height: 50px;
@@ -56,13 +55,13 @@ body {
 }
 
         .piolho {
-          width: 8vw;
+          width: 100%;
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
           gap: 4vw;
-          margin: 0 5rem;
+          margin: 0 0 0 5%;
         }
         
                 .loguinho {
@@ -71,7 +70,7 @@ body {
                 }
             
                 .divisaocabelo {
-                  size: 100%;
+                  color: var(--brancao);
                 }
     
         .textcabelo {
