@@ -65,12 +65,14 @@ body {
         }
         
                 .loguinho {
-                  size: 100%;
+                  width: 100%;
+                  height: 100%;
                   display: flex;
                 }
-            
+                
                 .divisaocabelo {
-                  color: var(--brancao);
+                  width: 100%;
+                  height: 100%;
                 }
     
         .textcabelo {
