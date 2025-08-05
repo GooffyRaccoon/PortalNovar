@@ -162,7 +162,7 @@ body {
 }
         
         .carrossel-container {
-          max-width: 1570px;
+          max-width: 100%;
           overflow: hidden;
           position: relative;
         }
