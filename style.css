@@ -37,7 +37,7 @@
 
 /* Reset and base styles */
 body {
-  background-color: var(--baranco);
+  background: var(--branco);
   justify-self: center;
   align-self: center;
 }
@@ -297,7 +297,7 @@ body {
 
         .buttset1 {
           display: flex;
-          transform: scaleX(0.7) scaleY(1.7);
+          transform: scaleX(0.7) scaleY(1.4);
           color: var(--mephiles);
           transition: filter 0.2s;
         }
@@ -323,7 +323,7 @@ body {
 
 /* noticias recentes */
 .notrec {
-  width: 100vw;
+  width: 100%;
   padding: 2vw 0 3vw 0;
   background: var(--branco);
 }
@@ -412,8 +412,8 @@ body {
                 }
 
                         .not2 .infonot {
-                          width: 2vw;
-                          height: 2vw;
+                          width: 1vw;
+                          height: 0.75vw;
                           min-width: 48px;
                           min-height: 32px;
                           background: var(--carlito);
@@ -431,32 +431,66 @@ body {
                           margin: 0;
                         }
 
-/* conheça o nosso app */
+/* conheça o nosso app 
+
+
 .appinfo {
-  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    Centraliza verticalmente o conteúdo 
+  align-items: center;        Centraliza horizontalmente 
+  width: 85%;
+  height: 60%;
   background: var(--brancao);
   box-sizing: border-box;
-  padding: 2.5vw 0 2vw 0;
+  padding: 2.5vw 2vw 2vw 2vw;
+}
+
+.appinfo .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;       Centraliza os itens verticalmente na row 
+  gap: 2vw;
+  width: 90vw;
+  margin: 0;                 Remova o valor "20" que estava errado 
+}
+
+ou
+
+.appinfo {
+  min-height: 400px; ou height: 60vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+*/
+.appinfo {
+  width: 85%;
+  height: 60%;
+  align-items: center;
+  justify-self: center;
+  background: var(--brancao);
+  box-sizing: border-box;
+  padding: 2.5vw 2vw 2vw 2vw;
 }
 
         .appinfo .title {
           font-family: var(--font-abeezee);
+          color: var(--verdura);
           font-style: normal;
           font-size: 2.5rem;
           font-weight: 400;
           text-align: center;
-          color: var(--verdura);
           margin-bottom: 2vw;
           letter-spacing: 1px;
         }
 
         .appinfo .row {
           display: flex;
-          align-items: center;
           justify-content: center;
           gap: 2vw;
-          width: 90vw;
-          margin: 0 auto;
+          margin: 0 10%;
         }
 
                 .appinfo .imgbox img {
