@@ -222,7 +222,7 @@ body {
         .carrossel-indicadores {
           position: absolute;
           left: 12vw;
-          bottom: 10vw;
+          bottom: 6vw;
           display: flex;
           gap: 15px;
           z-index: 2;
@@ -245,7 +245,7 @@ body {
           position: absolute;
           left: 0;
           top: 20%;
-          width: 66.666%;
+          width: 60.666%;
           height: 60.666%;
           max-width: none;
           min-width: 320px;
@@ -267,7 +267,7 @@ body {
         }
         
                 .txtcarr h1, .txtcarr h2 {
-                  margin: 1% 4%;
+                  margin: 1vw 4%;
                   font-weight: 400;
                   text-align: left;
                 }
@@ -275,7 +275,7 @@ body {
         .butt{
           background: var(--baranco);
           color: var(--mephiles);
-          max-width: 20%;
+          max-width: 15vw;
           line-height: 2vw;
           font-family: var(--font-roboto);
           font-style: normal;
@@ -284,6 +284,7 @@ body {
           letter-spacing: 0.5px;
           border: none;
           justify-content: space-around;
+          align-self: self-start;
           display: flex;
           flex-direction: row;
           margin: 2% 10vw;
@@ -314,7 +315,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%; 
-  z-index: 0000000000000000;
+  z-index: 0;
   pointer-events: none;
   background: linear-gradient(90deg, #2B4886 8.17%, rgba(48, 95, 197, 0) 80.77%); 
 }
