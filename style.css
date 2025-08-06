@@ -26,6 +26,7 @@
   --pare: #C33E3E;
   --vermelhuncio: #A32D2D;
   --ash: rgba(255, 255, 255, 0.2);
+  --botao: linear-gradient(180deg, #2d4e77 0%, #233d5c 100%);
   --font-inter: 'Inter', Arial, Helvetica, sans-serif;
   --font-abeezee: 'ABeeZee', Arial, Helvetica, sans-serif;
   --font-roboto: 'Roboto', Arial, Helvetica, sans-serif;
@@ -522,31 +523,33 @@ body {
         }
 
         .ideiainfo .desc {
-          max-width: 34vw;
+          max-width: 50vw;
           min-width: 220px;
           font-size: 1.08rem;
           color: var(--pretuncio);
         }
 
         .ideiainfo .butt {
-          display: inline-block;
-          background: var(--bler);
-          color: var(--branco);
-          font-size: 1rem;
-          font-weight: 500;
-          padding: 0.7em 2.2em;
-          border: none;
-          border-radius: 3px;
+          min-width: 144px;
+          background: var(--botao);
+          color: var(--brancao);
+          font-family: var(--font-roboto);
+          font-size: 1.25rem;
+          font-weight: 700;
           text-decoration: none;
-          transition: background 0.2s;
-          letter-spacing: 0.5px;
-          box-shadow: 0 2px 8px var(--ash);
+          padding: 1.5%;
+          border: none;
           cursor: pointer;
-          margin-left: 2vw;
+          letter-spacing: 0.04rem;
+          transition: background 0.18s, box-shadow 0.18s, transform 0.13s;
+          text-transform: uppercase;
         }
 
                 .ideiainfo .butt:hover {
-                  background: var(--sonic);
+                  background: linear-gradient(180deg, #385d92 0%, #304c7a 100%);
+                  box-shadow: 0 6px 18px 0 rgba(40,70,130,0.24);
+                  transform: translateY(-2px) scale(1.03);
+                  outline: none;
                 }
 
 
@@ -565,14 +568,12 @@ body {
 /* Footer */
 footer {
   color: var(--bler);
-  background: linear-gradient(180deg, #FFFFFF 0%, #0A3B6C 100%);
+  background: linear-gradient(180deg, var(--brancao) 0%, var(--mephiles) 100%);
   padding: 1.5vw 2vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-
 
 .footer {
   background: #f2f5fa;
@@ -650,7 +651,7 @@ footer {
 }
 
 .footer-saiba-mais button {
-  background: linear-gradient(180deg, #2d4e77 0%, #233d5c 100%);
+  background: var(--botao);
   color: var(--brancao);
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 1.25rem;
