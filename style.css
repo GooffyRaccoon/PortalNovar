@@ -552,10 +552,13 @@ body {
         }
 
         .ideiainfo .desc {
-          max-width: 50vw;
-          min-width: 220px;
-          font-size: 1.08rem;
+          font-family: var(--font-inter);
           color: var(--pretuncio);
+          max-width: 100%;
+          min-width: 220px;
+          justify-items: center;
+          margin: 0 0 0 3vw;
+          font-size: 2rem;
         }
 
         .ideiainfo .butt {
