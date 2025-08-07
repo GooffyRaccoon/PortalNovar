@@ -432,6 +432,15 @@ body {
                         }
 
 /* conheça o nosso app 
+.appinfo {
+  width: 85%;
+  height: 60%;
+  align-items: center;
+  justify-self: center;
+  background: var(--brancao);
+  box-sizing: border-box;
+  padding: 2.5vw 2vw 2vw 2vw;
+}
 
 
 .appinfo {
@@ -465,14 +474,19 @@ ou
   align-items: center;
 }
 */
+
 .appinfo {
-  width: 85%;
-  height: 60%;
-  align-items: center;
-  justify-self: center;
   background: var(--brancao);
   box-sizing: border-box;
+  width: 85%;
+  height:  60vh; 
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  justify-self: center;
   padding: 2.5vw 2vw 2vw 2vw;
+  display: flex;
+  flex-direction: column;
 }
 
         .appinfo .title {
