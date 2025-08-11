@@ -622,7 +622,7 @@ body {
 /* Footer */
 footer {
   color: var(--bler);
-  background: linear-gradient(180deg, var(--brancao) 0%, var(--mephiles) 100%);
+  background: linear-gradient(180deg, var(--branco) 0%, var(--mephiles) 100%);
   padding: 1.5vw 2vw;
   display: flex;
   flex-direction: column;
