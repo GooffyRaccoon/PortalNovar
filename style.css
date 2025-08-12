@@ -295,30 +295,13 @@ body {
           cursor: pointer;
           transition: background 0.2s;
         }
-
-               .buttset1 {
-                  display: flex;
-                  transform: scaleX(0.7) scaleY(1.4);
-                  color: var(--mephiles);
-                  transition: filter 0.2s;
+                .butt:hover {
+                  color: var(--branco);
+                  background: linear-gradient(180deg, #385d92 0%, #304c7a 100%);
+                  box-shadow: 0 6px 18px 0 rgba(40,70,130,0.24);
+                  transform: translateY(-2px) scale(1.03);
+                  outline: none;
                 }
-                        .butt:hover {
-                          color: var(--branco);
-                          background: linear-gradient(180deg, #385d92 0%, #304c7a 100%);
-                          box-shadow: 0 6px 18px 0 rgba(40,70,130,0.24);
-                          transform: translateY(-2px) scale(1.03);
-                          outline: none;
-                        }
-
-                        .butt:hover .buttset1 {
-                          color: var(--branco);
-                          background: linear-gradient(180deg, #385d92 0%, #304c7a 100%);
-                          box-shadow: 0 6px 18px 0 rgba(40,70,130,0.24);
-                          transform: translateY(-2px) scale(1.03);
-                          outline: none;
-                          display: flex;
-                          transform: scaleX(0.7) scaleY(1.4);
-                        }
 
 .gradiente-entre {
   position: absolute;
