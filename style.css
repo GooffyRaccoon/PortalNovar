@@ -667,6 +667,7 @@ footer {
                         .conheca-img {
                           width: 100%;
                           height: 50%;
+                          background: var(--carlos);
                         }
 
                 .conheca-info {
