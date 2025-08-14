@@ -665,10 +665,16 @@ footer {
                   overflow: hidden;
                 }
                         .conheca-img {
-                          width: 100%;
-                          height: 50%;
-                          background: var(--carlos);
-                        }
+  width: 100%;
+  height: 70%;
+}
+
+.conheca-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
                 .conheca-info {
                   padding: 0.8rem 1rem 0.8rem 1rem;
