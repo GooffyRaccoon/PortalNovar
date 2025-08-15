@@ -348,7 +348,6 @@ body {
                   padding: 1vw;
                   display: flex;
                   border: 1.25px solid var(--carlito);
-                  box-shadow: ;
                   flex-direction: column;
                   align-items: flex-start;
                   margin-bottom: 1.5vw;
