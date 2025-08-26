@@ -1,1 +1,43 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+:root {
+  --pretuncio: #313131;
+  --carlos: #848484;
+  --carlito: #999999;
+  --baranco: #B2B2B2;
+  --branco: #CCCCCC;
+  --brancao: #E5E5E5;
+  --bler: #4D69A6;
+  --sonic: #305FC5;
+  --mephiles: #0A3B6C;
+  --petroleo: #021B34;
+  --verdura: #106348;
+  --verde: #1FA57F;
+  --grama: #58B23D;
+  --va: #BEE15E;
+  --espere: #E7C84D;
+  --amareluncio: #BF9230;
+  --pare: #C33E3E;
+  --vermelhuncio: #A32D2D;
+  --ash: rgba(255, 255, 255, 0.2);
+  --botao: linear-gradient(180deg, #2d4e77 0%, #233d5c 100%);
+  --font-inter: 'Inter', Arial, Helvetica, sans-serif;
+  --font-abeezee: 'ABeeZee', Arial, Helvetica, sans-serif;
+  --font-roboto: 'Roboto', Arial, Helvetica, sans-serif;
+  --font-crimson: 'Crimson Text', Georgia, 'Times New Roman', serif;
+  --font-roboto-cond: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Reset and base styles */
+body {
+  background: var(--branco);
+  justify-self: center;
+  align-self: center;
+}
