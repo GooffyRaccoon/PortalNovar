@@ -158,11 +158,12 @@ body {
                 }
 
 /* banner*/
+/* Joelho*/
 .banner{
   height: 90vh;
 }
 
-      .joelho img {
+      .banner img {
         width: 100%;
         height: 100%;
         justify-self: center;
@@ -170,8 +171,6 @@ body {
         object-fit: cover; 
         display: block;
 }
-
-
 
 
 
