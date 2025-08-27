@@ -161,10 +161,11 @@ body {
 
 
 
-                
+
 
 .canela {
   background: var(--brancao);
+  color: var(--bler);
   width: 98%;
   height: 9.5vw;
   display: flex;
