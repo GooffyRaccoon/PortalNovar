@@ -106,7 +106,7 @@ body {
   padding: 0.5vw 3vw;
   margin: 0 auto;
   gap: 1vw;
-  box-shadow: 0 0.5vw 16px var(--bler);
+ box-shadow: 0 0.5vw 16px var(--bler);
   position: relative;
   z-index: 10;
 }
@@ -173,7 +173,7 @@ body {
 }
 
 /* noticias*/
-.notrec {
+.ngcontainer {
   width: 100%;
   padding: 2vw 0 3vw 0;
   background: var(--branco);
