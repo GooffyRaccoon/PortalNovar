@@ -159,7 +159,8 @@ body {
 
 /* banner*/
 .banner{
-  height: 90vh;
+  height: 50vh;
+  max-width: 100%
 }
 
       .banner img {
