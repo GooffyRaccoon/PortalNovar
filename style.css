@@ -370,11 +370,12 @@ body {
                         .cardnot .subtitulo {
                           font-family: var(--font-crimson);
                           font-weight: 400;
-                          font-size: 1.1rem;
+                          font-size: 1.3rem;
                           line-height: 125%;
                           color: var(--pretuncio);
                           margin: 0.7vw 0.4vw 0.2vw 0.4vw;
                           text-align: center;
+                          align-self: center;
                         }
 
                         .cardnot .cliquenot {
