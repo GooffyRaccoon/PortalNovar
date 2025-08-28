@@ -106,7 +106,7 @@ body {
   padding: 0.5vw 3vw;
   margin: 0 auto;
   gap: 1vw;
-  box-shadow: 0 0.5vw 16px #999;
+  box-shadow: 0 0.5vw 16px var(--bler);
   position: relative;
   z-index: 10;
 }
