@@ -355,11 +355,14 @@ body {
 
                         .cardnot .site {
                           font-family: var(--font-roboto);
-                          font-size: 1rem;
+                          font-size: 1.3rem;
                           color: var(--pretuncio);
                           font-weight: 400;
-                          margin: 0 0 0.5vw 0.5vw;
+                          margin: 0 0 0.5vw 0;
+                          padding: 0.5vw 0;
+                          text-align:center;
                         }
+
                                 .cardnot .noticia img {
                                   width: 100%;
                                   max-height: 275px;
@@ -370,12 +373,11 @@ body {
                         .cardnot .subtitulo {
                           font-family: var(--font-crimson);
                           font-weight: 400;
-                          font-size: 1.3rem;
+                          font-size: 1.1rem;
                           line-height: 125%;
                           color: var(--pretuncio);
                           margin: 0.7vw 0.4vw 0.2vw 0.4vw;
                           text-align: center;
-                          align-self: center;
                         }
 
                         .cardnot .cliquenot {
