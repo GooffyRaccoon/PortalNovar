@@ -38,8 +38,8 @@
 /* Reset and base styles */
 body {
   background: var(--branco);
-  justify-self: center;
-  align-self: center;
+  /* justify-self: center;
+  align-self: center; */
 }
 
 /* cabecario 1 */
