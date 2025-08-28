@@ -335,10 +335,11 @@ body {
         .bloconot {
           display: flex;
           justify-content: center;
+          justify-self: center;
           gap: 2vw;
           flex-wrap: wrap;
-          width: 90vw;
-          margin: 0 auto;
+          width: 95vw;
+          margin: 0 2vw 1vw;
         }
 
                 .cardnot {
