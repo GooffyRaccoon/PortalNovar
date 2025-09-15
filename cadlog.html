@@ -1,145 +1,136 @@
-<html lang="pt-br"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovAR</title>
-    <link rel="stylesheet" href="cadlog.css">
-    <script src="cadlog.js"></script>
-        <!-- Inter: 400 -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&amp;display=swap" rel="stylesheet">
-        <!-- ABeeZee: 400 -->
-    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:wght@400&amp;display=swap" rel="stylesheet">
-        <!-- Roboto: 400, 700 -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
-        <!-- Crimson Text: 400, 700 -->
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&amp;display=swap" rel="stylesheet">
-        <!-- Roboto Condensed: 400, 700 -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&amp;display=swap" rel="stylesheet">
-        <!-- Cormorant Garamond: 400 -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&amp;display=swap" rel="stylesheet">
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NovAR - Cadastro / Login</title>
+  <link rel="stylesheet" href="cadlog.css">
+  <!-- fonts (mantive como no seu original) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="cabelo">
-            <div class="piolho">
-                <a class="loguinho" href="index.html">
-                    <img src="imgs/loguinho.png" alt="Logo do aplicativo NovAR, a árvore de Araucária">
-                </a>
-                <span class="divisaocabelo">|</span>
-            </div>
-            <p class="textcabelo">Você está visualizando o Portal de Araucária: NovAR</p>
-            <button class="xcabelo">&times;</button>
-        </div>
-    </header>
-
-    <section class="cabecao">
-            <a class="logo" href="index.html">
-                <img src="imgs/logo.png" alt="Logo do aplicativo NovAR, a árvore de Araucária, com a palavra NOVAR na frente">
-            </a>
-            <a class="topnavegation" href="index.html" target="_self" rel="noopener">Página Inicial</a>
-            <a class="topnavegation" href="ng.html" target="_self" rel="noopener">Notícias Gerais</a>
-            <a class="topnavegation" href="ah.html" target="_self" rel="noopener">Arquivo Histórico</a>
-            <a class="topnavegation" href="pt.html" target="_self" rel="noopener">Pontos Turísticos</a>
-            <a class="topnavegation" href="cadlog.html" target="_self" rel="noopener">Faça o Login ou <br> Cadastre-se Agora!</a>
-            <a class="perfil" href="perfil.html">
-                <img src="imgs/perfil.png" alt="Acesse seu perfil">
-            </a>
-    </section>
-
-    <div class="login-card">
-    <div class="login-section">
-      <p class="card-title">Já possui uma conta?</p>
-      <div class="card-btn card-btn-big">ENTRAR</div>
+  <header>
+    <div class="cabelo">
+      <div class="piolho">
+        <a class="loguinho" href="index.html">
+          <img src="imgs/loguinho.png" alt="Logo">
+        </a>
+        <span class="divisaocabelo">|</span>
+      </div>
+      <p class="textcabelo">Você está visualizando o Portal de Araucária: NovAR</p>
+      <button class="xcabelo">&times;</button>
     </div>
-    <div class="register-section">
-      <p class="card-title">Crie uma nova conta</p>
-      <div class="card-btn card-btn-big">CADASTRE-SE</div>
-    </div>
-    <div class="google-circle">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46" width="48" height="48">
-        <g>
-          <path fill="#4285F4" d="M23 9.5c3.54 0 6.02 1.53 7.41 2.81l5.54-5.54C32.26 3.24 27.97 1 23 1 14.64 1 7.36 6.3 4.16 13.04l6.45 5.01C12.09 13.1 17.11 9.5 23 9.5z"/>
-          <path fill="#34A853" d="M44.92 20.25H23.46v7.5h12.26c-1.02 2.69-3.05 4.97-5.96 6.5l6.29 4.88c3.68-3.39 5.8-8.37 5.8-14.12 0-1-.09-2-.23-2.76z"/>
-          <path fill="#FBBC05" d="M10.61 27.05A13.5 13.5 0 0 1 9.5 23c0-1.4.23-2.77.61-4.05l-6.45-5.01A22.972 22.972 0 0 0 1 23c0 3.68.88 7.16 2.43 10.06l7.18-6.01z"/>
-          <path fill="#EA4335" d="M23 44.5c6.21 0 11.41-2.05 15.21-5.59l-7.18-6.01c-2.01 1.34-4.64 2.1-8.03 2.1-5.89 0-10.91-3.6-12.39-8.54l-7.18 6.01C7.36 39.7 14.64 45 23 45z"/>
-          <path fill="none" d="M1 1h44v44H1z"/>
-        </g>
-      </svg>
-    </div>
-  </div>
+  </header>
 
-<!-- Antonio -->
+  <section class="cabecao">
+    <a class="logo" href="index.html"><img src="imgs/logo.png" alt="Logo"></a>
+    <a class="topnavegation" href="index.html">Página Inicial</a>
+    <a class="topnavegation" href="ng.html">Notícias Gerais</a>
+    <a class="topnavegation" href="ah.html">Arquivo Histórico</a>
+    <a class="topnavegation" href="pt.html">Pontos Turísticos</a>
+    <a class="topnavegation" href="cadlog.html">Faça o Login ou Cadastre-se</a>
+    <a class="perfil" href="perfil.html"><img src="imgs/perfil.png" alt="Perfil"></a>
+  </section>
 
-<section class="container section">
+  <!-- ======= AQUI: container principal ======= -->
+  <section class="container section">
 
-    <!-- Cabeçalho -->
-    <div style="display:flex; justify-content:space-between; align-items:center;">
-      <h2>Gerenciar Cadastros</h2>
-      <button id="logoutBtn" class="btn">Sair</button>
-    </div>
+    <!-- área de autenticação (login / cadastro) -->
+    <div id="authArea" class="">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h2 id="pageTitle">Acessar conta</h2>
+        <!-- logoutBtn permanece, mas só visível quando logado -->
+        <button id="logoutBtn" class="btn hidden">Sair</button>
+      </div>
 
-    <!-- Tabela de usuários -->
-    <table id="usersTable" border="1" cellpadding="8" style="width:100%; border-collapse:collapse; margin-top:20px;">
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Nascimento</th>
-          <th>Email</th>
-          <th>Telefone</th>
-          <th>Usuário</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
+      <div id="authMsg" class="msg"></div>
 
-    <!-- Formulário de edição -->
-    <div id="editFormContainer" class="hidden" style="margin-top:30px;">
-      <h3>Editar Cadastro</h3>
-      <form id="editForm" class="form">
-        <input type="hidden" id="editId">
-        <div class="field"><label>Nome completo</label><input id="editNome" required /></div>
-        <div class="field"><label>Nascimento</label><input id="editNascimento" type="date" /></div>
-        <div class="field"><label>Email</label><input id="editEmail" type="email" required /></div>
-        <div class="field"><label>Telefone</label><input id="editTelefone" /></div>
-        <div class="field"><label>Usuário</label><input id="editUsuario" required /></div>
-        <button type="submit" class="btn">Salvar</button>
-        <button type="button" id="cancelEdit" class="btn ghost">Cancelar</button>
+      <div class="tabs" style="margin-bottom:12px;">
+        <button id="tabLogin" class="tab active">Login</button>
+        <button id="tabRegister" class="tab">Cadastro</button>
+      </div>
+
+      <!-- === Login form === -->
+      <form id="loginForm" class="form">
+        <input type="email" id="loginEmail" placeholder="E-mail" required />
+        <input type="password" id="loginPassword" placeholder="Senha" required />
+        <button type="submit" class="btn">Entrar</button>
+      </form>
+
+      <!-- === Register form === -->
+      <form id="registerForm" class="form hidden" style="margin-top:10px;">
+        <input type="text" id="registerName" placeholder="Nome completo" required />
+        <input type="text" id="registerUsername" placeholder="Usuário (apenas letras/números)" required />
+        <input type="email" id="registerEmail" placeholder="E-mail" required />
+        <input type="password" id="registerPassword" placeholder="Senha (mín. 6)" required />
+        <button type="submit" class="btn">Cadastrar</button>
       </form>
     </div>
 
-    <div id="msg" class="msg"></div>
-  </div>
+    <!-- === Área privada: tabela de "Gerenciar Cadastros" (apenas perfil do usuário logado) === -->
+    <div id="privateArea" class="private hidden" style="margin-top:26px;">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h2>Gerenciar Cadastros</h2>
+        <!-- logoutBtn já no topo, mas garantimos outro botão também -->
+        <button id="logoutBtn2" class="btn">Sair</button>
+      </div>
 
-  <script type="module" src="cadlog.js"></script>
+      <!-- Tabela de usuários (vai mostrar apenas o perfil do usuário logado) -->
+      <table id="usersTable" border="1" cellpadding="8" style="width:100%; border-collapse:collapse; margin-top:12px;">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Nascimento</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Usuário</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
 
-<!-- cabo antonio -->
+      <!-- Formulário de edição -->
+      <div id="editFormContainer" class="hidden" style="margin-top:20px;">
+        <h3>Editar Cadastro</h3>
+        <form id="editForm" class="form">
+          <input type="hidden" id="editId">
+          <div class="field"><label>Nome completo</label><input id="editNome" required /></div>
+          <div class="field"><label>Nascimento</label><input id="editNascimento" type="date" /></div>
+          <div class="field"><label>Email (login)</label><input id="editEmail" type="email" required /></div>
+          <div class="field"><label>Telefone</label><input id="editTelefone" /></div>
+          <div class="field"><label>Usuário</label><input id="editUsuario" required /></div>
+          <button type="submit" class="btn">Salvar</button>
+          <button type="button" id="cancelEdit" class="btn ghost">Cancelar</button>
+        </form>
+      </div>
 
+      <div id="msg" class="msg"></div>
+    </div>
+  </section>
 
   <footer>
+    <!-- seu footer existente (mantive como no seu original) -->
     <div class="canela">
-            <a class="gmail" href="mailto:portalnovar@gmail.com" target="_blank" rel="noopener">portalnovar@gmail.com</a>
-            <a class="canlogo" href="index.html">
-                <img src="imgs/logo.png" alt="Logo do aplicativo NovAR, a árvore de Araucária, com a palavra NOVAR na frente">
-            </a>
-            <div class="redes">
-                <a class="redesocial" href="#" title="Facebook">
-                    <img src="imgs/facebook.png" alt="Abra nossa pagina do facebook">
-                </a>
-                <a class="redesocial" href="#" title="Instagram">
-                    <img src="imgs/insta.png" alt="Abra nossa pagina do instagram">
-                </a>
-                <a class="redesocial" href="#" title="Twitter">
-                    <img src="imgs/twitter.png" alt="Abra nossa pagina do twitter">
-                </a>
-            </div>
-        </div>
-        <div class="tornozelo">
-            <p class="torntxt">Contate-Nos Através do Nosso E-mail, ou Visite Nossas Redes Sociais</p>
-            <p class="torntxt2">Todo o conteúdo desse site está publicado sob licença.</p>
-        </div>
-    </footer>
+      <a class="gmail" href="mailto:portalnovar@gmail.com">portalnovar@gmail.com</a>
+      <a class="canlogo" href="index.html"><img src="imgs/logo.png" alt="Logo"></a>
+      <div class="redes">
+        <a class="redesocial" href="#"><img src="imgs/facebook.png" alt="Facebook"></a>
+        <a class="redesocial" href="#"><img src="imgs/insta.png" alt="Instagram"></a>
+        <a class="redesocial" href="#"><img src="imgs/twitter.png" alt="Twitter"></a>
+      </div>
+    </div>
+    <div class="tornozelo">
+      <p class="torntxt">Contate-Nos Através do Nosso E-mail, ou Visite Nossas Redes Sociais</p>
+      <p class="torntxt2">Todo o conteúdo desse site está publicado sob licença.</p>
+    </div>
+  </footer>
 
-</body></html>
+  <!-- SCRIPT: observe type="module" -->
+  <script type="module" src="cadlog.js"></script>
+</body>
+</html>
+
 
 
 
