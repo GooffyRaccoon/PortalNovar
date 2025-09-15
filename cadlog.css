@@ -269,7 +269,7 @@ input:focus{ border-color:var(--accent); box-shadow:0 0 0 3px rgba(96,165,250,.2
 
 /* FOOTER */
 .footer{ 
-  padding:32px 0; 
+  padding: 1.5vw 2vw;
   border-top:1px solid rgba(255,255,255,.06); 
   background:rgba(0,0,0,.2); 
   text-align:center; 
