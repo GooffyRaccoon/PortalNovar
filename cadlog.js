@@ -1,118 +1,106 @@
-// app.js
-import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm&quot;;
+import { supabase } from "./supabaseClient.js";
 
-// ===== CONFIG SUPABASE =====
-const SUPABASE_URL = "https://xxxxxxxxxxxxxxxxxxx.supabase.co&quot;;   // troque
-const SUPABASE_ANON_KEY = "coloque aqui seu API";             // troque
-const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+// DOM
+const tabLogin = document.getElementById("tabLogin");
+const tabRegister = document.getElementById("tabRegister");
+const loginForm = document.getElementById("loginForm");
+const registerForm = document.getElementById("registerForm");
+const authMsg = document.getElementById("authMsg");
+const privateArea = document.getElementById("privateArea");
+const welcomeUser = document.getElementById("welcomeUser");
+const logoutBtn = document.getElementById("logoutBtn");
 
-// ===== ELEMENTOS =====
-const tabs = document.querySelectorAll('.tab');
-const panes = document.querySelectorAll('.pane');
-const loginForm = document.getElementById('loginForm');
-const registerForm = document.getElementById('registerForm');
-const authMsg = document.getElementById('authMsg');
-const privateArea = document.getElementById('privateArea');
-const welcomeUser = document.getElementById('welcomeUser');
-const logoutBtn = document.getElementById('logoutBtn');
-
-const showMsg = (text, type = "success") => {
-  if (!authMsg) return;
+function showMsg(text = "", type = "") {
   authMsg.textContent = text;
-  authMsg.className = `msg ${type}`;
-};
-const clearMsg = () => showMsg("");
-
-// ===== TROCA DE ABAS =====
-tabs.forEach(btn => {
-  btn.addEventListener('click', () => {
-    tabs.forEach(b => b.classList.remove('active'));
-    panes.forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById(btn.dataset.tab).classList.add('active');
-  });
-});
-
-// ===== CADASTRO =====
-if (registerForm) {
-  registerForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    clearMsg();
-
-    const nome = document.getElementById('regNome').value.trim();
-    const dataNascimento = document.getElementById('regNascimento').value || null;
-    const email = document.getElementById('regEmail').value.trim().toLowerCase();
-    const telefone = document.getElementById('regTelefone').value.trim();
-    const usuario = document.getElementById('regUsuario').value.trim().toLowerCase();
-    const senha = document.getElementById('regSenha').value;
-
-    try {
-      const { data, error } = await supabase.auth.signUp({
-        email,
-        password: senha,
-        options: {
-          data: { full_name: nome, dob: dataNascimento, phone: telefone, username: usuario }
-        }
-      });
-
-      if (error) {
-        showMsg("Erro ao cadastrar: " + error.message, "error");
-        return;
-      }
-
-      showMsg("Conta criada! Verifique seu e-mail se precisar confirmar.", "success");
-      registerForm.reset();
-      document.querySelector('.tab[data-tab="login-pane"]').click();
-    } catch (err) {
-      console.error(err);
-      showMsg("Erro inesperado ao cadastrar.", "error");
-    }
-  });
+  authMsg.className = type ? `msg ${type}` : "msg";
 }
-
-// ===== LOGIN =====
-if (loginForm) {
-  loginForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    clearMsg();
-
-    let userOrEmail = document.getElementById('loginUser').value.trim().toLowerCase();
-    const pass = document.getElementById('loginPass').value;
-
-    try {
-      const { data, error } = await supabase.auth.signInWithPassword({
-        email: userOrEmail,
-        password: pass
-      });
-
-      if (error) {
-        showMsg("Erro ao entrar: " + error.message, "error");
-        return;
-      }
-
-      showMsg("Login realizado com sucesso!", "success");
-      loginForm.reset();
-    } catch (err) {
-      console.error(err);
-      showMsg("Erro inesperado no login.", "error");
-    }
-  });
-}
-
-// ===== ESTADO DE AUTENTICAÇÃO =====
-supabase.auth.onAuthStateChange((_event, session) => {
-  if (session?.user) {
-    privateArea.classList.remove('hidden');
-    welcomeUser.textContent = `Bem-vindo, ${session.user.user_metadata?.full_name || session.user.email}!`;
+function toggleTab(tab) {
+  if (tab === "login") {
+    tabLogin.classList.add("active"); tabRegister.classList.remove("active");
+    loginForm.classList.remove("hidden"); registerForm.classList.add("hidden");
   } else {
-    privateArea.classList.add('hidden');
+    tabRegister.classList.add("active"); tabLogin.classList.remove("active");
+    registerForm.classList.remove("hidden"); loginForm.classList.add("hidden");
+  }
+  showMsg();
+}
+
+tabLogin.addEventListener("click", () => toggleTab("login"));
+tabRegister.addEventListener("click", () => toggleTab("register"));
+
+// Cadastro
+registerForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  showMsg("Cadastrando...", "");
+  const name = document.getElementById("registerName").value.trim();
+  const username = document.getElementById("registerUsername").value.trim().toLowerCase();
+  const email = document.getElementById("registerEmail").value.trim().toLowerCase();
+  const password = document.getElementById("registerPassword").value;
+
+  try {
+    const { data, error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: { full_name: name, username }
+      }
+    });
+    if (error) throw error;
+    showMsg("Cadastro realizado! Verifique seu e-mail.", "success");
+    registerForm.reset();
+    toggleTab("login");
+  } catch (err) {
+    showMsg(err.message || "Erro no cadastro", "error");
+    console.error(err);
   }
 });
 
-// ===== LOGOUT =====
-if (logoutBtn) {
-  logoutBtn.addEventListener('click', async () => {
-    await supabase.auth.signOut();
-    showMsg("Você saiu da conta.", "success");
-  });
-}
+// Login
+loginForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  showMsg("Entrando...", "");
+  const email = document.getElementById("loginEmail").value.trim().toLowerCase();
+  const password = document.getElementById("loginPassword").value;
+
+  try {
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+    if (error) throw error;
+    showMsg("Login realizado!", "success");
+    loginForm.reset();
+  } catch (err) {
+    showMsg(err.message || "Erro no login", "error");
+    console.error(err);
+  }
+});
+
+// Logout
+logoutBtn.addEventListener("click", async () => {
+  await supabase.auth.signOut();
+  showMsg("Você saiu.", "success");
+});
+
+// Auth state
+supabase.auth.onAuthStateChange((event, session) => {
+  if (session?.user) {
+    loginForm.classList.add("hidden");
+    registerForm.classList.add("hidden");
+    tabLogin.classList.remove("active");
+    tabRegister.classList.remove("active");
+    privateArea.classList.remove("hidden");
+    welcomeUser.textContent = `Bem-vindo, ${session.user.user_metadata?.full_name || session.user.email}`;
+  } else {
+    privateArea.classList.add("hidden");
+  }
+});
+
+// Check session on load
+(async () => {
+  const { data } = await supabase.auth.getSession();
+  const session = data?.session;
+  if (session) {
+    privateArea.classList.remove("hidden");
+    welcomeUser.textContent = `Bem-vindo, ${session.user.user_metadata?.full_name || session.user.email}`;
+    loginForm.classList.add("hidden");
+    registerForm.classList.add("hidden");
+  }
+})();
