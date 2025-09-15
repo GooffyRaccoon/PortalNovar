@@ -180,17 +180,6 @@ body {
   background: var(--branco);
 }
 
-        .notrec h1 {
-          font-family: var(--font-abeezee);
-          font-style: normal;
-          font-size: 2.5rem;
-          font-weight: 400;
-          text-align: center;
-          color: var(--mephiles);
-          margin-bottom: 2vw;
-          letter-spacing: 1px;
-        }
-
         .bloconot {
           display: flex;
           justify-content: center;
@@ -201,12 +190,11 @@ body {
         }
 
                 .cardnot {
-                  width: 27vw;
+                  width: 26vw;
                   min-width: 250px;
-                  max-width: 350px;
-                  padding: 1vw;
+                  height: 35vw;
                   display: flex;
-                  border: 1.25px solid var(--carlito);
+                  border: none;
                   flex-direction: column;
                   align-items: flex-start;
                   margin-bottom: 1.5vw;
@@ -217,7 +205,7 @@ body {
                           font-size: 1rem;
                           color: var(--pretuncio);
                           font-weight: 400;
-                          margin: 0 0 0.5vw 0.5vw;
+                          margin: 0.5vw;
                         }
                                 .cardnot .noticia img {
                                   width: 100%;
@@ -226,14 +214,15 @@ body {
                                   background: var(--carlito);
                                 }
 
-                        .cardnot .subtitulo {
+                        .cardnot .titulo {
                           font-family: var(--font-crimson);
                           font-weight: 400;
                           font-size: 1.1rem;
                           line-height: 125%;
                           color: var(--pretuncio);
-                          margin: 0.7vw 0.4vw 0.2vw 0.4vw;
+                          margin: 0;
                           text-align: center;
+                          align-self: center;
                         }
 
                         .cardnot .cliquenot {
