@@ -233,7 +233,16 @@ body {
   text-align: center;
 }
 
-
+:root{
+  --bg:#0f172a;
+  --surface:#111827;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --primary:#22c55e;
+  --primary-900:#16a34a;
+  --accent:#60a5fa;
+  --danger:#ef4444;
+}
 
 *{ box-sizing:border-box; }
 html, body{
