@@ -36,74 +36,48 @@
   <section class="container section">
 
     <!-- área de autenticação (login / cadastro) -->
-    <div id="authArea" class="">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-        <h2 id="pageTitle">Acessar conta</h2>
-        <!-- logoutBtn permanece, mas só visível quando logado -->
-        <button id="logoutBtn" class="btn hidden">Sair</button>
-      </div>
+    <div class="container section">
+    <!-- Cabeçalho -->
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <h2>Gerenciar Cadastros</h2>
+      <button id="logoutBtn" class="btn">Sair</button>
+    </div>
 
-      <div id="authMsg" class="msg"></div>
+    <!-- Tabela de usuários -->
+    <table id="usersTable" border="1" cellpadding="8" style="width:100%; border-collapse:collapse; margin-top:20px;">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Nascimento</th>
+          <th>Email</th>
+          <th>Telefone</th>
+          <th>Usuário</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
 
-      <div class="tabs" style="margin-bottom:12px;">
-        <button id="tabLogin" class="tab active">Login</button>
-        <button id="tabRegister" class="tab">Cadastro</button>
-      </div>
-
-      <!-- === Login form === -->
-      <form id="loginForm" class="form">
-        <input type="email" id="loginEmail" placeholder="E-mail" required />
-        <input type="password" id="loginPassword" placeholder="Senha" required />
-        <button type="submit" class="btn">Entrar</button>
-      </form>
-
-      <!-- === Register form === -->
-      <form id="registerForm" class="form hidden" style="margin-top:10px;">
-        <input type="text" id="registerName" placeholder="Nome completo" required />
-        <input type="text" id="registerUsername" placeholder="Usuário (apenas letras/números)" required />
-        <input type="email" id="registerEmail" placeholder="E-mail" required />
-        <input type="password" id="registerPassword" placeholder="Senha (mín. 6)" required />
-        <button type="submit" class="btn">Cadastrar</button>
+    <!-- Formulário de edição -->
+    <div id="editFormContainer" class="hidden" style="margin-top:30px;">
+      <h3>Editar Cadastro</h3>
+      <form id="editForm" class="form">
+        <input type="hidden" id="editId">
+        <div class="field"><label>Nome completo</label><input id="editNome" required /></div>
+        <div class="field"><label>Nascimento</label><input id="editNascimento" type="date" /></div>
+        <div class="field"><label>Email</label><input id="editEmail" type="email" required /></div>
+        <div class="field"><label>Telefone</label><input id="editTelefone" /></div>
+        <div class="field"><label>Usuário</label><input id="editUsuario" required /></div>
+        <button type="submit" class="btn">Salvar</button>
+        <button type="button" id="cancelEdit" class="btn ghost">Cancelar</button>
       </form>
     </div>
 
-    <!-- === Área privada: tabela de "Gerenciar Cadastros" (apenas perfil do usuário logado) === -->
-    <div id="privateArea" class="private hidden" style="margin-top:26px;">
-      <div style="display:flex; justify-content:space-between; align-items:center;">
-        <h2>Gerenciar Cadastros</h2>
-        <!-- logoutBtn já no topo, mas garantimos outro botão também -->
-        <button id="logoutBtn2" class="btn">Sair</button>
-      </div>
+    <div id="msg" class="msg"></div>
+  </div>
 
-      <!-- Tabela de usuários (vai mostrar apenas o perfil do usuário logado) -->
-      <table id="usersTable" border="1" cellpadding="8" style="width:100%; border-collapse:collapse; margin-top:12px;">
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Nascimento</th>
-            <th>Email</th>
-            <th>Telefone</th>
-            <th>Usuário</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+  <script type="module" src="admin.js"></script>
 
-      <!-- Formulário de edição -->
-      <div id="editFormContainer" class="hidden" style="margin-top:20px;">
-        <h3>Editar Cadastro</h3>
-        <form id="editForm" class="form">
-          <input type="hidden" id="editId">
-          <div class="field"><label>Nome completo</label><input id="editNome" required /></div>
-          <div class="field"><label>Nascimento</label><input id="editNascimento" type="date" /></div>
-          <div class="field"><label>Email (login)</label><input id="editEmail" type="email" required /></div>
-          <div class="field"><label>Telefone</label><input id="editTelefone" /></div>
-          <div class="field"><label>Usuário</label><input id="editUsuario" required /></div>
-          <button type="submit" class="btn">Salvar</button>
-          <button type="button" id="cancelEdit" class="btn ghost">Cancelar</button>
-        </form>
-      </div>
 
       <div id="msg" class="msg"></div>
     </div>
