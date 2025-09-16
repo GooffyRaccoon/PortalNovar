@@ -448,3 +448,74 @@ footer {
                           letter-spacing: 0.3px;
                           margin: 0.5vw 0 0 0;
                         }
+
+/* Caixa principal da área de cadastros */
+.cadastro-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #0f172a; /* Azul bem escuro */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+/* Título */
+.cadastro-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: #e5e7eb;
+}
+
+/* Tabela */
+.cadastro-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: #1e293b; /* contraste com a caixa */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Cabeçalho */
+.cadastro-container th {
+  background: #334155;
+  color: #f1f5f9;
+  padding: 12px;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Linhas */
+.cadastro-container td {
+  padding: 12px;
+  border-bottom: 1px solid #334155;
+  color: #e2e8f0;
+}
+
+/* Linhas alternadas */
+.cadastro-container tr:nth-child(even) {
+  background: #243447;
+}
+
+/* Botão sair */
+.cadastro-container .logout-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(90deg, #22c55e, #3b82f6);
+  color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cadastro-container .logout-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.6);
+}
