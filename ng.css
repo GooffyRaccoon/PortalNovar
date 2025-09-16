@@ -215,15 +215,14 @@ body {
                                 }
 
                         .cardnot .titulo {
-                          font-family: var(--font-inter);
-                          font-weight: 400;
-                          font-size: 1.2rem;
+                          font-family: var(--font-abeezee);
+                          font-weight: 300;
+                          font-size: 1.4rem;
                           text-transform: capitalize;
                           line-height: 125%;
                           color: var(--pretuncio);
                           margin: 0.5vw 0 0.5vw 0;
                           text-align: center;
-                          align-self: center;
                         }
 
                         .cardnot .desc {
@@ -239,83 +238,6 @@ body {
 
                         
 
-
-/* noticias */
-/* .ngcontainer {
-  display: flex;
-  gap: 32px;
-  justify-content: center;
-  margin: 40px 0;
-}
-
-.ngcard {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  width: 340px;
-  padding-bottom: 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-        .ngcard img {
-          width: 100%;
-          height: 180px;
-          object-fit: cover;
-          border-radius: 8px 8px 0 0;
-          background: #eee;
-        }
-
-        .ngcard .fonte {
-          font-size: 13px;
-          color: #50607a;
-          margin: 8px 0 4px 16px;
-          display: flex;
-          align-items: center;
-        }
-                .ngcard .fonte::before {
-                  content: "🛈";
-                  font-size: 13px;
-                  margin-right: 4px;
-                }
-                
-        .ngcard .titulo {
-          font-size: 20px;
-          color: #33446d;
-          font-weight: 500;
-          margin: 0 0 8px 16px;
-        }
-
-        .ngcard .desc {
-          font-size: 15px;
-          color: #50607a;
-          margin: 0 16px 16px 16px;
-          line-height: 1.5;
-        }
-
-        .ngcard .btn {
-          margin: 0 0 0 16px;
-          padding: 10px 24px;
-          background: #33446d;
-          color: #fff;
-          border: none;
-          border-radius: 4px;
-          font-size: 17px;
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          text-decoration: none;
-          transition: background 0.2s;
-        }
-
-                .ngcard .btn:hover {
-                  background: #18284a;
-                }
-
-                        .ngcard .btn span {
-                            margin-left: 10px;
-                            font-size: 18px;
-                        } */
 
 
 footer {
