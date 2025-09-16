@@ -53,12 +53,21 @@ registerForm?.addEventListener("submit", async (e) => {
   const password = document.getElementById("registerPassword").value;
 
   try {
-    const { data, error } = await supabase.auth.signUp({
+    const { data: userData, error } = await supabase.auth.signUp({
       email,
       password,
       options: { data: { full_name: name, username } }
     });
     if (error) throw error;
+
+    // Cria registro no profiles
+    if (userData?.user?.id) {
+      const { error: profileErr } = await supabase
+        .from("profiles")
+        .insert([{ id: userData.user.id, full_name: name, username }]);
+      if (profileErr) throw profileErr;
+    }
+
     showAuthMsg("Cadastro realizado! Verifique seu e-mail caso seja necessário.", "success");
     registerForm.reset();
     toggleTab("login");
