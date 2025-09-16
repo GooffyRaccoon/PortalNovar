@@ -1,6 +1,6 @@
 import { supabase } from "./supabaseClient.js";
 
-// DOM
+// --- DOM Elements ---
 const tabLogin = document.getElementById("tabLogin");
 const tabRegister = document.getElementById("tabRegister");
 const loginForm = document.getElementById("loginForm");
@@ -16,37 +16,43 @@ const msgBox = document.getElementById("msg");
 const logoutBtn = document.getElementById("logoutBtn");
 const logoutBtn2 = document.getElementById("logoutBtn2");
 
-// util: mostrar mensagens
+// --- Utility functions ---
 function showAuthMsg(text = "", type = "") {
   if (!authMsg) return;
   authMsg.textContent = text;
   authMsg.className = type ? `msg ${type}` : "msg";
 }
+
 function showMsg(text = "", type = "") {
   if (!msgBox) return;
   msgBox.textContent = text;
   msgBox.className = type ? `msg ${type}` : "msg";
 }
 
-// troca abas
+// --- Tab switching ---
 function toggleTab(tab) {
   if (tab === "login") {
-    tabLogin?.classList.add("active"); tabRegister?.classList.remove("active");
-    loginForm?.classList.remove("hidden"); registerForm?.classList.add("hidden");
+    tabLogin.classList.add("active");
+    tabRegister.classList.remove("active");
+    loginForm.classList.remove("hidden");
+    registerForm.classList.add("hidden");
   } else {
-    tabRegister?.classList.add("active"); tabLogin?.classList.remove("active");
-    registerForm?.classList.remove("hidden"); loginForm?.classList.add("hidden");
+    tabRegister.classList.add("active");
+    tabLogin.classList.remove("active");
+    registerForm.classList.remove("hidden");
+    loginForm.classList.add("hidden");
   }
   showAuthMsg("");
 }
 
-tabLogin?.addEventListener("click", () => toggleTab("login"));
-tabRegister?.addEventListener("click", () => toggleTab("register"));
+tabLogin.addEventListener("click", () => toggleTab("login"));
+tabRegister.addEventListener("click", () => toggleTab("register"));
 
 // --- REGISTER ---
-registerForm?.addEventListener("submit", async (e) => {
+registerForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   showAuthMsg("Cadastrando...", "");
+  
   const name = document.getElementById("registerName").value.trim();
   const username = document.getElementById("registerUsername").value.trim().toLowerCase();
   const email = document.getElementById("registerEmail").value.trim().toLowerCase();
@@ -68,9 +74,10 @@ registerForm?.addEventListener("submit", async (e) => {
       if (profileErr) throw profileErr;
     }
 
-    showAuthMsg("Cadastro realizado! Verifique seu e-mail caso seja necessário.", "success");
+    showAuthMsg("Cadastro realizado! Verifique seu e-mail.", "success");
     registerForm.reset();
     toggleTab("login");
+
   } catch (err) {
     console.error(err);
     showAuthMsg(err?.message || "Erro ao cadastrar", "error");
@@ -78,18 +85,20 @@ registerForm?.addEventListener("submit", async (e) => {
 });
 
 // --- LOGIN ---
-loginForm?.addEventListener("submit", async (e) => {
+loginForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   showAuthMsg("Entrando...", "");
+  
   const email = document.getElementById("loginEmail").value.trim().toLowerCase();
   const password = document.getElementById("loginPassword").value;
 
   try {
     const { data, error } = await supabase.auth.signInWithPassword({ email, password });
     if (error) throw error;
+
     showAuthMsg("Login realizado!", "success");
     loginForm.reset();
-    // sessão será tratada pelo listener onAuthStateChange
+
   } catch (err) {
     console.error(err);
     showAuthMsg(err?.message || "Erro no login", "error");
@@ -100,27 +109,23 @@ loginForm?.addEventListener("submit", async (e) => {
 async function doLogout() {
   await supabase.auth.signOut();
   showAuthMsg("Você saiu.", "success");
-  // onAuthStateChange esconderá as áreas
 }
-logoutBtn?.addEventListener("click", doLogout);
-logoutBtn2?.addEventListener("click", doLogout);
+logoutBtn.addEventListener("click", doLogout);
+logoutBtn2.addEventListener("click", doLogout);
 
-// --- Funções de perfil / tabela ---
-// pega apenas o perfil do usuário logado (por causa das políticas RLS)
+// --- PROFILE / TABLE ---
 async function loadMyProfileAndRender(userId, email) {
   try {
     const { data, error } = await supabase
       .from("profiles")
-      .select("id, full_name, dob, phone, username, created_at")
+      .select("id, full_name, dob, phone, username")
       .eq("id", userId)
       .single();
+    
+    if (error && error.code !== "PGRST116") throw error;
 
-    if (error && error.code !== "PGRST116" /* not found */) throw error;
-
-    // limpa tabela
     usersTableBody.innerHTML = "";
-
-    const row = data ? data : { id: userId, full_name: "(sem perfil)", dob: null, phone: "", username: "" };
+    const row = data || { id: userId, full_name: "(sem perfil)", dob: "", phone: "", username: "" };
 
     const tr = document.createElement("tr");
     tr.innerHTML = `
@@ -135,17 +140,17 @@ async function loadMyProfileAndRender(userId, email) {
     `;
     usersTableBody.appendChild(tr);
 
-    // bind edit button
     const editBtn = tr.querySelector(".edit-btn");
-    editBtn?.addEventListener("click", () => openEditForm(row, email));
+    editBtn.addEventListener("click", () => openEditForm(row, email));
+
   } catch (err) {
-    console.error("Erro ao carregar profile:", err);
+    console.error("Erro ao carregar perfil:", err);
     showMsg("Não foi possível carregar seu perfil.", "error");
   }
 }
 
+// --- EDIT FORM ---
 function openEditForm(profile, email) {
-  if (!editFormContainer || !editForm) return;
   editFormContainer.classList.remove("hidden");
   document.getElementById("editId").value = profile.id || "";
   document.getElementById("editNome").value = profile.full_name || "";
@@ -155,16 +160,15 @@ function openEditForm(profile, email) {
   document.getElementById("editUsuario").value = profile.username || "";
 }
 
-// cancelar edição
-cancelEdit?.addEventListener("click", (e) => {
+cancelEdit.addEventListener("click", (e) => {
   e.preventDefault();
   editFormContainer.classList.add("hidden");
 });
 
-// submit editar perfil
-editForm?.addEventListener("submit", async (e) => {
+editForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   showMsg("Salvando...", "");
+
   const id = document.getElementById("editId").value;
   const full_name = document.getElementById("editNome").value.trim();
   const dob = document.getElementById("editNascimento").value || null;
@@ -173,73 +177,59 @@ editForm?.addEventListener("submit", async (e) => {
   const username = document.getElementById("editUsuario").value.trim().toLowerCase();
 
   try {
-    // 1) atualiza a tabela profiles
     const { error: updateErr } = await supabase
       .from("profiles")
       .update({ full_name, dob, phone, username })
       .eq("id", id);
-
     if (updateErr) throw updateErr;
 
-    // 2) tentar atualizar email no auth (pode solicitar confirmação)
     try {
       const { error: authErr } = await supabase.auth.updateUser({ email });
-      if (authErr) {
-        // nem sempre possível (relogin / confirmação)
-        console.warn("Não foi possível atualizar email no auth:", authErr.message);
-      }
-    } catch (e) {
-      console.warn("updateUser falhou:", e);
-    }
+      if (authErr) console.warn("Não foi possível atualizar email:", authErr.message);
+    } catch(e){ console.warn("updateUser falhou:", e); }
 
     showMsg("Perfil atualizado com sucesso!", "success");
     editFormContainer.classList.add("hidden");
 
-    // recarregar perfil atual
     const { data: { session } } = await supabase.auth.getSession();
-    if (session?.user) {
-      await loadMyProfileAndRender(session.user.id, session.user.email);
-    }
+    if (session?.user) await loadMyProfileAndRender(session.user.id, session.user.email);
+
   } catch (err) {
-    console.error("Erro ao salvar perfil:", err);
+    console.error(err);
     showMsg(err?.message || "Erro ao salvar perfil", "error");
   }
 });
 
-// --- auth state change listener ---
+// --- AUTH STATE CHANGE ---
 supabase.auth.onAuthStateChange(async (event, session) => {
-  // caso de login/ logout
   if (session?.user) {
-    // mostrar área privada, esconder auth forms
-    authArea?.classList.add("hidden");
-    privateArea?.classList.remove("hidden");
-    logoutBtn?.classList.remove("hidden");
-    logoutBtn2?.classList.remove("hidden");
-    // carrega o perfil do usuário logado
+    authArea.classList.add("hidden");
+    privateArea.classList.remove("hidden");
+    logoutBtn.classList.remove("hidden");
+    logoutBtn2.classList.remove("hidden");
     await loadMyProfileAndRender(session.user.id, session.user.email);
   } else {
-    // sem sessão: mostrar formulários
-    authArea?.classList.remove("hidden");
-    privateArea?.classList.add("hidden");
-    logoutBtn?.classList.add("hidden");
-    logoutBtn2?.classList.add("hidden");
+    authArea.classList.remove("hidden");
+    privateArea.classList.add("hidden");
+    logoutBtn.classList.add("hidden");
+    logoutBtn2.classList.add("hidden");
     usersTableBody.innerHTML = "";
-    editFormContainer?.classList.add("hidden");
+    editFormContainer.classList.add("hidden");
   }
 });
 
-// check session on load (persistência)
+// --- CHECK SESSION ON LOAD ---
 (async () => {
   try {
     const { data } = await supabase.auth.getSession();
     const session = data?.session;
     if (session?.user) {
-      authArea?.classList.add("hidden");
-      privateArea?.classList.remove("hidden");
+      authArea.classList.add("hidden");
+      privateArea.classList.remove("hidden");
       await loadMyProfileAndRender(session.user.id, session.user.email);
     } else {
-      authArea?.classList.remove("hidden");
-      privateArea?.classList.add("hidden");
+      authArea.classList.remove("hidden");
+      privateArea.classList.add("hidden");
     }
   } catch (err) {
     console.error("Erro ao checar sessão:", err);
