@@ -161,9 +161,9 @@ body {
 /* banner*/
 .banner{
   position: relative;
-  height: 50vh;
+  aspect-ratio: 4/1;
   max-width: 100%;
-          z-index: 2;
+  z-index: 2;
 
 }
 
@@ -181,7 +181,8 @@ body {
   z-index: 1; 
    top: 7vh;
   left: 0;
-  height: 50vh;
+  object-fit: cover;     /* Mantém a proporção e cobre todo o espaço */
+  object-position: center;
 }
 
 
