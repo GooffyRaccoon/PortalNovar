@@ -160,8 +160,11 @@ body {
 
 /* banner*/
 .banner{
+  position: relative;
   height: 50vh;
-  max-width: 100%
+  max-width: 100%;
+          z-index: 2;
+
 }
 
       .banner img {
@@ -172,6 +175,16 @@ body {
         object-fit: cover; 
         display: block;
 }
+
+.bannerimg{
+  position: absolute;
+  z-index: 1; 
+   top: 7vh;
+  left: 0;
+  height: 50vh;
+}
+
+
 
 /* noticias*/
 .ngcontainer {
