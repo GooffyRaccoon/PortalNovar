@@ -107,7 +107,7 @@ body {
   padding: 0.5vw 3vw;
   margin: 0 auto;
   gap: 1vw;
- box-shadow: 0 0.5vw 16px var(--blertrans);
+  box-shadow: 0 0.5vw 16px var(--blertrans);
   position: relative;
   z-index: 10;
 }
@@ -215,60 +215,29 @@ body {
                                 }
 
                         .cardnot .titulo {
-                          font-family: var(--font-crimson);
+                          font-family: var(--font-inter);
                           font-weight: 400;
-                          font-size: 1.1rem;
+                          font-size: 1.2rem;
+                          text-transform: capitalize;
                           line-height: 125%;
                           color: var(--pretuncio);
-                          margin: 0;
+                          margin: 0.5vw 0 0.5vw 0;
                           text-align: center;
                           align-self: center;
                         }
 
-                        .cardnot .cliquenot {
-                          font-family: var(--font-roboto-cond);
-                          font-size: 1rem;
-                          color: var(--sonic);
-                          margin: 1vw 0.25vw 0;
-                          align-self: center;
-                          text-decoration: none;
-                          display: inline-block;
-                          transition: color 0.2s;
-                        }
-                                .cardnot .cliquenot:hover {
-                                  color: var(--sonic);
-                                  text-decoration: underline;
-                                }
-
-                .not2 {
-                  width: 100%;
-                  display: flex;
-                  align-items: flex-start;
-                  gap: 0.5vw;
-                  margin-top: 1vw;
-                  border-top: 1px solid var(--baranco);
-                  padding-top: 0.8vw;
-                }
-
-                        .not2 .infonot {
-                          width: 1vw;
-                          height: 0.75vw;
-                          min-width: 48px;
-                          min-height: 32px;
-                          background: var(--carlito);
-                          margin-right: 0.5vw;
-                          border-radius: 4px;
-                        }
-
-                        .not2 p {
-                          font-family: var(--font-crimson);
-                          font-style: normal;
+                        .cardnot .desc {
+                          font-family: var(--font-inter);
                           font-weight: 400;
-                          font-size: 0.9rem;
-                          line-height: 120%;
-                          color: var(--carlito);
-                          margin: 0;
+                          font-size: 1.1rem;
+                          line-height: 125%;
+                          color: var(--pretuncio);
+                          margin: 0.4vw 0 0.4vw;
+                          text-align: left;
+                          align-self: center;
                         }
+
+                        
 
 
 /* noticias */
