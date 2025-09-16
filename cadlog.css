@@ -519,3 +519,33 @@ footer {
   transform: scale(1.05);
   box-shadow: 0 0 12px rgba(34, 197, 94, 0.6);
 }
+/* estilo básico para campos e botões */
+.form input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    background-color: #22c55e;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background-color: #16a34a;
+}
+
+.hidden { display: none !important; }
+
+.tab.active {
+    font-weight: bold;
+    border-bottom: 2px solid #22c55e;
+}
