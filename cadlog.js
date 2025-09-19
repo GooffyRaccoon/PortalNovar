@@ -16,222 +16,205 @@ const msgBox = document.getElementById("msg");
 const logoutBtn = document.getElementById("logoutBtn");
 const logoutBtn2 = document.getElementById("logoutBtn2");
 
-// --- Utility functions ---
-function showAuthMsg(text = "", type = "") {
-  if (!authMsg) return;
+const supabaseUrl = "https://SUA-URL.supabase.co";
+const supabaseKey = "SUA-CHAVE-ANON";
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+const authArea = document.getElementById("authArea");
+const privateArea = document.getElementById("privateArea");
+const authMsg = document.getElementById("authMsg");
+const msg = document.getElementById("msg");
+
+// ===========================
+// MENSAGENS
+// ===========================
+function showAuthMsg(text, type = "info") {
   authMsg.textContent = text;
-  authMsg.className = type ? `msg ${type}` : "msg";
+  authMsg.className = type;
 }
 
-function showMsg(text = "", type = "") {
-  if (!msgBox) return;
-  msgBox.textContent = text;
-  msgBox.className = type ? `msg ${type}` : "msg";
+function showMsg(text, type = "info") {
+  msg.textContent = text;
+  msg.className = type;
 }
 
-// --- Tab switching ---
-function toggleTab(tab) {
-  if (tab === "login") {
-    tabLogin.classList.add("active");
-    tabRegister.classList.remove("active");
-    loginForm.classList.remove("hidden");
-    registerForm.classList.add("hidden");
-  } else {
-    tabRegister.classList.add("active");
-    tabLogin.classList.remove("active");
-    registerForm.classList.remove("hidden");
-    loginForm.classList.add("hidden");
-  }
-  showAuthMsg("");
-}
-
-tabLogin.addEventListener("click", () => toggleTab("login"));
-tabRegister.addEventListener("click", () => toggleTab("register"));
-
-// --- REGISTER ---
-registerForm.addEventListener("submit", async (e) => {
+// ===========================
+// CADASTRO
+// ===========================
+document.getElementById("registerForm").addEventListener("submit", async (e) => {
   e.preventDefault();
-  showAuthMsg("Cadastrando...", "");
-  
-  const name = document.getElementById("registerName").value.trim();
-  const username = document.getElementById("registerUsername").value.trim().toLowerCase();
-  const email = document.getElementById("registerEmail").value.trim().toLowerCase();
-  const password = document.getElementById("registerPassword").value;
+
+  const name = document.getElementById("regName").value;
+  const username = document.getElementById("regUsername").value;
+  const email = document.getElementById("regEmail").value;
+  const password = document.getElementById("regPassword").value;
+  const dob = document.getElementById("regDob")?.value || null;
+  const phone = document.getElementById("regPhone")?.value || null;
 
   try {
-    const { data: userData, error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: { data: { full_name: name, username } }
-    });
-    if (error) throw error;
+    const { data, error } = await supabase.auth.signUp({ email, password });
 
-    // Cria registro no profiles
-    if (userData?.user?.id) {
-      const { error: profileErr } = await supabase
-        .from("profiles")
-        .insert([{ id: userData.user.id, full_name: name, username }]);
-      if (profileErr) throw profileErr;
+    if (error) {
+      showAuthMsg("Erro no cadastro: " + error.message, "error");
+      return;
     }
 
-    showAuthMsg("Cadastro realizado! Verifique seu e-mail.", "success");
-    registerForm.reset();
-    toggleTab("login");
+    const user = data.user;
+    if (!user) {
+      showAuthMsg("Erro inesperado: usuário não retornado", "error");
+      return;
+    }
 
+    const { error: insertError } = await supabase.from("profiles").insert([
+      {
+        id: user.id,
+        full_name: name,
+        username: username,
+        dob: dob,
+        phone: phone,
+      },
+    ]);
+
+    if (insertError) {
+      if (insertError.code === "23505") {
+        showAuthMsg("Este nome de usuário já está em uso.", "error");
+      } else {
+        showAuthMsg("Erro ao salvar perfil: " + insertError.message, "error");
+      }
+      return;
+    }
+
+    showAuthMsg("Cadastro realizado! Agora faça login.", "success");
+    e.target.reset();
   } catch (err) {
     console.error(err);
-    showAuthMsg(err?.message || "Erro ao cadastrar", "error");
+    showAuthMsg("Erro inesperado no cadastro.", "error");
   }
 });
 
-// --- LOGIN ---
-loginForm.addEventListener("submit", async (e) => {
+// ===========================
+// LOGIN
+// ===========================
+document.getElementById("loginForm").addEventListener("submit", async (e) => {
   e.preventDefault();
-  showAuthMsg("Entrando...", "");
-  
-  const email = document.getElementById("loginEmail").value.trim().toLowerCase();
-  const password = document.getElementById("loginPassword").value;
 
-  try {
-    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
-    if (error) throw error;
+  const email = document.getElementById("logEmail").value;
+  const password = document.getElementById("logPassword").value;
 
-    showAuthMsg("Login realizado!", "success");
-    loginForm.reset();
+  const { error } = await supabase.auth.signInWithPassword({ email, password });
 
-  } catch (err) {
-    console.error(err);
-    showAuthMsg(err?.message || "Erro no login", "error");
+  if (error) {
+    showAuthMsg("Erro no login: " + error.message, "error");
+  } else {
+    showAuthMsg("Login realizado com sucesso!", "success");
+    carregarPerfil();
   }
 });
 
-// --- LOGOUT ---
-async function doLogout() {
-  await supabase.auth.signOut();
-  showAuthMsg("Você saiu.", "success");
-}
-logoutBtn.addEventListener("click", doLogout);
-logoutBtn2.addEventListener("click", doLogout);
+// ===========================
+// LOGOUT
+// ===========================
+document.getElementById("logoutBtn").addEventListener("click", async () => {
+  const { error } = await supabase.auth.signOut();
+  if (error) {
+    showMsg("Erro ao sair: " + error.message, "error");
+  } else {
+    showMsg("Logout realizado!", "success");
+    authArea.style.display = "block";
+    privateArea.style.display = "none";
+  }
+});
 
-// --- PROFILE / TABLE ---
-async function loadMyProfileAndRender(userId, email) {
-  try {
-    const { data, error } = await supabase
-      .from("profiles")
-      .select("id, full_name, dob, phone, username")
-      .eq("id", userId)
-      .single();
-    
-    if (error && error.code !== "PGRST116") throw error;
+// ===========================
+// CARREGAR PERFIL
+// ===========================
+async function carregarPerfil() {
+  const { data: { user } } = await supabase.auth.getUser();
 
-    usersTableBody.innerHTML = "";
-    const row = data || { id: userId, full_name: "(sem perfil)", dob: "", phone: "", username: "" };
+  if (!user) {
+    authArea.style.display = "block";
+    privateArea.style.display = "none";
+    return;
+  }
 
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
-      <td>${row.full_name || ""}</td>
-      <td>${row.dob || ""}</td>
-      <td>${email || ""}</td>
-      <td>${row.phone || ""}</td>
-      <td>${row.username || ""}</td>
+  const { data, error } = await supabase
+    .from("profiles")
+    .select("*")
+    .eq("id", user.id)
+    .single();
+
+  if (error) {
+    showMsg("Erro ao carregar perfil: " + error.message, "error");
+    return;
+  }
+
+  document.getElementById("perfilTableBody").innerHTML = `
+    <tr>
+      <td>${data.full_name || ""}</td>
+      <td>${data.username || ""}</td>
+      <td>${data.dob || ""}</td>
+      <td>${data.phone || ""}</td>
       <td>
-        <button class="btn edit-btn" data-id="${row.id}">Editar</button>
+        <button onclick="abrirEdicao('${data.id}','${data.full_name}','${data.username}','${data.dob}','${data.phone}')">Editar</button>
       </td>
-    `;
-    usersTableBody.appendChild(tr);
+    </tr>
+  `;
 
-    const editBtn = tr.querySelector(".edit-btn");
-    editBtn.addEventListener("click", () => openEditForm(row, email));
-
-  } catch (err) {
-    console.error("Erro ao carregar perfil:", err);
-    showMsg("Não foi possível carregar seu perfil.", "error");
-  }
+  authArea.style.display = "none";
+  privateArea.style.display = "block";
 }
 
-// --- EDIT FORM ---
-function openEditForm(profile, email) {
-  editFormContainer.classList.remove("hidden");
-  document.getElementById("editId").value = profile.id || "";
-  document.getElementById("editNome").value = profile.full_name || "";
-  document.getElementById("editNascimento").value = profile.dob || "";
-  document.getElementById("editEmail").value = email || "";
-  document.getElementById("editTelefone").value = profile.phone || "";
-  document.getElementById("editUsuario").value = profile.username || "";
-}
+// ===========================
+// EDITAR PERFIL
+// ===========================
+window.abrirEdicao = function(id, name, username, dob, phone) {
+  document.getElementById("editId").value = id;
+  document.getElementById("editName").value = name;
+  document.getElementById("editUsername").value = username;
+  document.getElementById("editDob").value = dob;
+  document.getElementById("editPhone").value = phone;
+  document.getElementById("editForm").style.display = "block";
+};
 
-cancelEdit.addEventListener("click", (e) => {
+document.getElementById("editForm").addEventListener("submit", async (e) => {
   e.preventDefault();
-  editFormContainer.classList.add("hidden");
-});
-
-editForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  showMsg("Salvando...", "");
 
   const id = document.getElementById("editId").value;
-  const full_name = document.getElementById("editNome").value.trim();
-  const dob = document.getElementById("editNascimento").value || null;
-  const email = document.getElementById("editEmail").value.trim().toLowerCase();
-  const phone = document.getElementById("editTelefone").value.trim();
-  const username = document.getElementById("editUsuario").value.trim().toLowerCase();
+  const name = document.getElementById("editName").value;
+  const username = document.getElementById("editUsername").value;
+  const dob = document.getElementById("editDob").value;
+  const phone = document.getElementById("editPhone").value;
 
-  try {
-    const { error: updateErr } = await supabase
-      .from("profiles")
-      .update({ full_name, dob, phone, username })
-      .eq("id", id);
-    if (updateErr) throw updateErr;
+  const { error } = await supabase
+    .from("profiles")
+    .update({
+      full_name: name,
+      username: username,
+      dob: dob,
+      phone: phone,
+    })
+    .eq("id", id);
 
-    try {
-      const { error: authErr } = await supabase.auth.updateUser({ email });
-      if (authErr) console.warn("Não foi possível atualizar email:", authErr.message);
-    } catch(e){ console.warn("updateUser falhou:", e); }
-
-    showMsg("Perfil atualizado com sucesso!", "success");
-    editFormContainer.classList.add("hidden");
-
-    const { data: { session } } = await supabase.auth.getSession();
-    if (session?.user) await loadMyProfileAndRender(session.user.id, session.user.email);
-
-  } catch (err) {
-    console.error(err);
-    showMsg(err?.message || "Erro ao salvar perfil", "error");
-  }
-});
-
-// --- AUTH STATE CHANGE ---
-supabase.auth.onAuthStateChange(async (event, session) => {
-  if (session?.user) {
-    authArea.classList.add("hidden");
-    privateArea.classList.remove("hidden");
-    logoutBtn.classList.remove("hidden");
-    logoutBtn2.classList.remove("hidden");
-    await loadMyProfileAndRender(session.user.id, session.user.email);
-  } else {
-    authArea.classList.remove("hidden");
-    privateArea.classList.add("hidden");
-    logoutBtn.classList.add("hidden");
-    logoutBtn2.classList.add("hidden");
-    usersTableBody.innerHTML = "";
-    editFormContainer.classList.add("hidden");
-  }
-});
-
-// --- CHECK SESSION ON LOAD ---
-(async () => {
-  try {
-    const { data } = await supabase.auth.getSession();
-    const session = data?.session;
-    if (session?.user) {
-      authArea.classList.add("hidden");
-      privateArea.classList.remove("hidden");
-      await loadMyProfileAndRender(session.user.id, session.user.email);
+  if (error) {
+    if (error.code === "23505") {
+      showMsg("Nome de usuário já está em uso.", "error");
     } else {
-      authArea.classList.remove("hidden");
-      privateArea.classList.add("hidden");
+      showMsg("Erro ao atualizar perfil: " + error.message, "error");
     }
-  } catch (err) {
-    console.error("Erro ao checar sessão:", err);
+  } else {
+    showMsg("Perfil atualizado com sucesso!", "success");
+    e.target.reset();
+    document.getElementById("editForm").style.display = "none";
+    carregarPerfil();
+  }
+});
+
+// ===========================
+// CHECAR LOGIN AUTOMÁTICO
+// ===========================
+(async () => {
+  const { data: { user } } = await supabase.auth.getUser();
+  if (user) {
+    carregarPerfil();
   }
 })();
