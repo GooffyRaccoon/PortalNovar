@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>NovAR - Cadastro / Login</title>
   <link rel="stylesheet" href="cadlog.css">
+  <!-- fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <header>
     <div class="cabelo">
       <div class="piolho">
@@ -32,12 +34,12 @@
   </section>
 
   <section class="container section">
+    <!-- Área de autenticação -->
     <div id="authArea">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
         <h2 id="pageTitle">Acessar conta</h2>
         <button id="logoutBtn" class="btn hidden">Sair</button>
       </div>
-
       <div id="authMsg" class="msg"></div>
 
       <div class="tabs" style="margin-bottom:12px;">
@@ -60,6 +62,7 @@
       </form>
     </div>
 
+    <!-- Área privada -->
     <div id="privateArea" class="private hidden" style="margin-top:26px;">
       <div style="display:flex; justify-content:space-between; align-items:center;">
         <h2>Gerenciar Cadastros</h2>
