@@ -159,32 +159,33 @@ body {
                 }
 
 /* banner*/
-.banner{
-  position: relative;
-  aspect-ratio: 4/1;
-  max-width: 100%;
-  z-index: 2;
-
+.banner {
+  position: ;
+  width: 100%;
+  aspect-ratio: 4/1; /* ou ajuste conforme seu layout */
+  max-width: 1300px;  /* ajuste conforme precisar */
+  overflow: hidden;
 }
 
-      .banner img {
-        width: 100%;
-        height: 100%;
-        justify-self: center;
-        object-position: bottom; 
-        object-fit: cover; 
-        display: block;
-}
+        .bannerimg {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: left center; /* ajuste conforme necessário */
+          z-index: 1;
+        }
 
-.bannerimg{
-  position: absolute;
-  z-index: 1; 
-   top: 7vh;
-  left: 0;
-  object-fit: cover;     /* Mantém a proporção e cobre todo o espaço */
-  object-position: center;
-}
-
+        .banner1 {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: 2;
+          pointer-events: none; /* permite clicar no banner, se necessário */
+        }
 
 
 /* noticias*/
