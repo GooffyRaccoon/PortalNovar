@@ -215,31 +215,35 @@ body {
                   margin-bottom: 1.5vw;
                 }
 
-.cardnot .font{
-
-}
-
-.cardnot .font span {
-  
-}
-
-
-                        .cardnot .font p {
-                          font-family: var(--font-roboto);
-                          font-size: 1rem;
-                          color: var(--pretuncio);
-                          font-weight: 400;
-                          margin: 0.5vw;
+                        .cardnot .font{
+                          display: flex;
+                          align-items: center;
+                          gap: 0.4vw;
                         }
 
-
-
-                                .cardnot .noticia img {
-                                  width: 100%;
-                                  max-height: 275px;
-                                  object-fit: contain;
-                                  background: var(--carlito);
+                                .cardnot .font span {
+                                  display: inline-block;
+                                  width: 20px;
+                                  justify-content: center;
+                                  justify-self: center;
+                                  font-size: 15px;
+                                  background: none;
                                 }
+
+                                .cardnot .font p {
+                                  font-family: var(--font-roboto);
+                                  font-size: 1rem;
+                                  color: var(--pretuncio);
+                                  font-weight: 400;
+                                  margin: 0.5vw;
+                                }
+
+                        .cardnot .noticia img {
+                          width: 100%;
+                          max-height: 275px;
+                          object-fit: contain;
+                          background: var(--carlito);
+                        }
 
                         .cardnot .titulo {
                           font-family: var(--font-abeezee);
