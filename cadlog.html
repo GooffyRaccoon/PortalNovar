@@ -36,78 +36,67 @@
   <section class="container section">
 
     <!-- área de autenticação (login / cadastro) -->
-    <div id="authArea" class="">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-        <h2 id="pageTitle">Acessar conta</h2>
-        <!-- logoutBtn permanece, mas só visível quando logado -->
-        <button id="logoutBtn" class="btn hidden">Sair</button>
-      </div>
+    <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema com Supabase</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+</head>
+<body>
+  <div id="authArea">
+    <h2>Criar conta</h2>
+    <form id="registerForm">
+      <input type="text" id="regName" placeholder="Nome completo" required />
+      <input type="text" id="regUsername" placeholder="Usuário" required />
+      <input type="email" id="regEmail" placeholder="Email" required />
+      <input type="password" id="regPassword" placeholder="Senha" required />
+      <input type="date" id="regDob" placeholder="Nascimento" />
+      <input type="text" id="regPhone" placeholder="Telefone" />
+      <button type="submit">Cadastrar</button>
+    </form>
 
-      <div id="authMsg" class="msg"></div>
+    <h2>Acessar conta</h2>
+    <form id="loginForm">
+      <input type="email" id="logEmail" placeholder="Email" required />
+      <input type="password" id="logPassword" placeholder="Senha" required />
+      <button type="submit">Entrar</button>
+    </form>
 
-      <div class="tabs" style="margin-bottom:12px;">
-        <button id="tabLogin" class="tab active">Login</button>
-        <button id="tabRegister" class="tab">Cadastro</button>
-      </div>
+    <p id="authMsg"></p>
+  </div>
 
-      <!-- === Login form === -->
-      <form id="loginForm" class="form">
-        <input type="email" id="loginEmail" placeholder="E-mail" required />
-        <input type="password" id="loginPassword" placeholder="Senha" required />
-        <button type="submit" class="btn">Entrar</button>
-      </form>
+  <div id="privateArea" style="display:none;">
+    <h2>Bem-vindo!</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Usuário</th>
+          <th>Nascimento</th>
+          <th>Telefone</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="perfilTableBody"></tbody>
+    </table>
 
-      <!-- === Register form === -->
-      <form id="registerForm" class="form hidden" style="margin-top:10px;">
-        <input type="text" id="registerName" placeholder="Nome completo" required />
-        <input type="text" id="registerUsername" placeholder="Usuário (apenas letras/números)" required />
-        <input type="email" id="registerEmail" placeholder="E-mail" required />
-        <input type="password" id="registerPassword" placeholder="Senha (mín. 6)" required />
-        <button type="submit" class="btn">Cadastrar</button>
-      </form>
-    </div>
+    <form id="editForm" style="display:none;">
+      <input type="hidden" id="editId" />
+      <input type="text" id="editName" placeholder="Nome completo" required />
+      <input type="text" id="editUsername" placeholder="Usuário" required />
+      <input type="date" id="editDob" />
+      <input type="text" id="editPhone" placeholder="Telefone" />
+      <button type="submit">Salvar alterações</button>
+    </form>
 
-    <!-- === Área privada: tabela de "Gerenciar Cadastros" (apenas perfil do usuário logado) === -->
-    <div id="privateArea" class="private hidden" style="margin-top:26px;">
-      <div style="display:flex; justify-content:space-between; align-items:center;">
-        <h2>Gerenciar Cadastros</h2>
-        <!-- logoutBtn já no topo, mas garantimos outro botão também -->
-        <button id="logoutBtn2" class="btn">Sair</button>
-      </div>
+    <button id="logoutBtn">Sair</button>
+    <p id="msg"></p>
+  </div>
 
-      <!-- Tabela de usuários (vai mostrar apenas o perfil do usuário logado) -->
-      <table id="usersTable" border="1" cellpadding="8" style="width:100%; border-collapse:collapse; margin-top:12px;">
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Nascimento</th>
-            <th>Email</th>
-            <th>Telefone</th>
-            <th>Usuário</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-
-      <!-- Formulário de edição -->
-      <div id="editFormContainer" class="hidden" style="margin-top:20px;">
-        <h3>Editar Cadastro</h3>
-        <form id="editForm" class="form">
-          <input type="hidden" id="editId">
-          <div class="field"><label>Nome completo</label><input id="editNome" required /></div>
-          <div class="field"><label>Nascimento</label><input id="editNascimento" type="date" /></div>
-          <div class="field"><label>Email (login)</label><input id="editEmail" type="email" required /></div>
-          <div class="field"><label>Telefone</label><input id="editTelefone" /></div>
-          <div class="field"><label>Usuário</label><input id="editUsuario" required /></div>
-          <button type="submit" class="btn">Salvar</button>
-          <button type="button" id="cancelEdit" class="btn ghost">Cancelar</button>
-        </form>
-      </div>
-
-      <div id="msg" class="msg"></div>
-    </div>
-  </section>
+  <!-- Conecta o JS -->
+  <script src="app.js"></script>
+</body>
 
   <footer>
     <!-- seu footer existente (mantive como no seu original) -->
