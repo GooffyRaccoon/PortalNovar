@@ -62,9 +62,8 @@ registerForm.addEventListener("submit", async (e) => {
     const { data: userData, error } = await supabase.auth.signUp({
       email,
       password,
-      options: { data: { full_name: name, username } }
+      options: { data: { full_name: name, username } },
     });
-
     if (error) throw error;
 
     // Cria registro no profiles
@@ -78,7 +77,6 @@ registerForm.addEventListener("submit", async (e) => {
     showAuthMsg("Cadastro realizado! Verifique seu e-mail.", "success");
     registerForm.reset();
     toggleTab("login");
-
   } catch (err) {
     console.error(err);
     showAuthMsg(err?.message || "Erro ao cadastrar", "error");
@@ -99,7 +97,6 @@ loginForm.addEventListener("submit", async (e) => {
 
     showAuthMsg("Login realizado!", "success");
     loginForm.reset();
-
   } catch (err) {
     console.error(err);
     showAuthMsg(err?.message || "Erro no login", "error");
@@ -111,7 +108,6 @@ async function doLogout() {
   await supabase.auth.signOut();
   showAuthMsg("Você saiu.", "success");
 }
-
 logoutBtn.addEventListener("click", doLogout);
 logoutBtn2.addEventListener("click", doLogout);
 
@@ -127,6 +123,7 @@ async function loadMyProfileAndRender(userId, email) {
     if (error && error.code !== "PGRST116") throw error;
 
     usersTableBody.innerHTML = "";
+
     const row = data || { id: userId, full_name: "(sem perfil)", dob: "", phone: "", username: "" };
 
     const tr = document.createElement("tr");
@@ -144,7 +141,6 @@ async function loadMyProfileAndRender(userId, email) {
 
     const editBtn = tr.querySelector(".edit-btn");
     editBtn.addEventListener("click", () => openEditForm(row, email));
-
   } catch (err) {
     console.error("Erro ao carregar perfil:", err);
     showMsg("Não foi possível carregar seu perfil.", "error");
@@ -183,13 +179,12 @@ editForm.addEventListener("submit", async (e) => {
       .from("profiles")
       .update({ full_name, dob, phone, username })
       .eq("id", id);
-
     if (updateErr) throw updateErr;
 
     try {
       const { error: authErr } = await supabase.auth.updateUser({ email });
       if (authErr) console.warn("Não foi possível atualizar email:", authErr.message);
-    } catch(e){
+    } catch (e) {
       console.warn("updateUser falhou:", e);
     }
 
@@ -198,7 +193,6 @@ editForm.addEventListener("submit", async (e) => {
 
     const { data: { session } } = await supabase.auth.getSession();
     if (session?.user) await loadMyProfileAndRender(session.user.id, session.user.email);
-
   } catch (err) {
     console.error(err);
     showMsg(err?.message || "Erro ao salvar perfil", "error");
@@ -228,6 +222,7 @@ supabase.auth.onAuthStateChange(async (event, session) => {
   try {
     const { data } = await supabase.auth.getSession();
     const session = data?.session;
+
     if (session?.user) {
       authArea.classList.add("hidden");
       privateArea.classList.remove("hidden");
