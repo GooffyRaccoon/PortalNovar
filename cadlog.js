@@ -1,3 +1,11 @@
+// --- SUPABASE CONFIG ---
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
+const SUPABASE_URL = "https://sbfrjfqaraxfulwqselv.supabase.co";
+const SUPABASE_ANON_KEY = "SUA_ANON_KEY_AQUI"; // substitua pela anon key do Supabase
+
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
 // --- DOM Elements ---
 const tabLogin = document.getElementById("tabLogin");
 const tabRegister = document.getElementById("tabRegister");
