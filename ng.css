@@ -286,7 +286,6 @@ body {
                           cursor: pointer;
                           letter-spacing: 0.04rem;
                           transition: background 0.18s, box-shadow 0.18s, transform 0.13s;
-                          text-transform: uppercase;
                         }
                 
                         .butt span {
