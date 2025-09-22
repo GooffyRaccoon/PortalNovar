@@ -19,6 +19,7 @@
   --mephiles: #0A3B6C;
   --petroleo: #021B34;
   --verdura: #106348;
+  --verduratrans: rgba(77, 105, 166, 0.5);
   --verde: #1FA57F;
   --grama: #58B23D;
   --va: #BEE15E;
@@ -107,7 +108,7 @@ body {
   padding: 0.5vw 3vw;
   margin: 0 auto;
   gap: 1vw;
-  box-shadow: 0 0.5vw 16px var(--blertrans);
+  box-shadow: 0 0.5vw 16px var(--verduratrans);
   position: relative;
   z-index: 10;
 }
