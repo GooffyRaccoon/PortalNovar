@@ -237,19 +237,18 @@ body {
                 }
 
 /* veja mais*/
-.veja-mais-card {
+.card {
     background: #fff;
     border-radius: 6px;
     max-width: 370px;
     box-shadow: 0 8px 36px 0 rgba(51,68,99,0.13);
-    margin: 24px auto;
     padding: 32px 24px 32px 32px;
     display: flex;
     flex-direction: column;
     gap: 34px;
 }
 
-.veja-title {
+.card h2 {
     margin: 0 0 10px 0;
     font-family: 'ABeeZee', Arial, sans-serif;
     font-size: 2rem;
@@ -258,7 +257,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-.veja-item {
+.itens {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -266,7 +265,7 @@ body {
     gap: 8px;
 }
 
-.veja-img {
+.card img {
     width: 100%;
     max-width: 260px;
     height: 90px;
