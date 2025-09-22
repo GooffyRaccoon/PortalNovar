@@ -205,9 +205,12 @@ body {
         }
 
                 .cardnot {
-                  width: 26vw;
                   min-width: 250px;
+                  min-height: 330px;
+                  width: 25vw;
                   height: 35vw;
+                  max-width: 30rem;
+                  max-height: 35rem;
                   display: flex;
                   border: none;
                   flex-direction: column;
