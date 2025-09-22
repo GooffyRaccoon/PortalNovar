@@ -189,7 +189,6 @@ body {
 
 
 /* ah*/
-
 .origem-bg {
   width: 100vw;
   height: 100vh;
@@ -244,6 +243,96 @@ body {
     box-shadow: 0 2px 10px 0 rgba(0,0,0,0.08);
 }
 
+/* veja mais*/
+.veja-mais-card {
+    background: #fff;
+    border-radius: 6px;
+    max-width: 370px;
+    box-shadow: 0 8px 36px 0 rgba(51,68,99,0.13);
+    margin: 24px auto;
+    padding: 32px 24px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+
+.veja-title {
+    margin: 0 0 10px 0;
+    font-family: 'ABeeZee', Arial, sans-serif;
+    font-size: 2rem;
+    color: #22305a;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+.veja-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+    gap: 8px;
+}
+
+.veja-img {
+    width: 100%;
+    max-width: 260px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 2px;
+    background: #eee;
+    margin-bottom: 0.2em;
+}
+
+.veja-placeholder {
+    background: #bdbdbd;
+    width: 100%;
+    max-width: 260px;
+    height: 90px;
+    display: block;
+}
+
+.veja-meta {
+    font-size: 0.72rem;
+    color: #7a7d87;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.veja-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: url('data:image/svg+xml;utf8,<svg width="10" height="10" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="4" fill="%237a7d87"/></svg>') no-repeat center center;
+    background-size: cover;
+}
+
+.veja-desc {
+    font-size: 1rem;
+    color: #22305a;
+    margin: 2px 0 0 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+}
+
+.veja-btn {
+    background: #22305a;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    font-size: 0.78rem;
+    padding: 4px 14px;
+    margin-top: 6px;
+    cursor: pointer;
+    transition: background 0.15s;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+.veja-btn:hover {
+    background: #2d4170;
+}
+
+
+/* footer*/
 footer {
   color: var(--bler);
   background: linear-gradient(180deg, var(--branco) 0%, var(--mephiles) 100%);
