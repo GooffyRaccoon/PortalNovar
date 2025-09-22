@@ -277,6 +277,7 @@ body {
                           font-size: 0.9rem;
                           font-weight: 400;
                           text-decoration: none;
+                          justify-content:space-around;
                           align-items: center;
                           text-align: center;
                           padding: 0.5rem;
@@ -288,14 +289,15 @@ body {
                           text-transform: uppercase;
                         }
                 
-                        .buttset {
+                        .butt span {
                           display: flex;
-                          transform: scaleX(1);
                           color: var(--brancao);
                           font-weight: 400;
+                          font-size: 1.2rem;
                           transition: filter 0.2s;
                           align-items: center;
                           text-align: center;
+                          padding-bottom: 2px;
                         }
                                 .butt:hover {
                                   background: linear-gradient(180deg, #385d92 0%, #304c7a 100%);
