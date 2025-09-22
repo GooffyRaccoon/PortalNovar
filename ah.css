@@ -193,7 +193,7 @@ body {
 .main {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center-start;
   padding: 2rem 7rem;
   position: relative;
