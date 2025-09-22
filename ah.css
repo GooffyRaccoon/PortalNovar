@@ -248,64 +248,56 @@ body {
   gap: 34px;
 }
 
-.card h2 {
-  margin: 0 0 10px 0;
-  font-family: var(--font-roboto);
-  font-size: 2rem;
-  color: #22305a;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-}
+        .card h2 {
+          margin: 0 0 10px 0;
+          font-family: var(--font-roboto);
+          font-size: 2rem;
+          color: var(--verdura);
+          font-weight: 400;
+          letter-spacing: 0.5px;
+        }
+        
+        .itens {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          margin-bottom: 0;
+          gap: 8px;
+        }
+        
+        .card img {
+          width: 100%;
+          max-width: 260px;
+          height: 90px;
+          object-fit: cover;
+          border-radius: 2px;
+          background: var(--carlos);
+          margin-bottom: 0.2em;
+        }
 
-.itens {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 0;
-  gap: 8px;
-}
-
-.card img {
-  width: 100%;
-  max-width: 260px;
-  height: 90px;
-  object-fit: cover;
-  border-radius: 2px;
-  background: #eee;
-  margin-bottom: 0.2em;
-}
-
-.veja-placeholder {
-    background: #bdbdbd;
-    width: 100%;
-    max-width: 260px;
-    height: 90px;
-    display: block;
-}
-
-.veja-meta {
-    font-size: 0.72rem;
-    color: #7a7d87;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.veja-dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background: url('data:image/svg+xml;utf8,<svg width="10" height="10" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="4" fill="%237a7d87"/></svg>') no-repeat center center;
-    background-size: cover;
-}
-
-.veja-desc {
-    font-size: 1rem;
-    color: #22305a;
-    margin: 2px 0 0 0;
-    font-family: 'Roboto', Arial, sans-serif;
-    font-weight: 400;
-}
+        .veja-meta {
+          font-size: 0.72rem;
+          color: var(--verde);
+          display: flex;
+          align-items: center;
+          gap: 4px;
+        }
+        
+        .veja-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: url('data:image/svg+xml;utf8,<svg width="10" height="10" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="4" fill="%237a7d87"/></svg>') no-repeat center center;
+            background-size: cover;
+        }
+        
+        .veja-desc {
+            font-size: 1rem;
+            color: var(--pretuncio);
+            margin: 2px 0 0 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-weight: 400;
+        }
 
 .veja-btn {
     background: #22305a;
