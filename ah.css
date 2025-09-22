@@ -222,9 +222,9 @@ body {
                 .ahpag p {
                   color: var(--pretuncio);
                   font-size: 1.5rem;
+                  font-size: 2rem;
                   line-height: 1.6;
                   margin-bottom: 0;
-                  
                 }
         
                 .ahpag-img {
