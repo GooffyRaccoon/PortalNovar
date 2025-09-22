@@ -249,30 +249,30 @@ body {
 }
 
 .card h2 {
-    margin: 0 0 10px 0;
-    font-family: var(--font-roboto);
-    font-size: 2rem;
-    color: #22305a;
-    font-weight: 400;
-    letter-spacing: 0.5px;
+  margin: 0 0 10px 0;
+  font-family: var(--font-roboto);
+  font-size: 2rem;
+  color: #22305a;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 .itens {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 0;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 0;
+  gap: 8px;
 }
 
 .card img {
-    width: 100%;
-    max-width: 260px;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 2px;
-    background: #eee;
-    margin-bottom: 0.2em;
+  width: 100%;
+  max-width: 260px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 2px;
+  background: #eee;
+  margin-bottom: 0.2em;
 }
 
 .veja-placeholder {
