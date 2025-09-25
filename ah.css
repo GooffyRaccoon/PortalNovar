@@ -237,7 +237,7 @@ body {
                 }
 
 /* veja mais*/
-.card {
+.vejamais {
   background: var(--brancao);
   border-radius: 6px;
   max-width: 370px;
@@ -248,7 +248,7 @@ body {
   gap: 34px;
 }
 
-        .card h2 {
+        .vejamais h2 {
           margin: 0 0 10px 0;
           font-family: var(--font-roboto);
           font-size: 2rem;
@@ -265,7 +265,7 @@ body {
           gap: 8px;
         }
         
-        .card img {
+        .vejamais img {
           width: 100%;
           max-width: 260px;
           height: 90px;
@@ -275,7 +275,7 @@ body {
           margin-bottom: 0.2em;
         }
 
-        .veja-meta {
+        .veja-fonte {
           font-size: 0.72rem;
           color: var(--verde);
           display: flex;
@@ -283,7 +283,7 @@ body {
           gap: 4px;
         }
         
-        .veja-dot {
+        .veja-symb {
             display: inline-block;
             width: 10px;
             height: 10px;
