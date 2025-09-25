@@ -29,6 +29,7 @@
   --vermelhuncio: #A32D2D;
   --ash: rgba(255, 255, 255, 0.2);
   --botao: linear-gradient(180deg, #2d4e77 0%, #233d5c 100%);
+  --botaover: linear-gradient(180deg, #31772D 0%, #294E1B 100%);
   --font-inter: 'Inter', Arial, Helvetica, sans-serif;
   --font-abeezee: 'ABeeZee', Arial, Helvetica, sans-serif;
   --font-roboto: 'Roboto', Arial, Helvetica, sans-serif;
@@ -300,24 +301,21 @@ body {
         }
 
         .butt {
-            display: flex;
-            max-height: 20px;
-            min-width: 100px;
-            background: var(--botao);
-            color: var(--brancao);
-            font-family: var(--font-roboto);
-            font-size: 0.9rem;
-            font-weight: 400;
-            text-decoration: none;
-            justify-content:space-around;
-            align-items: center;
-            text-align: center;
-            padding: 0.5rem;
-            margin: 1.5vw 0 0 1vw;
-            border: none;
-            cursor: pointer;
-            letter-spacing: 0.04rem;
-            transition: background 0.18s, box-shadow 0.18s, transform 0.13s;
+          display: flex;
+          height: 1.6vw;
+          min-width: 80px;
+          background: var(--botaover);
+          color: var(--brancao);
+          font-family: var(--font-roboto);
+          font-size: 0.9rem;
+          font-weight: 400;
+          text-decoration: none;
+          justify-content:space-around;
+          align-items: center;
+          text-align: center;
+          border: none;
+          cursor: pointer;
+          transition: background 0.18s, box-shadow 0.18s, transform 0.13s;
         }
                 
                         .butt span {
@@ -331,7 +329,7 @@ body {
                           padding-bottom: 2px;
                         }
                                 .butt:hover {
-                                  background: linear-gradient(180deg, #385d92 0%, #304c7a 100%);
+                                  background: linear-gradient(180deg, #479238 0%, #3C712F 100%);
                                   box-shadow: 0 6px 18px 0 rgba(40,70,130,0.24);
                                   transform: translateY(-2px) scale(1.03);
                                   outline: none;
