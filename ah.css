@@ -265,15 +265,15 @@ body {
           gap: 8px;
         }
         
-        .vejamais img {
-          width: 100%;
-          max-width: 260px;
-          height: 90px;
-          object-fit: cover;
-          border-radius: 2px;
-          background: var(--carlos);
-          margin-bottom: 0.2em;
-        }
+                .vejamais img {
+                  width: 100%;
+                  max-width: 260px;
+                  height: 90px;
+                  object-fit: cover;
+                  border-radius: 2px;
+                  background: var(--carlos);
+                  margin-bottom: 0.2em;
+                }
 
         .veja-fonte {
           font-size: 0.72rem;
@@ -301,7 +301,7 @@ body {
 
         .butt {
             display: flex;
-            max-height: 30px;
+            max-height: 20px;
             min-width: 100px;
             background: var(--botao);
             color: var(--brancao);
