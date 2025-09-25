@@ -20,8 +20,8 @@
   --petroleo: #021B34;
   --verdura: #106348;
   --verduratrans: rgba(16, 99, 72, 0.5);
-  --verde: #1FA57F;
-  --grama: #58B23D;
+  --verde: #1FA543;
+  --grama: #0B9430;
   --va: #BEE15E;
   --espere: #E7C84D;
   --amareluncio: #BF9230;
@@ -241,6 +241,7 @@ body {
 .vejamais {
   background: var(--brancao);
   border-radius: 6px;
+  max-height: 50rem;
   max-width: 370px;
   box-shadow: 0 8px 36px 0 var(--carlos);
   padding: 32px 24px 32px 32px;
@@ -255,7 +256,6 @@ body {
           font-size: 2rem;
           color: var(--verdura);
           font-weight: 400;
-          letter-spacing: 0.5px;
         }
         
         .itens {
@@ -334,28 +334,6 @@ body {
                                   transform: translateY(-2px) scale(1.03);
                                   outline: none;
                                 }
-
-
-
-
-
-
-.veja-btn {
-    background: #22305a;
-    color: #fff;
-    border: none;
-    border-radius: 2px;
-    font-size: 0.78rem;
-    padding: 4px 14px;
-    margin-top: 6px;
-    cursor: pointer;
-    transition: background 0.15s;
-    font-family: 'Roboto', Arial, sans-serif;
-}
-.veja-btn:hover {
-    background: #2d4170;
-}
-
 
 /* footer*/
 footer {
