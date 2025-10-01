@@ -189,6 +189,87 @@ body {
           pointer-events: none; 
         }
 
+/* main*/
+
+.main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: #e9ecef;
+    padding: 24px 0;
+    gap: 40px;
+}
+
+                .main + .main {
+                    margin-top: 40px;
+                }
+                
+                .turcad {
+                    flex: 1 1 0;
+                    max-width: 54%;
+                }
+                
+                                .turcad h2 {
+                                    font-family: 'Roboto Condensed', Arial, sans-serif;
+                                    font-size: 2rem;
+                                    color: #233a5a;
+                                    font-weight: 400;
+                                    margin: 0 0 18px 0;
+                                    line-height: 1.2;
+                                }
+                                
+                                .turcad p {
+                                    font-size: 1.08rem;
+                                    color: #222;
+                                    margin-bottom: 10px;
+                                    line-height: 1.6;
+                                }
+                
+                .local {
+                    color: #5a7ec3;
+                    text-decoration: underline;
+                    transition: color 0.2s;
+                }
+                
+                                .local:hover {
+                                    color: #32528f;
+                                }
+                
+                .butt {
+                    display: inline-block;
+                    margin-top: 12px;
+                    background: #425c7d;
+                    color: #fff;
+                    font-family: 'Roboto Condensed', Arial, sans-serif;
+                    font-size: 1rem;
+                    border: none;
+                    border-radius: 2px;
+                    padding: 8px 18px;
+                    cursor: pointer;
+                    letter-spacing: 0.5px;
+                    transition: background 0.2s;
+                }
+                
+                                .butt:hover {
+                                    background: #2e4968;
+                                }
+                
+                .turimg {
+                    flex: 0 0 420px;
+                    max-width: 420px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                .tourist-img img {
+                    width: 100%;
+                    max-width: 420px;
+                    height: auto;
+                    border-radius: 2px;
+                    box-shadow: 0 2px 8px rgba(42,58,90,0.10);
+                    object-fit: cover;
+                }
 
 
 /* footer*/
