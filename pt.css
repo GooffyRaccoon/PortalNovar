@@ -191,31 +191,102 @@ body {
 
 
 
+/* footer*/
+footer {
+  color: var(--bler);
+  background: linear-gradient(180deg, var(--branco) 0%, var(--mephiles) 100%);
+  padding: 1.5vw 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.canela {
+  background: var(--brancao);
+  width: 98%;
+  height: 9.5vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1vw 2vw;
+  margin: 2vw 0 0 0;
+}
+        
+        .gmail {
+          font-family:var(--font-inter);
+          color: inherit;
+          text-decoration: none;
+          font-size: 1.5vw;
+          text-align: left;
+          display: flex;
+          flex: 1;
+          padding: 0 0 0 2vw;
+        }
+                        
+                .canlogo {
+                  justify-content: center;
+                  display: flex;
+                  flex: 1;
+                }
+                
+                        .canela .canlogo img{
+                          max-width: 150px;
+                          width: 40%;
+                          flex: -1;
+                          margin: 0.5vw 1vw;
+                        }
+                                
+                .redes {
+                  display: flex;
+                  flex: 1;
+                  justify-content: right;
+                  gap: 0vw;
+                }
+        
+                        .redesocial{
+                          max-width: 50px;
+                          width: 20%;
+                          justify-content: center;
+                          display: flex;
+                          scale: 1;
+                          object-fit: contain;
+                          filter: grayscale(0%);
+                          transition: filter 0.2s;
+                        }
+        
+                                        .redesocial img:hover {
+                                          filter: brightness(1.2);
+                                        }
+        
+                .tornozelo {
+                  background: var(--brancao);
+                  width: 98%;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: space-around;
+                  padding: 0vw 2vw 1vw 2vw;
+                  box-sizing: border-box;
+                }
+                
+                        .torntxt {
+                          font-family:var(--font-inter);
+                          font-size: 1.7vw;
+                          text-align: center;
+                          letter-spacing: 0.2px;
+                          margin: 0 0 0.6vw 0;
+                          padding: 0 0 2vw;
+                          border-bottom: 2px solid var(--carlito);
+                        }
+                
+                        .torntxt2 {
+                          font-family:var(--font-inter);
+                          font-size: 0.95vw;
+                          align-self: center;
+                          letter-spacing: 0.3px;
+                          margin: 0.5vw 0 0 0;
+                        }
 
 
 
-</footer>
-    <div class="canela">
-            <a class="gmail" href="mailto:portalnovar@gmail.com" target="_blank" rel="noopener">portalnovar@gmail.com</a>
-            <a class="canlogo" href="index.html">
-                <img src="imgs/logo.png" alt="Logo do aplicativo NovAR, a árvore de Araucária, com a palavra NOVAR na frente">
-            </a>
-            <div class="redes">
-                <a class="redesocial" href="#" title="Facebook">
-                    <img src="imgs/facebook.png" alt="Abra nossa pagina do facebook">
-                </a>
-                <a class="redesocial" href="#" title="Instagram">
-                    <img src="imgs/insta.png" alt="Abra nossa pagina do instagram">
-                </a>
-                <a class="redesocial" href="#" title="Twitter">
-                    <img src="imgs/twitter.png" alt="Abra nossa pagina do twitter">
-                </a>
-            </div>
-        </div>
-        <div class="tornozelo">
-            <p class="torntxt">Contate-Nos Através do Nosso E-mail, ou Visite Nossas Redes Sociais</p>
-            <p class="torntxt2">Todo o conteúdo desse site está publicado sob licença.</p>
-        </div>
-    </footer>
 
-</body></html>
