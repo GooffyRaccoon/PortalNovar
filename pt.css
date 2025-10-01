@@ -187,22 +187,30 @@ body {
         }
 
 /* main*/
+.sections{
+  width: 100%;
+
+}
+
 .main {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  background: var(--branco);
   padding: 24px 0;
   gap: 40px;
   display: block;
+  width: 100%;
+}
+
+.turcard{
+  display:flex;
 }
                 
-        .turcad {
+        .turcont {
           flex: 1 1 0;
-          max-width: 54%;
         }
         
-                .turcont h2 {
+                .turcad h2 {
                   font-family: var(--font-roboto);
                   font-size: 2rem;
                   color: var(--mephiles);
@@ -211,7 +219,7 @@ body {
                   line-height: 1.2;
                 }
                                 
-                        .turcont p {
+                        .turcad p {
                           font-size: 1.08rem;
                           color: var(--pretuncio);
                           margin-bottom: 10px;
