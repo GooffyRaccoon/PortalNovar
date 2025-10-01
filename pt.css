@@ -198,6 +198,7 @@ body {
     background: #e9ecef;
     padding: 24px 0;
     gap: 40px;
+    display: block;
 }
 
                 .main + .main {
