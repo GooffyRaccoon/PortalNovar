@@ -38,11 +38,8 @@
   --font-cormorant: 'Cormorant Garamond', Georgia, serif;
 }
 
-/* Reset and base styles */
 body {
   background: var(--branco);
-  /* justify-self: center;
-  align-self: center; */
 }
 
 /* cabecario 1 */
@@ -190,7 +187,6 @@ body {
         }
 
 /* main*/
-
 .main {
   display: flex;
   align-items: flex-start;
