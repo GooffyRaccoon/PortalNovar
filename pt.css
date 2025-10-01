@@ -272,6 +272,71 @@ body {
                     object-fit: cover;
                 }
 
+/* rotation*/
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px auto;
+    gap: 18px;
+    user-select: none;
+}
+.pagination-btn, .pagination-ellipsis {
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+    background: #dedede;
+    color: #233a5a;
+    font-size: 1.5rem;
+    font-family: inherit;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.pagination-btn.active {
+    background: #233a5a;
+    color: #fff;
+    font-weight: 700;
+}
+.pagination-btn:focus {
+    outline: 2px solid #5a7ec3;
+}
+.pagination-btn:hover:not(.active):not(.disabled) {
+    background: #c8d8e8;
+}
+.pagination-btn.disabled {
+    background: #dedede;
+    color: #bbb;
+    cursor: default;
+}
+.pagination-ellipsis {
+    cursor: default;
+    background: transparent;
+    color: #333;
+    font-size: 2rem;
+    border: none;
+    width: auto;
+}
+.section-content {
+    max-width: 680px;
+    background: #fff;
+    margin: 0 auto 32px auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(42,58,90,0.07);
+    padding: 36px;
+    text-align: center;
+    font-size: 1.25rem;
+    display: none;
+}
+.section-content.active {
+    display: block;
+}
+
+
+
 
 /* footer*/
 footer {
