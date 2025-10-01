@@ -1,1 +1,221 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+:root {
+  --pretuncio: #313131;
+  --carlos: #999;
+  --carlito: #B2B2B2;
+  --baranco: #CCC;
+  --branco: #E5E5E5;
+  --brancao: #FFF;
+  --bler: #4D69A6;
+  --blertrans: rgba(77, 105, 166, 0.5);
+  --sonic: #305FC5;
+  --mephiles: #0A3B6C;
+  --petroleo: #021B34;
+  --verdura: #106348;
+  --verduratrans: rgba(16, 99, 72, 0.5);
+  --verde: #1FA543;
+  --grama: #0B9430;
+  --va: #BEE15E;
+  --espere: #E7C84D;
+  --amareluncio: #BF9230;
+  --pare: #C33E3E;
+  --vermelhuncio: #A32D2D;
+  --ash: rgba(255, 255, 255, 0.2);
+  --botao: linear-gradient(180deg, #2d4e77 0%, #233d5c 100%);
+  --botaover: linear-gradient(180deg, #31772D 0%, #294E1B 100%);
+  --font-inter: 'Inter', Arial, Helvetica, sans-serif;
+  --font-abeezee: 'ABeeZee', Arial, Helvetica, sans-serif;
+  --font-roboto: 'Roboto', Arial, Helvetica, sans-serif;
+  --font-crimson: 'Crimson Text', Georgia, 'Times New Roman', serif;
+  --font-roboto-cond: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Reset and base styles */
+body {
+  background: var(--branco);
+  /* justify-self: center;
+  align-self: center; */
+}
+
+/* cabecario 1 */
+.cabelo {
+  height: 4vw;
+  max-width: 100%;
+  max-height: 50px;
+  background-color: var(--mephiles);
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+        .piolho {
+          width: 8vw;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          gap: 4vw;
+          margin: 0 0 0 5%;
+        }
+        
+                .loguinho {
+                  display: flex;
+                }
+
+                .divisaocabelo {
+                  color: var(--brancao);
+                  width: 100%;
+                  height: 100%;
+                }
+    
+        .textcabelo {
+          color: var(--baranco);
+          font: var(--font-inter);
+          font-style: normal;
+          font-weight: 400;
+        }
+    
+        .xcabelo {
+          font-family: var(--font-crimson);
+          font-weight: 200;
+          font-size: 25px;
+          display: flex;
+          background: none;
+          border: none;
+          color: var(--brancao);
+          margin: 0 5rem;
+        }
+
+/* cabecario 2*/
+.cabecao {
+  font-family: var(--font-inter);
+  width: 100%;
+  background: var(--brancao);
+  color: var(--pretuncio);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5vw 3vw;
+  margin: 0 auto;
+  gap: 1vw;
+  box-shadow: 0 0.5vw 16px var(--verduratrans);
+  position: relative;
+  z-index: 10;
+}
+
+        .logo{
+          display: flex;
+          width: 3vw;
+          justify-content: center;
+          margin: 0 2rem;
+        }
+
+                .cabecao .logo img{
+                  max-width: 8vw;
+                  flex: 1;
+                  margin: 0 0 0 20px;
+                }
+        
+        .topnavegation {
+          font-family: inherit;
+          font-style: normal;
+          font-weight: 400;          
+          font-size: 1.5vw;
+          color: inherit;
+          text-decoration: none;
+          white-space: normal;
+          line-height: 150%;
+          display: flex; 
+          flex-shrink: 0;
+          flex-direction: row;
+          text-align: center;
+          gap: 2 rem;
+          padding: 0 1.5vw;
+          margin: auto;
+          transition: color 0.3s ease;
+        }
+        
+                .topnavegation:hover {
+                  color: var(--verde);
+                }
+
+        .perfil{
+          display: flex; 
+        }
+
+                .cabecao .perfil img{
+                  max-block-size: 4vw;
+                  flex: -1;
+                  margin: 0 2vw 0 0;
+                }
+
+/* banner*/
+.banner {
+  width: 100%;
+  max-height: 50vw;
+  aspect-ratio: 4/1; 
+  position: relative;
+  overflow: hidden;
+}
+
+        .bannerimg {
+          position: absolute;
+          inset: 0;
+          width: 48%;
+          height: 100%;
+          object-fit: cover;
+          object-position: left center;
+          z-index: 1;
+        }
+
+        .banner1 {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: 2;
+          pointer-events: none; 
+        }
+
+
+
+
+
+
+</footer>
+    <div class="canela">
+            <a class="gmail" href="mailto:portalnovar@gmail.com" target="_blank" rel="noopener">portalnovar@gmail.com</a>
+            <a class="canlogo" href="index.html">
+                <img src="imgs/logo.png" alt="Logo do aplicativo NovAR, a árvore de Araucária, com a palavra NOVAR na frente">
+            </a>
+            <div class="redes">
+                <a class="redesocial" href="#" title="Facebook">
+                    <img src="imgs/facebook.png" alt="Abra nossa pagina do facebook">
+                </a>
+                <a class="redesocial" href="#" title="Instagram">
+                    <img src="imgs/insta.png" alt="Abra nossa pagina do instagram">
+                </a>
+                <a class="redesocial" href="#" title="Twitter">
+                    <img src="imgs/twitter.png" alt="Abra nossa pagina do twitter">
+                </a>
+            </div>
+        </div>
+        <div class="tornozelo">
+            <p class="torntxt">Contate-Nos Através do Nosso E-mail, ou Visite Nossas Redes Sociais</p>
+            <p class="torntxt2">Todo o conteúdo desse site está publicado sob licença.</p>
+        </div>
+    </footer>
+
+</body></html>
