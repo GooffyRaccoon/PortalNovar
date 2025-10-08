@@ -334,70 +334,166 @@ a{ color:inherit; text-decoration:none; }
   background:rgba(255,255,255,.02); 
 }
 
-.hero{ text-align:center; padding:96px 0; }
-.hero h1{ font-size:2rem; margin:0 0 10px; }
-.hero p{ color:var(--muted); margin:0 0 22px; }
+.hero{
+  text-align:center;
+  padding:96px 0;
+}
+
+.hero h1{
+  font-size:2rem;
+  margin:0 0 10px;
+}
+
+.hero p{
+  color:var(--muted);
+  margin:0 0 22px;
+}
+
 .butt{
-  display:inline-block; border:0; border-radius:12px; padding:12px 18px; cursor:pointer;
-  background:linear-gradient(90deg, var(--primary), var(--accent)); color:#091221; font-weight:600;
+  display:inline-block;
+  border:0;
+  border-radius:12px;
+  padding:12px 18px;
+  cursor:pointer;
+  background:linear-gradient(90deg, var(--primary), var(--accent));
+  color:#091221;
+  font-weight:600;
   box-shadow:0 8px 24px rgba(96,165,250,.25);
 }
-.butt:hover{ filter:brightness(1.05); }
-.ghostbutt{
-  background:transparent; border:1px solid rgba(255,255,255,.15); color:var(--text);
-}
-.butt.full{ width:100%; }
 
-.grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
-.cards{ display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; }
+.butt:hover{
+  filter:brightness(1.05);
+}
+
+.ghostbutt{
+  background:transparent;
+  border:1px solid rgba(255,255,255,.15);
+  color:var(--text);
+}
+
+.butt.full{
+  width:100%;
+}
+
+.grid-2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:20px;
+}
+
 .card{
-  background:rgba(17,24,39,.6); border:1px solid rgba(255,255,255,.06);
-  border-radius:16px; padding:20px; box-shadow:0 10px 30px rgba(0,0,0,.25);
+  background:rgba(17,24,39,.6);
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:16px;
+  padding:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
 }
 
 /* FORMULÁRIOS */
-.auth{ max-width:720px; }
-.tabs{ display:flex; gap:8px; margin-bottom:16px; }
-.tab{
-  flex:1; padding:10px 14px; border-radius:10px; background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.06); color:var(--text); cursor:pointer;
+.auth{
+  max-width:720px;
 }
+
+.tabs{
+  display:flex;
+  gap:8px;
+  margin-bottom:16px;
+}
+
+.tab{
+  flex:1;
+  padding:10px 14px;
+  border-radius:10px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.06);
+  color:var(--text);
+  cursor:pointer;
+}
+
 .tab.active{
   background:linear-gradient(90deg, var(--accent), var(--primary));
-  color:#0a0f1f; font-weight:700;
+  color:#0a0f1f;
+  font-weight:700;
 }
-.pane{ display:none; }
-.pane.active{ display:block; }
-.form{ display:grid; gap:14px; }
-.field{ display:grid; gap:8px; }
-label{ font-weight:600; }
-input{
-  background:rgba(17,24,39,.6); color:var(--text); border:1px solid rgba(255,255,255,.1);
-  border-radius:10px; padding:12px 14px; outline:0;
-}
-input:focus{ border-color:var(--accent); box-shadow:0 0 0 3px rgba(96,165,250,.25); }
-.muted{ color:var(--muted); font-size:.9rem; }
-.center{ text-align:center; }
-.msg{ margin-top:14px; min-height:24px; }
-.msg.error{ color:var(--danger); }
-.msg.success{ color:var(--primary); }
 
-.private{ margin-top:22px; }
-.hidden{ display:none; }
+.pane{
+  display:none;
+}
+
+.pane.active{
+  display:block;
+}
+
+.form{
+  display:grid;
+  gap:14px;
+}
+
+.field{
+  display:grid;
+  gap:8px;
+}
+
+label{
+  font-weight:600;
+}
+
+input{
+  background:rgba(17,24,39,.6);
+  color:var(--text);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:10px;
+  padding:12px 14px;
+  outline:0;
+}
+
+input:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(96,165,250,.25);
+}
+
+.muted{
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+.center{
+  text-align:center;
+}
+
+.msg{
+  margin-top:14px;
+  min-height:24px;
+}
+
+.msg.error{
+  color:var(--danger);
+}
+
+.msg.success{
+  color:var(--primary);
+}
+
+.private{
+  margin-top:22px;
+}
+
+.hidden{
+  display:none;
+}
 
 /* FOOTER */
-.footer{ padding:32px 0; border-top:1px solid rgba(255,255,255,.06); background:rgba(0,0,0,.2); text-align:center; }
-
-/* RESPONSIVO */
-@media (max-width: 900px){
-  .cards{ grid-template-columns:1fr 1fr; }
-}
-@media (max-width: 680px){
-  .grid-2{ grid-template-columns:1fr; }
-  .cards{ grid-template-columns:1fr; }
-  .menu{ display:none; }
-  .menu.open{ display:flex; flex-direction:column; position:absolute; right:4%; top:60px; background:rgba(15,23,42,.95); padding:14px; border-radius:16px; }
-  .hamburger{ display:block; }
+.footer{
+  padding:32px 0;
+  border-top:1px solid rgba(255,255,255,.06);
+  background:rgba(0,0,0,.2);
+  text-align:center;
 }
 
 /* cabo antonio */
@@ -597,4 +693,40 @@ footer {
 .tab.active {
     font-weight: bold;
     border-bottom: 2px solid #22c55e;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px){
+  .cards{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media (max-width: 680px){
+  .grid-2{
+    grid-template-columns:1fr;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .menu{
+    display:none;
+  }
+
+  .menu.open{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    right:4%;
+    top:60px;
+    background:rgba(15,23,42,.95);
+    padding:14px;
+    border-radius:16px;
+  }
+
+  .hamburger{
+    display:block;
+  }
 }
