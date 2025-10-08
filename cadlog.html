@@ -1,12 +1,11 @@
 <!doctype html>
-<html lang="pt-br">
-<head>
+<html lang="pt-br"><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>NovAR - Cadastro / Login</title>
   <link rel="stylesheet" href="cadlog.css">
   <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&amp;display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -19,7 +18,7 @@
         <span class="divisaocabelo">|</span>
       </div>
       <p class="textcabelo">Você está visualizando o Portal de Araucária: NovAR</p>
-      <button class="xcabelo">&times;</button>
+      <button class="xcabelo">×</button>
     </div>
   </header>
 
@@ -43,34 +42,34 @@
       </div>
       
       <div id="authMsg" class="msg"></div>
-      <div class="tabs" style="margin-bottom:12px;">
+      <div class="tabs">
         <button id="tabLogin" class="tab active">Login</button>
         <button id="tabRegister" class="tab">Cadastro</button>
       </div>
 
       <form id="loginForm" class="form">
-        <input type="email" id="loginEmail" placeholder="E-mail" required />
-        <input type="password" id="loginPassword" placeholder="Senha" required />
+        <input type="email" id="loginEmail" placeholder="E-mail" required="">
+        <input type="password" id="loginPassword" placeholder="Senha" required="">
         <button type="submit" class="btn">Entrar</button>
       </form>
 
-      <form id="registerForm" class="form hidden" style="margin-top:10px;">
-        <input type="text" id="registerName" placeholder="Nome completo" required />
-        <input type="text" id="registerUsername" placeholder="Usuário (apenas letras/números)" required />
-        <input type="email" id="registerEmail" placeholder="E-mail" required />
-        <input type="password" id="registerPassword" placeholder="Senha (mín. 6)" required />
+      <form id="registerForm" class="form hidden">
+        <input type="text" id="registerName" placeholder="Nome completo" required="">
+        <input type="text" id="registerUsername" placeholder="Usuário (apenas letras/números)" required="">
+        <input type="email" id="registerEmail" placeholder="E-mail" required="">
+        <input type="password" id="registerPassword" placeholder="Senha (mín. 6)" required="">
         <button type="submit" class="btn">Cadastrar</button>
       </form>
     </div>
 
     <!-- Área privada -->
-    <div id="privateArea" class="private hidden" style="margin-top:26px;">
-      <div style="display:flex; justify-content:space-between; align-items:center;">
+    <div id="privateArea" class="private hidden">
+      <div class="gerencicad">
         <h2>Gerenciar Cadastros</h2>
-        <button id="logoutBtn2" class="btn">Sair</button>
+        <button id="logoutBtn2" class="btn hidden">Sair</button>
       </div>
 
-      <table id="usersTable" border="1" cellpadding="8" style="width:100%; border-collapse:collapse; margin-top:12px;">
+      <table id="usersTable" border="1" cellpadding="8" class="usersTable">
         <thead>
           <tr>
             <th>Nome</th>
@@ -88,11 +87,11 @@
         <h3>Editar Cadastro</h3>
         <form id="editForm" class="form">
           <input type="hidden" id="editId">
-          <div class="field"><label>Nome completo</label><input id="editNome" required /></div>
-          <div class="field"><label>Nascimento</label><input id="editNascimento" type="date" /></div>
-          <div class="field"><label>Email (login)</label><input id="editEmail" type="email" required /></div>
-          <div class="field"><label>Telefone</label><input id="editTelefone" /></div>
-          <div class="field"><label>Usuário</label><input id="editUsuario" required /></div>
+          <div class="field"><label>Nome completo</label><input id="editNome" required=""></div>
+          <div class="field"><label>Nascimento</label><input id="editNascimento" type="date"></div>
+          <div class="field"><label>Email (login)</label><input id="editEmail" type="email" required=""></div>
+          <div class="field"><label>Telefone</label><input id="editTelefone"></div>
+          <div class="field"><label>Usuário</label><input id="editUsuario" required=""></div>
           <button type="submit" class="btn">Salvar</button>
           <button type="button" id="cancelEdit" class="btn ghost">Cancelar</button>
         </form>
@@ -119,5 +118,6 @@
   </footer>
 
   <script type="module" src="cadlog.js"></script>
-</body>
-</html>
+
+
+</body></html>
