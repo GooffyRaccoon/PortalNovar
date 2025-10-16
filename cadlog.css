@@ -7,36 +7,41 @@
 }
 
 :root {
+   /* Cores base */
+  --pretuncio: #2D3748;       
+  --carlos: #718096;       
+  --carlito: #A0AEC0;         
+  --baranco: #CBD5E0;         
+  --branco: #E2E8F0;          
+  --brancao: #F7FAFC;     
   
-  --surface:#111827;
-  --text:#e5e7eb;
-  --muted:#9ca3af;
-  --primary:#22c55e;
-  --primary-900:#16a34a;
-  --accent:#60a5fa;
-  --danger:#ef4444;
-
-  --pretuncio: #313131;
-  --carlos: #848484;
-  --carlito: #999999;
-  --baranco: #B2B2B2;
-  --branco: #CCCCCC;
-  --brancao: #E5E5E5;
-  --bler: #4D69A6;
-  --blertrans: rgba(77, 105, 166, 0.5);
-  --sonic: #305FC5;
-  --mephiles: #0A3B6C;
-  --petroleo: #021B34;
-  --verdura: #106348;
-  --verde: #1FA57F;
-  --grama: #58B23D;
-  --va: #BEE15E;
-  --espere: #E7C84D;
-  --amareluncio: #BF9230;
-  --pare: #C33E3E;
-  --vermelhuncio: #A32D2D;
+  /* Azuis */
+  --bler: #4A6FA5;           
+  --sonic: #2B6CB0;          
+  --mephiles: #1A365D;       
+  --petroleo: #0F1A2A;     
+  
+  /* Verdes */
+  --verdura: #22543D;      
+  --verde: #2F855A;         
+  --grama: #48BB78;           
+  --va: #9AE6B4;             
+  
+  /* Amarelos */
+  --espere: #D69E2E;       
+  --amareluncio: #B7791F;  
+  
+  /* Vermelhos */
+  --pare: #C53030;      
+  --vermelhuncio: #9B2C2C;    
+  
+  /* Cores funcionais */
+  --laranja: #DD6B20;        
+  --roxo: #6B46C1;     
+  
   --ash: rgba(255, 255, 255, 0.2);
   --botao: linear-gradient(180deg, #2d4e77 0%, #233d5c 100%);
+  
   --font-inter: 'Inter', Arial, Helvetica, sans-serif;
   --font-abeezee: 'ABeeZee', Arial, Helvetica, sans-serif;
   --font-roboto: 'Roboto', Arial, Helvetica, sans-serif;
