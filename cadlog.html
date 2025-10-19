@@ -23,15 +23,69 @@
     </div>
   </header>
 
-  <section class="cabecao">
-    <a class="logo" href="index.html"><img src="imgs/logo.png" alt="Logo"></a>
-    <a class="topnavegation" href="index.html">Página Inicial</a>
-    <a class="topnavegation" href="ng.html">Notícias Gerais</a>
-    <a class="topnavegation" href="ah.html">Arquivo Histórico</a>
-    <a class="topnavegation" href="pt.html">Pontos Turísticos</a>
-    <a class="topnavegation" href="cadlog.html" target="_self" rel="noopener">Faça o Login ou <br> Cadastre-se Agora!</a>
-    <a class="perfil" href="perfil.html"><img src="imgs/perfil.png" alt="Perfil"></a>
-  </section>
+  <nav class="cabecao">
+        <div class="cerebro">
+
+            <a class="logo" href="index.html">
+                <img src="imgs/logo.png" alt="Logo do aplicativo NovAR, a árvore de Araucária, com a palavra NOVAR na frente">
+            </a>
+
+            <!-- Menu Desktop -->
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link" target="_self" rel="noopener">Página Inicial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ng.html" class="nav-link" target="_self" rel="noopener">Notícias Gerais</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ah.html" class="nav-link" target="_self" rel="noopener">Arquivo Histórico</a>
+                    </li>
+                    <li class="nav-item" target="_self" rel="noopener">
+                        <a href="pt.html" class="nav-link">Pontos Turísticos</a>
+                    </li>
+                    <li class="nav-item" target="_self" rel="noopener">
+                        <a href="cadlog.html" class="nav-link">Faça o Login ou <br> Cadastre-se Agora!</a>
+                    </li>
+                </ul>
+
+                <!-- Botão Hambúrguer (visível apenas no mobile) -->
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+    
+        </div>
+    </nav>
+<script>
+  // Selecionar elementos
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+// Adicionar evento de clique no hambúrguer
+hamburger.addEventListener('click', () => {
+    // Toggle classes active
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+// Fechar menu ao clicar em um link
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
+
+// Fechar menu ao redimensionar a janela (se voltar para desktop)
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    }
+});
+</script>
 
   <section class="container section">
     <!-- Área de autenticação -->
