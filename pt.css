@@ -662,12 +662,12 @@ footer {
         height: auto;
         flex-direction: column;
         gap: 15px;
-        padding: 15px 10px;
+        padding: 5px 1rem 2rem 1rem;
         margin: 10px 0 0 0;
     }
     
     .gmail {
-        font-size: 14px;
+        font-size: 1rem;
         padding: 0;
         text-align: center;
         order: 2;
@@ -677,16 +677,17 @@ footer {
     .canlogo {
         order: 1;
         flex: none;
+        padding: 1rem 0 0.5rem 0;
     }
     
     .canela .canlogo img {
-        max-width: 120px;
-        width: 100%;
-        margin: 5px 0;
+        max-width: 100px;
+        width: 70%;
+        margin: 0;
     }
     
     .redes {
-        order: 3;
+        order: 1;
         flex: none;
         justify-content: center;
         gap: 20px;
@@ -698,19 +699,7 @@ footer {
     }
     
     .tornozelo {
-        width: 100%;
-        padding: 10px 15px;
-    }
-    
-    .torntxt {
-        font-size: 14px;
-        padding: 0 0 15px;
-        margin: 0 0 10px 0;
-    }
-    
-    .torntxt2 {
-        font-size: 11px;
-        text-align: center;
+        display: none;
     }
 }
 
