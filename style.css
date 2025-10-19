@@ -58,6 +58,30 @@ body {
 }
 
 /* cabecario 1 */
+.cabelo.notificacao {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  animation: mostrarESumir 5.3s ease-in-out forwards;
+}
+
+@keyframes mostrarESumir {
+  0% {
+    transform: translateY(-100%);
+  }
+  5% {
+    transform: translateY(0);
+  }
+  95% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
 .cabelo {
   height: 4vw;
   max-width: 100%;
