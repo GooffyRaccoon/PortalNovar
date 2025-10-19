@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
 const slidesWrapper = document.getElementById('carrosselSlides');
 const slides = document.querySelectorAll('.carrossel-slide');
 const setaEsq = document.getElementById('carrosselSetaEsquerda');
@@ -150,3 +151,4 @@ window.addEventListener('resize', () => mostrarSlide(currentIndex));
 // Inicialização
 mostrarSlide(0);
 iniciarCarrossel();
+
