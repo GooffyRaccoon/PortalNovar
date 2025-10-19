@@ -116,7 +116,7 @@ body {
   align-items: center;
   padding: 0.5vw 3vw;
   margin: 0 auto;
-  box-shadow: 0 0.5vw 16px #999;
+  box-shadow: 0 0.5vw 16px var(--verde);
   position: relative;
   z-index: 10;
 }
@@ -233,8 +233,10 @@ body {
 }
 
 .section-content {
+  background: var(--brancao);
+  box-shadow: 0 6px 32px 0 var(--carlos);
   width: 85%;
-  margin: 0 auto 2rem auto;
+  margin: 1rem auto auto auto;
   padding: 36px;
   display: none;
 }
