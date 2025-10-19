@@ -314,6 +314,7 @@ body {
 
 /* Área Privada */
 .private {
+    display: none;
     margin-top: 2rem;
 }
 
