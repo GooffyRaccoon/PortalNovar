@@ -211,9 +211,11 @@ body {
   width: 85%;
   margin: 0 auto 2rem auto;
   padding: 36px;
+  display: none;
 }
+
         .section-content.active {
-            display: block;
+          display: block;
         }
 
 .turcard{
