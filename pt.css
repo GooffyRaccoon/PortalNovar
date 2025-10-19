@@ -472,6 +472,268 @@ footer {
                           margin: 0.5vw 0 0 0;
                         }
 
+/* ===== MEDIA QUERIES MOBILE ===== */
+@media (max-width: 768px) {
+    
+    /* CABEÇALHO SUPERIOR */
+    .cabelo {
+        height: auto;
+        min-height: 40px;
+        padding: 8px 0;
+        flex-wrap: wrap;
+    }
+    
+    .piolho {
+        width: auto;
+        gap: 15px;
+        margin: 0 0 0 15px;
+    }
+    
+    .textcabelo {
+        font-size: 12px;
+        text-align: center;
+        margin: 5px 15px;
+        flex-basis: 100%;
+        order: 3;
+    }
+    
+    .xcabelo {
+        margin: 0 15px;
+        font-size: 20px;
+    }
+    
+    /* CABEÇALHO PRINCIPAL */
+    .cabecao {
+        padding: 10px 15px;
+    }
+    
+    .cerebro {
+        padding: 0 10px;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+    
+    .logo {
+        width: auto;
+        margin: 0;
+    }
+    
+    .cabecao .logo img {
+        max-width: 120px;
+        margin: 0;
+    }
+    
+    /* MENU HAMBÚRGUER */
+    .hamburger {
+        display: flex;
+        z-index: 1000;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    /* MENU MOBILE */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: var(--mephiles);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 80px 30px 30px;
+        transition: right 0.3s ease;
+        z-index: 999;
+        gap: 0;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid var(--ash);
+    }
+    
+    .nav-link {
+        color: var(--brancao) !important;
+        font-size: 16px !important;
+        padding: 15px 10px;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .nav-link:hover {
+        color: var(--grama) !important;
+        background: rgba(255,255,255,0.1);
+    }
+    
+    /* BANNER */
+    .banner {
+        max-height: 200px;
+        aspect-ratio: 16/9;
+    }
+    
+    .bannerimg {
+        width: 100%;
+    }
+    
+    /* CONTEÚDO PRINCIPAL */
+    .main {
+        padding: 15px 0;
+        gap: 20px;
+    }
+    
+    .section-content {
+        width: 95%;
+        padding: 20px 15px;
+    }
+    
+    /* CARDS DE PONTOS TURÍSTICOS */
+    .turcard {
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .turcard h2 {
+        font-size: 1.4rem;
+        margin: 0 0 12px 0;
+        text-align: center;
+    }
+    
+    .turcard p {
+        font-size: 0.95rem;
+        text-indent: 1.5em;
+        margin-bottom: 8px;
+    }
+    
+    .butt {
+        width: 70%;
+        max-width: 250px;
+        margin: 20px auto 0;
+        font-size: 1rem;
+        padding: 12px;
+    }
+    
+    .turimg img {
+        max-width: 100%;
+        margin-top: 10px;
+    }
+    
+    /* PAGINAÇÃO */
+    .pagination-wrapper {
+        margin: 20px auto;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+    
+    .pagination-btn, .pagination-ellipsis {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    /* FOOTER */
+    footer {
+        padding: 15px 10px;
+    }
+    
+    .canela {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 10px;
+        margin: 10px 0 0 0;
+    }
+    
+    .gmail {
+        font-size: 14px;
+        padding: 0;
+        text-align: center;
+        order: 2;
+        flex: none;
+    }
+    
+    .canlogo {
+        order: 1;
+        flex: none;
+    }
+    
+    .canela .canlogo img {
+        max-width: 120px;
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .redes {
+        order: 3;
+        flex: none;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .redesocial {
+        max-width: 35px;
+        width: 35px;
+    }
+    
+    .tornozelo {
+        width: 100%;
+        padding: 10px 15px;
+    }
+    
+    .torntxt {
+        font-size: 14px;
+        padding: 0 0 15px;
+        margin: 0 0 10px 0;
+    }
+    
+    .torntxt2 {
+        font-size: 11px;
+        text-align: center;
+    }
+}
 
+/* Media Query adicional para telas muito pequenas */
+@media (max-width: 480px) {
+    .nav-menu {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .turcard h2 {
+        font-size: 1.2rem;
+    }
+    
+    .butt {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+    
+    .pagination-wrapper {
+        gap: 5px;
+    }
+    
+    .pagination-btn, .pagination-ellipsis {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+}
 
 
