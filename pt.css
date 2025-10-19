@@ -207,21 +207,6 @@ body {
   gap: 40px;
 }
 
-        .main h2{
-          font-size: 1.8rem;
-          font-weight: 600;
-          font-family: var(--font-inter);
-          margin-bottom: 1rem;
-        }
-
-        .main p{
-          font-size: 1.5rem;
-          font-weight: 100;
-          text-align:justify;
-          font-family: var(--font-inter);
-          text-indent: 2em;
-        }
-
 .section-content {
   width: 85%;
   margin: 0 auto 2rem auto;
@@ -242,7 +227,7 @@ body {
           flex: 1 1 0;
         }
         
-                .turcad h2 {
+                .turcard h2 {
                   font-family: var(--font-roboto);
                   font-size: 2rem;
                   color: var(--mephiles);
@@ -251,11 +236,14 @@ body {
                   line-height: 1.2;
                 }
                                 
-                        .turcad p {
+                        .turcard p {
                           font-size: 1.08rem;
                           color: var(--pretuncio);
                           margin-bottom: 10px;
                           line-height: 1.6;
+                          text-align:justify;
+                          font-family: var(--font-inter);
+                          text-indent: 2em;
                         }
                 
                         .local {
