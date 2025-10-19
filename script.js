@@ -24,19 +24,23 @@ function criarEmojis() {
       
       // Remove o emoji após a animação
       setTimeout(() => {
-        emoji.remove();
-      }, 2000);
+        if (emoji.parentNode) {
+          emoji.remove();
+        }
+      }, 3000);
       
-    }, i * 100); // Emojis aparecem com pequeno intervalo
+    }, i * 150); // Emojis aparecem com pequeno intervalo
   }
   
   // Remove o container após todos os emojis
   setTimeout(() => {
-    container.remove();
-  }, 3000);
+    if (container.parentNode) {
+      container.remove();
+    }
+  }, 5000);
 }
 
-// Modifique a função de mostrar notificação
+// Função para mostrar notificação
 function mostrarNotificacao() {
   if (!localStorage.getItem('notificacaoVista')) {
     // Cria os emojis
@@ -53,12 +57,31 @@ function mostrarNotificacao() {
         localStorage.setItem('notificacaoVista', 'true');
       }, 10000);
     }
+  } else {
+    // Se já foi vista, remove a notificação
+    const notificacao = document.querySelector('.cabelo.notificacao');
+    if (notificacao) {
+      notificacao.remove();
+    }
   }
 }
 
 // Execute quando a página carregar
 document.addEventListener('DOMContentLoaded', mostrarNotificacao);
 
+// Adicionar evento ao botão X para fechar manualmente
+document.addEventListener('DOMContentLoaded', function() {
+  const botaoFechar = document.querySelector('.xcabelo');
+  if (botaoFechar) {
+    botaoFechar.addEventListener('click', function() {
+      const notificacao = document.querySelector('.cabelo.notificacao');
+      if (notificacao) {
+        notificacao.style.display = 'none';
+        localStorage.setItem('notificacaoVista', 'true');
+      }
+    });
+  }
+});
 const slidesWrapper = document.getElementById('carrosselSlides');
 const slides = document.querySelectorAll('.carrossel-slide');
 const setaEsq = document.getElementById('carrosselSetaEsquerda');
