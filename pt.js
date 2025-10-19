@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', function() {
+    showSection(1);
+    updatePagination(1);
+});
+
 // Página atual
 let currentPage = 1;
 const totalPages = 34;
