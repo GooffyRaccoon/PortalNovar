@@ -15,6 +15,15 @@ function showSection(page) {
         section.classList.add('active');
         currentPage = page;
         updatePagination(page);
+        
+        // LEVAR AO TOPO DA SEÇÃO MAIN
+        const mainSection = document.querySelector('.main');
+        if (mainSection) {
+            mainSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
     }
 }
 
