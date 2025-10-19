@@ -639,60 +639,52 @@ footer {
 
     /* FOOTER */
     footer {
-        padding: 20px 10px;
+        padding: 15px 10px;
     }
     
     .canela {
-        flex-direction: column;
+        width: 100%;
         height: auto;
-        padding: 20px;
-        gap: 20px;
+        flex-direction: column;
+        gap: 15px;
+        padding: 5px 1rem 2rem 1rem;
+        margin: 10px 0 0 0;
     }
     
     .gmail {
-        font-size: 16px;
+        font-size: 1rem;
         padding: 0;
         text-align: center;
-        order: 1;
-        flex: none;
-    }
-    
-    .canlogo {
         order: 2;
         flex: none;
     }
     
+    .canlogo {
+        order: 1;
+        flex: none;
+        padding: 1rem 0 0.5rem 0;
+    }
+    
     .canela .canlogo img {
-        width: 150px;
-        max-width: 150px;
-        margin: 10px 0;
+        max-width: 100px;
+        width: 70%;
+        margin: 0;
     }
     
     .redes {
-        order: 3;
-        justify-content: center;
+        order: 1;
         flex: none;
+        justify-content: center;
         gap: 20px;
     }
     
     .redesocial {
-        width: 35px;
         max-width: 35px;
+        width: 35px;
     }
     
     .tornozelo {
-        padding: 15px 10px;
-    }
-    
-    .torntxt {
-        font-size: 14px;
-        padding-bottom: 15px;
-        margin-bottom: 10px;
-    }
-    
-    .torntxt2 {
-        font-size: 12px;
-        text-align: center;
+        display: none;
     }
 }
 
