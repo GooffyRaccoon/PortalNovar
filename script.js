@@ -1,3 +1,64 @@
+function criarEmojis() {
+  const emojis = ['🎉', '✨', '🌟', '💫', '🔥', '⭐', '💥', '🎊'];
+  const container = document.createElement('div');
+  container.className = 'emoji-container';
+  
+  // Adiciona container ao corpo
+  document.body.appendChild(container);
+  
+  // Cria 8 emojis em posições aleatórias
+  for (let i = 0; i < 8; i++) {
+    setTimeout(() => {
+      const emoji = document.createElement('div');
+      emoji.className = 'emoji';
+      emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      
+      // Posição aleatória horizontal
+      const left = Math.random() * 90 + 5; // Entre 5% e 95%
+      emoji.style.left = left + '%';
+      
+      // Atraso aleatório para animação
+      emoji.style.animationDelay = (Math.random() * 0.5) + 's';
+      
+      container.appendChild(emoji);
+      
+      // Remove o emoji após a animação
+      setTimeout(() => {
+        emoji.remove();
+      }, 2000);
+      
+    }, i * 100); // Emojis aparecem com pequeno intervalo
+  }
+  
+  // Remove o container após todos os emojis
+  setTimeout(() => {
+    container.remove();
+  }, 3000);
+}
+
+// Modifique a função de mostrar notificação
+function mostrarNotificacao() {
+  if (!localStorage.getItem('notificacaoVista')) {
+    // Cria os emojis
+    criarEmojis();
+    
+    // Mostra a notificação
+    const notificacao = document.querySelector('.cabelo.notificacao');
+    if (notificacao) {
+      notificacao.style.display = 'flex';
+      
+      // Esconde após 10 segundos
+      setTimeout(() => {
+        notificacao.style.display = 'none';
+        localStorage.setItem('notificacaoVista', 'true');
+      }, 10000);
+    }
+  }
+}
+
+// Execute quando a página carregar
+document.addEventListener('DOMContentLoaded', mostrarNotificacao);
+
 const slidesWrapper = document.getElementById('carrosselSlides');
 const slides = document.querySelectorAll('.carrossel-slide');
 const setaEsq = document.getElementById('carrosselSetaEsquerda');
