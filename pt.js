@@ -1,22 +1,20 @@
-document.addEventListener('DOMContentLoaded', function() {
-    showSection(1);
-    updatePagination(1);
-});
-
 // Página atual
 let currentPage = 1;
-const totalPages = 34;
-const sectionIds = ["section-1", "section-2", "section-3", "section-34"];
 
 function showSection(page) {
+    console.log('Tentando mostrar seção:', page);
+    
     // Esconde todas as seções
-    sectionIds.forEach(id => {
-        document.getElementById(id).classList.remove('active');
+    document.querySelectorAll('.section-content').forEach(section => {
+        section.classList.remove('active');
     });
-    // Mostra a seção correspondente, se existir
+    
+    // Mostra a seção correspondente
     const section = document.getElementById('section-' + page);
     if (section) {
         section.classList.add('active');
+        currentPage = page;
+        updatePagination(page);
     }
 }
 
@@ -25,6 +23,7 @@ function updatePagination(page) {
     document.querySelectorAll('.pagination-btn').forEach(btn => {
         btn.classList.remove('active');
     });
+    
     // Adiciona classe active ao botão da página atual
     const activeBtn = document.querySelector('.pagination-btn[data-page="' + page + '"]');
     if (activeBtn) {
@@ -36,24 +35,19 @@ function updatePagination(page) {
 document.querySelectorAll('.pagination-btn[data-page]').forEach(btn => {
     btn.addEventListener('click', function() {
         const page = Number(this.getAttribute('data-page'));
-        if (sectionIds.includes('section-' + page)) {
-            currentPage = page;
-            showSection(page);
-            updatePagination(page);
-        }
+        showSection(page);
     });
 });
 
 // Botão próximo >>
 document.getElementById('next-btn').addEventListener('click', function() {
     let nextPage = currentPage + 1;
-    // Só mostra se existe seção para a página
-    while (nextPage <= totalPages && !sectionIds.includes('section-' + nextPage)) {
-        nextPage++;
+    if (nextPage <= 34) {
+        showSection(nextPage);
     }
-    if (nextPage <= totalPages && sectionIds.includes('section-' + nextPage)) {
-        currentPage = nextPage;
-        showSection(currentPage);
-        updatePagination(currentPage);
-    }
+});
+
+// Inicializa a página 1
+document.addEventListener('DOMContentLoaded', function() {
+    showSection(1);
 });
