@@ -693,4 +693,54 @@ footer {
         background-color: var(--va);
         color: var(--verde);
     }
+    
+        /* FOOTER */
+    footer {
+        padding: 15px 10px;
+    }
+    
+    .canela {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 15px;
+        padding: 5px 1rem 2rem 1rem;
+        margin: 10px 0 0 0;
+    }
+    
+    .gmail {
+        font-size: 1rem;
+        padding: 0;
+        text-align: center;
+        order: 2;
+        flex: none;
+    }
+    
+    .canlogo {
+        order: 1;
+        flex: none;
+        padding: 1rem 0 0.5rem 0;
+    }
+    
+    .canela .canlogo img {
+        max-width: 100px;
+        width: 70%;
+        margin: 0;
+    }
+    
+    .redes {
+        order: 1;
+        flex: none;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .redesocial {
+        max-width: 35px;
+        width: 35px;
+    }
+    
+    .tornozelo {
+        display: none;
+    }
 }
