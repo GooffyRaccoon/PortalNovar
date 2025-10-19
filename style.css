@@ -1587,54 +1587,55 @@ footer {
     font-size: 1.1rem;
     padding: 0.8rem 1.8rem;
   }
-
-  .canela {
-    height: auto;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 2rem 1rem;
-  }
-
-  .gmail {
-    font-size: 1rem;
-    padding: 0;
-    text-align: center;
-    flex: none;
-    width: 100%;
-  }
-
-  .canlogo {
-    flex: none;
-    width: 100%;
-  }
-
-  .canela .canlogo img {
-    max-width: 120px;
-  }
-
-  .redes {
-    flex: none;
-    width: 100%;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .redesocial {
-    max-width: 40px;
-  }
-
-  .tornozelo {
-    padding: 1.5rem 1rem;
-  }
-
-  .torntxt {
-    font-size: 1rem;
-    padding: 0 0 1.5rem;
-  }
-
-  .torntxt2 {
-    font-size: 0.85rem;
-  }
+/* FOOTER */
+    footer {
+        padding: 15px 10px;
+    }
+    
+    .canela {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 15px;
+        padding: 5px 1rem 2rem 1rem;
+        margin: 10px 0 0 0;
+    }
+    
+    .gmail {
+        font-size: 1rem;
+        padding: 0;
+        text-align: center;
+        order: 2;
+        flex: none;
+    }
+    
+    .canlogo {
+        order: 1;
+        flex: none;
+        padding: 1rem 0 0.5rem 0;
+    }
+    
+    .canela .canlogo img {
+        max-width: 100px;
+        width: 70%;
+        margin: 0;
+    }
+    
+    .redes {
+        order: 1;
+        flex: none;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .redesocial {
+        max-width: 35px;
+        width: 35px;
+    }
+    
+    .tornozelo {
+        display: none;
+    }
 }
 
 /* Smartphones pequenos (até 480px) */
@@ -1877,41 +1878,6 @@ footer {
     padding: 0.7rem 1.5rem;
   }
 
-  .canela {
-    padding: 1.5rem 0.5rem;
-    gap: 1rem;
-  }
-
-  .gmail {
-    font-size: 0.9rem;
-  }
-
-  .canela .canlogo img {
-    max-width: 100px;
-  }
-
-  .redes {
-    gap: 0.8rem;
-  }
-
-  .redesocial {
-    max-width: 35px;
-  }
-
-  .tornozelo {
-    padding: 1rem 0.5rem;
-  }
-
-  .torntxt {
-    font-size: 0.9rem;
-    padding: 0 0 1rem;
-  }
-
-  .torntxt2 {
-    font-size: 0.75rem;
-  }
-}
-
 /* Ajustes específicos para orientação landscape em mobile */
 @media (max-width: 768px) and (orientation: landscape) {
   .carroselfilhadaputa {
@@ -1921,17 +1887,3 @@ footer {
   .carrossel-slide img {
     max-height: 90vh;
   }
-
-  .txtcarr {
-    top: 5%;
-    font-size: 0.8rem;
-  }
-
-  .txtcarr h1 {
-    font-size: 1.2rem;
-  }
-
-  .txtcarr h2 {
-    font-size: 1rem;
-  }
-}
