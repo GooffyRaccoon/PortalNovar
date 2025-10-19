@@ -465,3 +465,248 @@ footer {
                           letter-spacing: 0.3px;
                           margin: 0.5vw 0 0 0;
                         }
+
+/* ... seu CSS existente ... */
+
+/* ========== MEDIA QUERY MOBILE (max-width: 768px) ========== */
+@media (max-width: 768px) {
+    
+    /* Header superior */
+    .cabelo {
+        height: auto;
+        min-height: 40px;
+        padding: 8px 0;
+    }
+    
+    .piolho {
+        width: auto;
+        gap: 15px;
+        margin: 0 0 0 3%;
+    }
+    
+    .textcabelo {
+        font-size: 12px;
+        text-align: center;
+        flex: 1;
+        padding: 0 10px;
+    }
+    
+    .xcabelo {
+        margin: 0 1rem;
+        font-size: 20px;
+    }
+    
+    /* Menu principal */
+    .cabecao {
+        padding: 10px 15px;
+    }
+    
+    .cerebro {
+        padding: 0 1rem;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+    
+    .logo {
+        width: auto;
+        margin: 0;
+    }
+    
+    .cabecao .logo img {
+        max-width: 120px;
+        margin: 0;
+    }
+    
+    /* Menu Hambúrguer */
+    .hamburger {
+        display: flex;
+        z-index: 100;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: var(--brancao);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 80px;
+        padding-left: 30px;
+        transition: 0.3s;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        z-index: 99;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-item {
+        margin: 15px 0;
+        width: 100%;
+    }
+    
+    .nav-link {
+        font-size: 18px;
+        padding: 12px 0;
+        width: 100%;
+        border-bottom: 1px solid var(--baranco);
+    }
+    
+    /* Banner */
+    .banner {
+        max-height: none;
+        aspect-ratio: 16/9;
+    }
+    
+    .bannerimg {
+        width: 100%;
+    }
+    
+    /* Conteúdo principal */
+    .main {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+        gap: 2rem;
+    }
+    
+    .ahpag {
+        margin: 0;
+        padding: 25px 20px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .ahpag h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .ahpag p {
+        font-size: 1.1rem;
+        text-indent: 1.5em;
+        line-height: 1.5;
+    }
+    
+    .ahpag img {
+        margin: 20px auto;
+    }
+    
+    /* Veja mais */
+    .vejamais {
+        max-width: 100%;
+        max-height: none;
+        width: 100%;
+        padding: 25px 20px;
+    }
+    
+    .vejamais h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .itens {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .vejamais img {
+        max-width: 100%;
+        height: 120px;
+    }
+    
+    .butt {
+        display:none;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 1rem;
+    }
+    
+    .canela {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .gmail {
+        font-size: 16px;
+        padding: 0;
+        text-align: center;
+        order: 1;
+    }
+    
+    .canlogo {
+        order: 2;
+    }
+    
+    .canela .canlogo img {
+        max-width: 120px;
+        width: 100%;
+    }
+    
+    .redes {
+        order: 3;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .redesocial {
+        max-width: 40px;
+        width: 40px;
+    }
+    
+    .tornozelo {
+        padding: 15px 10px;
+    }
+    
+    .torntxt {
+        font-size: 14px;
+        padding-bottom: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .torntxt2 {
+        font-size: 12px;
+    }
+}
+
+/* Media Query adicional para telas muito pequenas */
+@media (max-width: 480px) {
+    .textcabelo {
+        font-size: 10px;
+    }
+    
+    .ahpag h1 {
+        font-size: 1.7rem;
+    }
+    
+    .ahpag p {
+        font-size: 1rem;
+    }
+    
+    .nav-menu {
+        width: 100%;
+    }
+    
+    .gmail {
+        font-size: 14px;
+    }
+}
