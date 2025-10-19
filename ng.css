@@ -482,19 +482,19 @@ footer {
         font-size: 20px;
     }
 
-    /* CABEÇALHO PRINCIPAL */
+        /* CABEÇALHO PRINCIPAL */
     .cabecao {
         padding: 10px 15px;
     }
     
     .cerebro {
+        width: 100%;
         padding: 0 10px;
         justify-content: space-between;
-        gap: 1rem;
     }
     
     .logo {
-        width: 120px;
+        scale: 70%;
     }
     
     .cabecao .logo img {
@@ -552,15 +552,17 @@ footer {
     }
     
     .nav-link {
-        font-size: 18px;
-        padding: 15px;
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 0.5rem;
         width: 100%;
         display: block;
         justify-content: center;
+        line-height: 1.5;
     }
     
     .nav-link:hover {
-        background-color: var(--branco);
+        background-color: var(--va);
         color: var(--verde);
     }
 
