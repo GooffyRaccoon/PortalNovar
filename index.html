@@ -28,27 +28,77 @@
                 <span class="divisaocabelo">|</span>
             </div>
             <p class="textcabelo">Você está visualizando o Portal de Araucária: NovAR</p>
-            <button class="xcabelo">&times;</button>
+            <button class="xcabelo">×</button>
         </div>
     </header>
+    
+    <nav class="cabecao">
+        <div class="cerebro">
 
-    <section class="cabecao">
             <a class="logo" href="index.html">
                 <img src="imgs/logo.png" alt="Logo do aplicativo NovAR, a árvore de Araucária, com a palavra NOVAR na frente">
             </a>
-            <a class="topnavegation" href="index.html" target="_self" rel="noopener">Página Inicial</a>
-            <a class="topnavegation" href="ng.html" target="_self" rel="noopener">Notícias Gerais</a>
-            <a class="topnavegation" href="ah.html" target="_self" rel="noopener">Arquivo Histórico</a>
-            <a class="topnavegation" href="pt.html" target="_self" rel="noopener">Pontos Turísticos</a>
-            <a class="topnavegation" href="cadlog.html" target="_self" rel="noopener">Faça o Login ou <br> Cadastre-se Agora!</a>
-            <a class="perfil" href="perfil.html">
-                <img src="imgs/perfil.png" alt="Acesse seu perfil">
-            </a>
-    </section>
+
+            <!-- Menu Desktop -->
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link" target="_self" rel="noopener">Página Inicial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ng.html" class="nav-link" target="_self" rel="noopener">Notícias Gerais</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ah.html" class="nav-link" target="_self" rel="noopener">Arquivo Histórico</a>
+                    </li>
+                    <li class="nav-item" target="_self" rel="noopener">
+                        <a href="pt.html" class="nav-link">Pontos Turísticos</a>
+                    </li>
+                    <li class="nav-item" target="_self" rel="noopener">
+                        <a href="cadlog.html" class="nav-link">Faça o Login ou <br> Cadastre-se Agora!</a>
+                    </li>
+                </ul>
+
+                <!-- Botão Hambúrguer (visível apenas no mobile) -->
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+    
+        </div>
+    </nav>
+<script>
+  // Selecionar elementos
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+// Adicionar evento de clique no hambúrguer
+hamburger.addEventListener('click', () => {
+    // Toggle classes active
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+// Fechar menu ao clicar em um link
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
+
+// Fechar menu ao redimensionar a janela (se voltar para desktop)
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    }
+});
+</script>
 
     <section class="carroselsec">
         <div class="carrossel-container">
-            <div class="carrossel-slides" id="carrosselSlides" style="transform: translateX(-200%);">
+            <div class="carrossel-slides" id="carrosselSlides" style="transform: translateX(-400%);">
                 <div class="carrossel-slide">
                     <img src="imgs/slide1.png" alt="Gatinho 1">
                 </div>
@@ -79,7 +129,7 @@
             </div>
                 <button class="carrossel-seta carrossel-seta-esquerda" id="carrosselSetaEsquerda">◀</button>
                 <button class="carrossel-seta carrossel-seta-direita" id="carrosselSetaDireita">▶</button>
-                <div class="carrossel-indicadores" id="carrosselIndicadores"><span class="carrossel-indicador" data-index="0"></span><span class="carrossel-indicador" data-index="1"></span><span class="carrossel-indicador ativo" data-index="2"></span><span class="carrossel-indicador" data-index="3"></span><span class="carrossel-indicador" data-index="4"></span><span class="carrossel-indicador" data-index="5"></span><span class="carrossel-indicador" data-index="6"></span><span class="carrossel-indicador" data-index="7"></span><span class="carrossel-indicador" data-index="8"></span></div>
+                <div class="carrossel-indicadores" id="carrosselIndicadores"><span class="carrossel-indicador" data-index="0"></span><span class="carrossel-indicador" data-index="1"></span><span class="carrossel-indicador ativo" data-index="2"></span><span class="carrossel-indicador ativo" data-index="3"></span><span class="carrossel-indicador ativo" data-index="4"></span><span class="carrossel-indicador" data-index="5"></span><span class="carrossel-indicador" data-index="6"></span><span class="carrossel-indicador" data-index="7"></span><span class="carrossel-indicador" data-index="8"></span></div>
                     <div class="txtcarr">
                         <h1>Seja Bem Vindo(a) ao Portal de Araucária: NovAR!</h1>
                         <h2>Aqui você encontra tudo que deseja saber sobre a cidade paranaense.</h2>
@@ -87,7 +137,8 @@
                     </div>
         <script src="script.js"></script>
         <div class="gradiente-entre"></div>
-     </div></section>
+     </div>
+    </section>
 
 <section class="notrec">
         <h1>CONHEÇA A ADMINISTRAÇÃO DA CIDADE</h1>        
@@ -183,7 +234,7 @@
                    Por meio do nosso App você terá acesso a tudo à distância de um clique!<br>
                    Disponível para Android e iOS.
                 </p>
-                <a href="https://www.figma.com/proto/IOnEjIKnmWmT7p8qmHhTmQ/NovAR-Aplicativo--ver-3-?node-id=8032-392&p=f&t=bhgIcBEg69vqCGEi-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=8032%3A250" class="butt">BAIXAR AGORA
+                <a href="https://www.figma.com/proto/IOnEjIKnmWmT7p8qmHhTmQ/NovAR-Aplicativo--ver-3-?node-id=8032-392&amp;p=f&amp;t=bhgIcBEg69vqCGEi-0&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=8032%3A250" class="butt">BAIXAR AGORA
                     <span class="buttset">&gt;</span>
                 </a>
             </div>
@@ -285,5 +336,5 @@
             <p class="torntxt2">Todo o conteúdo desse site está publicado sob licença.</p>
         </div>
     </footer>
-
-</body></html>
+</body>
+</html>
