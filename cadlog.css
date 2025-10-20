@@ -599,9 +599,7 @@ footer {
     background-color: var(--verde);
 }
 
-.hidden {
-    display: none !important;
-}
+.hidden { display: none !important; }
 
 .tab.active {
     font-weight: bold;
