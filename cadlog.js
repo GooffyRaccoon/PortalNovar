@@ -60,6 +60,8 @@ registerForm.addEventListener("submit", async (e) => {
   showAuthMsg("Cadastrando...", "");
 
   const name = document.getElementById("registerName").value.trim();
+  const dob = document.getElementById("registerDob").value || null;
+  const phone = document.getElementById("registerPhone").value.trim();
   const username = document.getElementById("registerUsername").value.trim().toLowerCase();
   const email = document.getElementById("registerEmail").value.trim().toLowerCase();
   const password = document.getElementById("registerPassword").value;
@@ -68,7 +70,7 @@ registerForm.addEventListener("submit", async (e) => {
     const { data: userData, error } = await supabase.auth.signUp({
       email,
       password,
-      options: { data: { full_name: name, username } }, // já manda pro user_metadata
+      options: { data: { full_name: name, dob, phone, username } },
     });
     if (error) throw error;
 
@@ -80,6 +82,7 @@ registerForm.addEventListener("submit", async (e) => {
     showAuthMsg(err?.message || "Erro ao cadastrar", "error");
   }
 });
+
 
 // --- LOGIN ---
 loginForm.addEventListener("submit", async (e) => {
