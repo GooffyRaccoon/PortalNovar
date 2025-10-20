@@ -59,54 +59,181 @@ body {
 
 /* cabecario 1 */
 .cabelo {
-  height: 4vw;
-  max-width: 100%;
-  max-height: 50px;
-  background-color: var(--mephiles);
-  display: flex;
-  flex-direction: row;
-  flex-shrink: 0;
-  justify-content: space-between;
-  align-items: center;
+    height: 4.2rem;
+    max-width: 100%;
+    font-family: var(--font-roboto);
+    background-color: var(--mephiles);
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
-        .piolho {
-          width: 8vw;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-          gap: 4vw;
-          margin: 0 0 0 5%;
-        }
-        
-                .loguinho {
-                  display: flex;
-                }
+.piolho {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 3%;
+}
 
-                .divisaocabelo {
-                  color: var(--brancao);
-                  width: 100%;
-                  height: 100%;
-                }
-    
-        .textcabelo {
-          color: var(--baranco);
-          font: var(--font-inter);
-          font-style: normal;
-          font-weight: 400;
-        }
-    
-        .xcabelo {
-          font-family: var(--font-crimson);
-          font-weight: 200;
-          font-size: 25px;
-          display: flex;
-          background: none;
-          border: none;
-          color: var(--brancao);
-          margin: 0 5rem;
-        }
+.divisaocabelo {
+    max-width: 20px;
+    color: var(--brancao);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+/* Container do menu de categorias */
+.pescat-container {
+    position: relative;
+    display: inline-block;
+}
+
+.pescat {
+    width: 10rem;
+    justify-content: center;
+    border-radius: 4px;
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    color: var(--brancao);
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+
+.pescat:hover {
+    background-color: var(--bler);
+}
+
+.pescat p {
+    margin: 0;
+    font-family: var(--font-roboto);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+/* Menu de categorias */
+.menu-categorias {
+    position: absolute;
+    top: calc(100% + 0px); /* Logo abaixo do botão com pequeno espaçamento */
+    left: 0;
+    background-color: var(--brancao);
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    min-width: 600px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Mostrar menu quando hover no container OU no próprio menu */
+.pescat-container:hover .menu-categorias,
+.menu-categorias:hover {
+    display: grid;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Manter o menu visível quando estiver sobre ele */
+.pescat-container .menu-categorias {
+    pointer-events: auto;
+}
+
+.categoria-grupo h3 {
+    color: var(--mephiles);
+    margin: 0 0 12px 0;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 2px solid var(--bler);
+    padding-bottom: 5px;
+}
+
+.categoria-grupo a {
+    display: block;
+    color: gray;
+    text-decoration: none;
+    padding: 6px 0;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: color 0.3s, padding-left 0.3s;
+}
+
+.categoria-grupo a:hover {
+    color: var(--mephiles);
+    padding-left: 1rem;
+}
+
+/* Container para a pesquisa */
+.pesquisa-container {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    background-color: var(--brancao);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 1rem;
+    flex: 1;
+}
+
+.campo-pesquisa {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 5px;
+    font: var(--font-inter);
+    font-style: normal;
+    font-weight: 400;
+    width: 100%;
+    color: var(--mephiles);
+}
+
+.campo-pesquisa::placeholder {
+    color: var(--carlos);
+}
+
+.botao-pesquisa {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.xcabelo {
+    width: 4%;
+    font-family: var(--font-crimson);
+    font-weight: 200;
+    font-size: 25px;
+    background: none;
+    border: none;
+    color: var(--brancao);
+    margin-right: 3% ;
+    cursor: pointer;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* cabecario 2*/
 .cabecao {
