@@ -20,24 +20,12 @@
 
 <body>
     <header>
-        <div class="cabelo">
-            <div class="piolho">
-                <a class="loguinho" href="index.html">
-                    <img src="imgs/loguinho.png" alt="Logo do aplicativo NovAR, a árvore de Araucária">
+        <nav class="cabecao">
+            <div class="cerebro">
+
+                <a class="logo" href="index.html">
+                    <img src="imgs/logo.png" alt="Logo do aplicativo NovAR, a árvore de Araucária, com a palavra NOVAR na frente">
                 </a>
-                <span class="divisaocabelo">|</span>
-            </div>
-            <p class="textcabelo">Você está visualizando o Portal de Araucária: NovAR</p>
-            <button class="xcabelo">×</button>
-        </div>
-    </header>
-
-    <nav class="cabecao">
-        <div class="cerebro">
-
-            <a class="logo" href="index.html">
-                <img src="imgs/logo.png" alt="Logo do aplicativo NovAR, a árvore de Araucária, com a palavra NOVAR na frente">
-            </a>
 
             <!-- Menu Desktop -->
                 <ul class="nav-menu">
@@ -67,6 +55,7 @@
     
         </div>
     </nav>
+
 <script>
   // Selecionar elementos
 const hamburger = document.querySelector('.hamburger');
@@ -95,11 +84,66 @@ window.addEventListener('resize', () => {
     }
 });
 </script>
-
+    </header>
+    
     <div class="banner">
         <img class="bannerimg" src="imgs/ngimg.jpg" alt="Imagem de Araucária">
         <img class="banner1" src="imgs/banner-ng.png" alt="Imagem de Araucária">
     </div>
+
+    <section class="pesquisar">
+    <div class="cabelo">
+        <div class="piolho">
+            <div class="pescat-container">
+                <a class="pescat" href="#">
+                    <p>Ver categorias</p>
+                </a>
+                <!-- Menu de categorias -->
+                <div class="menu-categorias">
+                    <div class="categoria-grupo">
+                        <h3>Gastronomia</h3>
+                        <a href="gastronomia.html">Restaurantes</a>
+                        <a href="bares.html">Bares</a>
+                        <a href="cafeterias.html">Cafeterias</a>
+                        <a href="comida-tipica.html">Comida Típica</a>
+                    </div>
+                    <div class="categoria-grupo">
+                        <h3>Esportes</h3>
+                        <a href="academias.html">Academias</a>
+                        <a href="quadras-esportivas.html">Quadras Esportivas</a>
+                        <a href="parques.html">Parques</a>
+                        <a href="eventos-esportivos.html">Eventos Esportivos</a>
+                    </div>
+                    <div class="categoria-grupo">
+                        <h3>Entretenimento</h3>
+                        <a href="cinemas.html">Cinemas</a>
+                        <a href="teatros.html">Teatros</a>
+                        <a href="shows.html">Shows</a>
+                        <a href="eventos-culturais.html">Eventos Culturais</a>
+                    </div>
+                    <div class="categoria-grupo">
+                        <h3>Serviços</h3>
+                        <a href="educacao.html">Educação</a>
+                        <a href="saude.html">Saúde</a>
+                        <a href="comercio.html">Comércio</a>
+                        <a href="transporte.html">Transporte</a>
+                    </div>
+                </div>
+            </div>
+            <span class="divisaocabelo">|</span>
+        </div>
+        
+        <!-- Campo de pesquisa -->
+        <div class="pesquisa-container">
+            <input type="text" class="campo-pesquisa" placeholder="Pesquisar por palavras-chave...">
+            <button class="botao-pesquisa">
+                <img src="imgs/lupa.png">
+</button>
+        </div>
+        
+        <button class="xcabelo">×</button>
+    </div>
+</section>
 
     <section class="ngcontainer">
         <div class="bloconot">  
@@ -290,6 +334,7 @@ window.addEventListener('resize', () => {
 </body>
 
 </html>
+
 
 
 
