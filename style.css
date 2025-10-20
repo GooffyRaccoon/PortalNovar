@@ -554,9 +554,9 @@ body {
 
 .appinfo .butt {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   max-height: 60px;
-  min-width: 200px;
+  width: 14rem;
   background: var(--botao);
   color: var(--brancao);
   font-family: var(--font-roboto);
