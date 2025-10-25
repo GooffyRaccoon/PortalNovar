@@ -14,7 +14,7 @@
     <div class="cabelo">
       <div class="piolho">
         <a class="loguinho" href="index.html">
-          <img src="imgs/loguinho.png" alt="Logo">
+          <img src="loguinho.png" alt="Logo">
         </a>
         <span class="divisaocabelo">|</span>
       </div>
@@ -27,7 +27,7 @@
         <div class="cerebro">
 
             <a class="logo" href="index.html">
-                <img src="imgs/logo.png" alt="Logo do aplicativo NovAR, a árvore de Araucária, com a palavra NOVAR na frente">
+                <img src="logo.png" alt="Logo do aplicativo NovAR, a árvore de Araucária, com a palavra NOVAR na frente">
             </a>
 
             <!-- Menu Desktop -->
@@ -103,7 +103,11 @@ window.addEventListener('resize', () => {
       <form id="loginForm" class="form">
         <input type="email" id="loginEmail" placeholder="E-mail" required="">
         <input type="password" id="loginPassword" placeholder="Senha" required="">
-        <button type="submit" class="btn">Entrar</button>
+        <div style="display:flex; gap:8px; align-items:center;">
+          <button type="submit" class="btn" id="loginSubmit">Entrar</button>
+          <!-- ADICIONADO: botão "Esqueceu a senha?" -->
+          <button type="button" id="forgotBtn" class="btn ghost" style="padding:6px 10px; font-size:0.9rem;">Esqueceu a senha?</button>
+        </div>
       </form>
 
     <form id="registerForm" class="form hidden" style="margin-top:10px;">
@@ -117,6 +121,14 @@ window.addEventListener('resize', () => {
 </form>
 
     </div>
+
+      <!-- ADICIONADO: área de boas-vindas simples que aparece após login -->
+      <div id="welcomeArea" class="hidden" style="margin-top:20px; text-align:center;">
+        <h2 id="welcomeTitle">Bem-vindo(a)</h2>
+        <p id="welcomeName" style="font-weight:600; font-size:1.1rem; margin-bottom:12px;"></p>
+        <button id="welcomeLogout" class="btn">Sair</button>
+        <button id="backToAuth" class="btn ghost" style="margin-left:10px; margin-top:10px;">Voltar</button>
+      </div>
 
       <div id="editFormContainer" class="hidden" style="margin-top:20px;">
         <h3>Editar Cadastro</h3>
@@ -139,11 +151,11 @@ window.addEventListener('resize', () => {
   <footer>
     <div class="canela">
       <a class="gmail" href="mailto:portalnovar@gmail.com">portalnovar@gmail.com</a>
-      <a class="canlogo" href="index.html"><img src="imgs/logo.png" alt="Logo"></a>
+      <a class="canlogo" href="index.html"><img src="logo.png" alt="Logo"></a>
       <div class="redes">
-        <a class="redesocial" href="#"><img src="imgs/facebook.png" alt="Facebook"></a>
-        <a class="redesocial" href="#"><img src="imgs/insta.png" alt="Instagram"></a>
-        <a class="redesocial" href="#"><img src="imgs/twitter.png" alt="Twitter"></a>
+        <a class="redesocial" href="#"><img src="facebook.png" alt="Facebook"></a>
+        <a class="redesocial" href="#"><img src="insta.png" alt="Instagram"></a>
+        <a class="redesocial" href="#"><img src="twitter.png" alt="Twitter"></a>
       </div>
     </div>
     <div class="tornozelo">
