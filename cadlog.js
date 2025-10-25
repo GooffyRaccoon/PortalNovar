@@ -161,6 +161,7 @@ if (welcomeLogout) {
 }
 
 // botão "Voltar" (mostra a área de login novamente, sem deslogar)
+// (mantive para caso você queira voltar sem sair)
 if (backToAuth) {
   backToAuth.addEventListener("click", () => {
     hideWelcomeArea();
