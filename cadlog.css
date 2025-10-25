@@ -455,6 +455,7 @@ footer {
                           margin: 0.5vw 1vw;
                         }
                                 
+
                 .redes {
                   display: flex;
                   flex: 1;
@@ -575,7 +576,7 @@ footer {
   transform: scale(1.05);
   box-shadow: 0 0 12px rgba(34, 197, 94, 0.6);
 }
-/* estilo básico para campos e botões */
+ /* estilo básico para campos e botões */
 .form input {
     display: block;
     width: 100%;
@@ -605,8 +606,6 @@ footer {
     font-weight: bold;
     border-bottom: 2px solid var(--verde);
 }
-
-
 
 /* RESPONSIVO */
 @media (max-width: 768px){
@@ -743,4 +742,41 @@ footer {
     .tornozelo {
         display: none;
     }
+}
+
+/* =========================
+   'Esqueceu a senha?' e
+   área de Bem-vindo
+   ========================= */
+
+#forgotBtn {
+  align-self: center;
+  background: transparent;
+  color: var(--mephiles);
+  border: 1px dashed var(--baranco);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+#welcomeArea {
+  background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.9));
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+#welcomeTitle {
+  color: var(--mephiles);
+  margin-bottom: 6px;
+}
+
+#welcomeName {
+  color: var(--pretuncio);
+}
+
+/* pequena responsividade para o welcome area */
+@media (max-width: 480px) {
+  #welcomeArea { padding: 12px; }
+  .btn { padding: 10px; }
 }
